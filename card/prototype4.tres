@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dhnfqvxikgmqh"]
+
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_ih122"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_jdjgm"]
+
+[resource]
+script = ExtResource("1_jdjgm")
+name = "アルカナ・ビート"
+cost = 4
+power = 15
+cast_time = 1
+icon = ExtResource("1_ih122")
