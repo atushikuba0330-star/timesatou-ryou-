@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://r46n3orrfhic"]
+
+[ext_resource type="Script" uid="uid://cowsykecspkx6" path="res://story.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://c06y38yxllpxj" path="res://endless.gd" id="2_ouk20"]
+[ext_resource type="Script" uid="uid://c46jo0mxbkm8k" path="res://setting.gd" id="3_mae5d"]
+
+[node name="Menu" type="Node2D" unique_id=543504500]
+
+[node name="story" type="Button" parent="." unique_id=2019634792]
+offset_left = 172.0
+offset_top = 120.0
+offset_right = 640.0
+offset_bottom = 238.0
+text = "ストーリーモード"
+script = ExtResource("1_lti8b")
+
+[node name="endless" type="Button" parent="." unique_id=222835492]
+offset_left = 169.0
+offset_top = 386.0
+offset_right = 636.0
+offset_bottom = 499.0
+text = "エンドレスモード"
+script = ExtResource("2_ouk20")
+
+[node name="setting" type="Button" parent="." unique_id=1879020622]
+offset_left = 181.0
+offset_top = 644.0
+offset_right = 643.0
+offset_bottom = 760.0
+text = "設定"
+script = ExtResource("3_mae5d")
+
+[connection signal="pressed" from="story" to="story" method="_on_pressed"]
+[connection signal="pressed" from="endless" to="endless" method="_on_pressed"]
+[connection signal="pressed" from="setting" to="setting" method="_on_pressed"]
