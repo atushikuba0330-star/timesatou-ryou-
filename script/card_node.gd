@@ -41,7 +41,6 @@ func _ready():
 		$Panel/Label.text = data.name
 		power = data.power
 
-
 func show_magic_circle():
 	if data == null:
 		return
@@ -58,6 +57,34 @@ func show_magic_circle():
 	
 	sprite.z_as_relative = false
 	sprite.z_index = 100
-
 	
 	magic_holder.add_child(sprite)
+
+
+func update_magic_circle():
+	if data == null:
+		return
+
+	for child in magic_holder.get_children():
+		child.queue_free()
+
+	var count = chant_progress
+
+	for i in range(count):
+		if i >= data.magic_circles.size():
+			break
+
+		var sprite = Sprite2D.new()
+		sprite.texture = data.magic_circles[i]
+
+		sprite.centered = true
+		sprite.scale = Vector2(0.6, 0.6)
+
+		# 円状に並べる（見た目良くなる）
+		var angle = i * TAU / max(count, 1)
+		sprite.position = Vector2(cos(angle), sin(angle)) * 20
+
+		sprite.z_as_relative = false
+		sprite.z_index = 100
+
+		magic_holder.add_child(sprite)

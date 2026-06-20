@@ -41,6 +41,8 @@ func progress_turn():
 	if card:
 		card.chant_progress += 1
 		
+		card.update_magic_circle()
+		
 		if enemy_slot and enemy_slot.card:
 			var enemy = enemy_slot.card
 			
