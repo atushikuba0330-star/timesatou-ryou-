@@ -30,6 +30,8 @@ func place(c):
 	
 	c.position = Vector2.ZERO
 	
+	c.show_magic_circle()
+	
 func  destroy_card():
 	if card:
 		card.queue_free()

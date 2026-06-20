@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_8d8ib"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_ug1vh"]
+[ext_resource type="Texture2D" uid="uid://ctf57vm5kuye0" path="res://irasto/Normal/Ma1a-line-normal/ma1a-purple.png" id="2_qjo1o"]
 
 [resource]
 script = ExtResource("1_ug1vh")
@@ -9,4 +10,5 @@ name = "正義の名のもとに！"
 cost = 2
 power = 16
 cast_time = 2
+magic_circles = Array[Texture2D]([ExtResource("2_qjo1o")])
 icon = ExtResource("1_8d8ib")
