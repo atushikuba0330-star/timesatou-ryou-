@@ -52,6 +52,7 @@ func progress_turn():
 				return
 				
 		if card.chant_progress > card.data.cast_time:
+			await card.play_zoom_out()
 			card.chant_progress = 0
 			resolve_battle()
 			

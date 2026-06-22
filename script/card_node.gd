@@ -102,3 +102,21 @@ func get_display_order():
 			return [3, 2, 1, 0]
 		5:
 			return [4, 3, 2, 1, 0]
+			
+
+func play_zoom_out():
+	
+	var i = 0
+	
+	for child in magic_holder.get_children():
+		var tween = create_tween()
+		
+		tween.tween_interval(i * 0.08)
+		
+		tween.tween_property(child, "scale", Vector2(0.05, 0.05), 0.2)
+		tween.set_trans(Tween.TRANS_SINE)
+		tween.set_ease(Tween.EASE_IN)
+		
+		i += 1
+
+	await get_tree().create_timer(0.2).timeout
