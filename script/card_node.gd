@@ -70,18 +70,25 @@ func update_magic_circle():
 		sprite.centered = true
 		sprite.position = data.magic_positions[index]
 
+		var target_scale
+
 		match index:
 			0: 
-				sprite.scale = Vector2(0.3, 0.3)
+				target_scale = Vector2(0.3, 0.3)
 			1,2,3: 
-				sprite.scale = Vector2(0.2, 0.2)
+				target_scale = Vector2(0.2, 0.2)
 			4:
-				sprite.scale = Vector2(0.4, 0.4)
-				
+				target_scale = Vector2(0.4, 0.4)
+		
+		sprite.scale = Vector2(0.05, 0.05)
+		
 		sprite.z_as_relative = false
 		sprite.z_index = 100
 
 		magic_holder.add_child(sprite)
+		
+		var tween = create_tween()
+		tween.tween_property(sprite, "scale", target_scale, 0.2)
 
 func get_display_order():
 	match data.cast_time:
