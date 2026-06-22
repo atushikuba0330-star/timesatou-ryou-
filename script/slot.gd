@@ -51,7 +51,7 @@ func progress_turn():
 				intercept(enemy)
 				return
 				
-		if card.chant_progress >= card.data.cast_time:
+		if card.chant_progress > card.data.cast_time:
 			card.chant_progress = 0
 			resolve_battle()
 			

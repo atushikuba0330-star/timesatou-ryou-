@@ -49,7 +49,8 @@ func update_magic_circle():
 		child.queue_free()
 
 	var order = get_display_order()
-	var count = min(chant_progress, order.size())
+	var count = min(chant_progress,data.cast_time)
+	count = min(chant_progress, order.size())
 
 	for i in range(count):
 		var index = order[i]
