@@ -7,6 +7,7 @@ var card = null
 func can_place():
 	return card == null
 	
+
 func place(c):
 	var mana_manager = get_node("/root/Main/ManaManager")
 	
@@ -16,7 +17,6 @@ func place(c):
 			c.queue_free()
 			return
 		mana_manager.player_mana -= c.data.cost
-		
 	else:
 		if mana_manager.enemy_mana < c.data.cost:
 			c.queue_free()
@@ -30,7 +30,8 @@ func place(c):
 	
 	c.position = Vector2.ZERO
 	
-	c.show_magic_circle()
+	card.chant_progress = 1
+	card.update_magic_circle()
 	
 func  destroy_card():
 	if card:

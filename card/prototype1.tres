@@ -3,12 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_0k32r"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_cra77"]
 [ext_resource type="Texture2D" uid="uid://ctf57vm5kuye0" path="res://irasto/Normal/Ma1a-line-normal/ma1a-purple.png" id="2_60c2f"]
+[ext_resource type="Texture2D" uid="uid://bvvpdrieyv4ue" path="res://irasto/Normal/Ma1a-line-normal/ma1a-blue.png" id="3_78ded"]
+[ext_resource type="Texture2D" uid="uid://ddhljlfainhbv" path="res://irasto/Normal/Ma1a-line-normal/ma1a-green.png" id="4_wvqrd"]
+[ext_resource type="Texture2D" uid="uid://bb1um6alfv07w" path="res://irasto/Normal/Ma1a-line-normal/ma1a-red.png" id="5_ou27n"]
+[ext_resource type="Texture2D" uid="uid://bwlyuthq4dqmk" path="res://irasto/Normal/Ma1a-line-normal/ma1a-skyblue.png" id="6_dvbex"]
 
 [resource]
 script = ExtResource("1_cra77")
 name = "愛で！"
 cost = 1
 power = 8
-cast_time = 3
-magic_circles = Array[Texture2D]([ExtResource("2_60c2f")])
+cast_time = 5
+magic_circles = Array[Texture2D]([ExtResource("2_60c2f"), ExtResource("3_78ded"), ExtResource("4_wvqrd"), ExtResource("5_ou27n"), ExtResource("6_dvbex")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(120, 0), Vector2(0, 140), Vector2(0, 140), Vector2(60, 80)])
 icon = ExtResource("1_0k32r")

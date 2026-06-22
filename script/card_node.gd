@@ -41,26 +41,6 @@ func _ready():
 		$Panel/Label.text = data.name
 		power = data.power
 
-func show_magic_circle():
-	if data == null:
-		return
-		
-	if data.magic_circles.size() == 0:
-		return
-
-	var sprite = Sprite2D.new()
-	sprite.texture = data.magic_circles[0]
-	
-	sprite.position = Vector2(60,80)
-	sprite.z_index = -1
-	sprite.scale = Vector2(0.3, 0.3)
-	
-	sprite.z_as_relative = false
-	sprite.z_index = 100
-	
-	magic_holder.add_child(sprite)
-
-
 func update_magic_circle():
 	if data == null:
 		return
@@ -68,23 +48,47 @@ func update_magic_circle():
 	for child in magic_holder.get_children():
 		child.queue_free()
 
-	var count = chant_progress
+	var order = get_display_order()
+	var count = min(chant_progress, order.size())
 
 	for i in range(count):
-		if i >= data.magic_circles.size():
-			break
+		var index = order[i]
+
+		if index >= data.magic_circles.size():
+			continue
+		if index >= data.magic_positions.size():
+			continue
 
 		var sprite = Sprite2D.new()
-		sprite.texture = data.magic_circles[i]
+		sprite.texture = data.magic_circles[index]
 
 		sprite.centered = true
-		sprite.scale = Vector2(0.6, 0.6)
+		sprite.position = data.magic_positions[index]
 
-		# 円状に並べる（見た目良くなる）
-		var angle = i * TAU / max(count, 1)
-		sprite.position = Vector2(cos(angle), sin(angle)) * 20
+		match index:
+			0: # 中央
+				sprite.scale = Vector2(0.3, 0.3)
+			1,2,3: # 小
+				sprite.scale = Vector2(0.2, 0.2)
+			4: # 下（大）
+				sprite.scale = Vector2(0.4, 0.4)
+
 
 		sprite.z_as_relative = false
 		sprite.z_index = 100
 
 		magic_holder.add_child(sprite)
+
+
+func get_display_order():
+	match data.cast_time:
+		1:
+			return [0]
+		2:
+			return [1, 0]
+		3:
+			return [2, 1, 0]
+		4:
+			return [3, 2, 1, 0]
+		5:
+			return [4, 3, 2, 1, 0]
