@@ -15,5 +15,5 @@ cost = 1
 power = 8
 cast_time = 5
 magic_circles = Array[Texture2D]([ExtResource("2_60c2f"), ExtResource("3_78ded"), ExtResource("4_wvqrd"), ExtResource("5_ou27n"), ExtResource("6_dvbex")])
-magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(110, 20), Vector2(10, 130), Vector2(110, 130), Vector2(60, 80)])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(10, 130), Vector2(110, 130), Vector2(60, 80)])
 icon = ExtResource("1_0k32r")

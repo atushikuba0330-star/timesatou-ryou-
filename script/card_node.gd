@@ -19,6 +19,10 @@ func _gui_input(event):
 func _process(delta):
 	if dragging:
 		global_position = get_global_mouse_position()
+	
+	for child in magic_holder.get_children():
+		child.rotation += delta
+
 		
 func _input(event):
 	if event is InputEventMouseButton and !event.pressed:
@@ -41,18 +45,18 @@ func _ready():
 		$Panel/Label.text = data.name
 		power = data.power
 
+
 func update_magic_circle():
 	if data == null:
 		return
 
-	for child in magic_holder.get_children():
-		child.queue_free()
-
 	var order = get_display_order()
-	var count = min(chant_progress,data.cast_time)
-	count = min(chant_progress, order.size())
+	var target_count = min(chant_progress, data.cast_time)
+	target_count = min(target_count, order.size())
 
-	for i in range(count):
+	var current_count = magic_holder.get_child_count()
+
+	for i in range(current_count, target_count):
 		var index = order[i]
 
 		if index >= data.magic_circles.size():
@@ -67,19 +71,17 @@ func update_magic_circle():
 		sprite.position = data.magic_positions[index]
 
 		match index:
-			0: # 中央
+			0: 
 				sprite.scale = Vector2(0.3, 0.3)
-			1,2,3: # 小
+			1,2,3: 
 				sprite.scale = Vector2(0.2, 0.2)
-			4: # 下（大）
+			4:
 				sprite.scale = Vector2(0.4, 0.4)
-
-
+				
 		sprite.z_as_relative = false
 		sprite.z_index = 100
 
 		magic_holder.add_child(sprite)
-
 
 func get_display_order():
 	match data.cast_time:
