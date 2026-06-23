@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cowsykecspkx6" path="res://story.gd" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://c06y38yxllpxj" path="res://endless.gd" id="2_ouk20"]
 [ext_resource type="Script" uid="uid://c46jo0mxbkm8k" path="res://setting.gd" id="3_mae5d"]
+[ext_resource type="Script" uid="uid://bjckt8rx1ihog" path="res://end.gd" id="4_4hy44"]
 
 [node name="Menu" type="Node2D" unique_id=543504500]
 
@@ -29,6 +30,11 @@ offset_right = 643.0
 offset_bottom = 760.0
 text = "設定"
 script = ExtResource("3_mae5d")
+
+[node name="Button" type="Button" parent="." unique_id=647146203]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("4_4hy44")
 
 [connection signal="pressed" from="story" to="story" method="_on_pressed"]
 [connection signal="pressed" from="endless" to="endless" method="_on_pressed"]
