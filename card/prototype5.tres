@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_gsdf0"]
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_obogw"]
 [ext_resource type="Texture2D" uid="uid://ctf57vm5kuye0" path="res://irasto/Normal/Ma1a-line-normal/ma1a-purple.png" id="2_nsen7"]
+[ext_resource type="Texture2D" uid="uid://bvvpdrieyv4ue" path="res://irasto/Normal/Ma1a-line-normal/ma1a-blue.png" id="3_13p2q"]
+[ext_resource type="Texture2D" uid="uid://ddhljlfainhbv" path="res://irasto/Normal/Ma1a-line-normal/ma1a-green.png" id="4_r0bx7"]
+[ext_resource type="Texture2D" uid="uid://bb1um6alfv07w" path="res://irasto/Normal/Ma1a-line-normal/ma1a-red.png" id="5_ro0y3"]
 
 [resource]
 script = ExtResource("1_gsdf0")
@@ -10,5 +13,6 @@ name = "アルカナ・スレイヴ"
 cost = 5
 power = 50
 cast_time = 4
-magic_circles = Array[Texture2D]([ExtResource("2_nsen7")])
+magic_circles = Array[Texture2D]([ExtResource("2_nsen7"), ExtResource("3_13p2q"), ExtResource("4_r0bx7"), ExtResource("5_ro0y3")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(10, 130), Vector2(110, 130)])
 icon = ExtResource("1_obogw")

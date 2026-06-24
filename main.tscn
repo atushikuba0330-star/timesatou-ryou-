@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://bibr06oqfdtp6" path="res://card/prototype5.tres" id="6_kek77"]
 [ext_resource type="Script" uid="uid://cpxoxxbq3c3qf" path="res://script/slot.gd" id="7_272bh"]
 [ext_resource type="Script" uid="uid://dhqcdh76yrph3" path="res://script/mana_manager.gd" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://ce1lbg7tqixro" path="res://battle_manager.gd" id="10_4c57u"]
 
 [node name="Main" type="Node2D" unique_id=166516908]
 script = ExtResource("1_kek77")
@@ -190,7 +191,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Magicholder" type="Node2D" parent="GridContainer/CardNode5/Panel" unique_id=2062901182]
 
-[node name="Slot" type="Control" parent="." unique_id=295564124 node_paths=PackedStringArray("enemy_slot")]
+[node name="Slot" type="Control" parent="." unique_id=295564124]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1106.0
@@ -198,7 +199,6 @@ offset_top = 903.0
 offset_right = 1446.0
 offset_bottom = 1257.0
 script = ExtResource("7_272bh")
-enemy_slot = NodePath("../Slot2")
 
 [node name="Panel" type="Panel" parent="Slot" unique_id=1242261818]
 custom_minimum_size = Vector2(120, 160)
@@ -206,7 +206,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Slot2" type="Control" parent="." unique_id=2061153683 node_paths=PackedStringArray("enemy_slot")]
+[node name="Slot2" type="Control" parent="." unique_id=2061153683]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1100.0
@@ -214,7 +214,6 @@ offset_top = 241.0
 offset_right = 1440.0
 offset_bottom = 595.0
 script = ExtResource("7_272bh")
-enemy_slot = NodePath("../Slot")
 is_player = false
 
 [node name="Panel" type="Panel" parent="Slot2" unique_id=979053299]
@@ -253,3 +252,6 @@ offset_left = 838.0
 offset_top = 332.0
 offset_right = 878.0
 offset_bottom = 355.0
+
+[node name="BattleManager" type="Node" parent="." unique_id=1314963196]
+script = ExtResource("10_4c57u")

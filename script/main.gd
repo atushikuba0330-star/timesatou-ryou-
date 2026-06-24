@@ -27,3 +27,7 @@ func _process(delta):
 	
 	$LabelPlayer_Mana.text = "Mana: " + str(mana_manager.player_mana)
 	$LabelEnemy_Mana.text = "Enemy Mana: " + str(mana_manager.enemy_mana)
+
+func _ready():
+	for slot in get_tree().get_nodes_in_group("slots"):
+		slot.connect("chant_finished", $BattleManager.resolve)
