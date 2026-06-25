@@ -10,15 +10,33 @@
 [ext_resource type="Script" uid="uid://cpxoxxbq3c3qf" path="res://script/slot.gd" id="7_272bh"]
 [ext_resource type="Script" uid="uid://dhqcdh76yrph3" path="res://script/mana_manager.gd" id="8_5vw27"]
 [ext_resource type="Script" uid="uid://ce1lbg7tqixro" path="res://battle_manager.gd" id="10_4c57u"]
+[ext_resource type="Texture2D" uid="uid://dnl5kyvex5fm4" path="res://irasto/22302021.png" id="11_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://cfy4vyrpcw14s" path="res://irasto/2117725.png" id="12_ycdy4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57qmd"]
+atlas = ExtResource("11_ycdy4")
+region = Rect2(-2, 3245, 612, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf5fn"]
+atlas = ExtResource("11_ycdy4")
+region = Rect2(-2, 2504, 612, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
+atlas = ExtResource("12_ycdy4")
+region = Rect2(350, 800, 805, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcnqv"]
+atlas = ExtResource("12_ycdy4")
+region = Rect2(350, 95, 805, 280)
 
 [node name="Main" type="Node2D" unique_id=166516908]
 script = ExtResource("1_kek77")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=550873136]
-offset_left = 2123.0
-offset_top = 453.0
-offset_right = 2491.0
-offset_bottom = 777.0
+offset_left = 2077.0
+offset_top = 588.0
+offset_right = 2445.0
+offset_bottom = 912.0
 columns = 3
 
 [node name="CardNode" type="Control" parent="GridContainer" unique_id=1366478347]
@@ -191,43 +209,13 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Magicholder" type="Node2D" parent="GridContainer/CardNode5/Panel" unique_id=2062901182]
 
-[node name="Slot" type="Control" parent="." unique_id=295564124]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 1106.0
-offset_top = 903.0
-offset_right = 1446.0
-offset_bottom = 1257.0
-script = ExtResource("7_272bh")
-
-[node name="Panel" type="Panel" parent="Slot" unique_id=1242261818]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Slot2" type="Control" parent="." unique_id=2061153683]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 1100.0
-offset_top = 241.0
-offset_right = 1440.0
-offset_bottom = 595.0
-script = ExtResource("7_272bh")
-is_player = false
-
-[node name="Panel" type="Panel" parent="Slot2" unique_id=979053299]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="ManaManager" type="Control" parent="." unique_id=923551341]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("8_5vw27")
+metadata/_edit_use_anchors_ = true
 
 [node name="LabelPlayer_HP" type="Label" parent="." unique_id=1759646058]
 offset_left = 803.0
@@ -255,3 +243,75 @@ offset_bottom = 355.0
 
 [node name="BattleManager" type="Node" parent="." unique_id=1314963196]
 script = ExtResource("10_4c57u")
+
+[node name="PlayerSlot" type="Node" parent="." unique_id=697633319]
+
+[node name="Slot" type="Control" parent="PlayerSlot" unique_id=295564124]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1106.0
+offset_top = 903.0
+offset_right = 1446.0
+offset_bottom = 1257.0
+script = ExtResource("7_272bh")
+
+[node name="Panel" type="Panel" parent="PlayerSlot/Slot" unique_id=1242261818]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemySlot" type="Node" parent="." unique_id=212027387]
+
+[node name="Slot2" type="Control" parent="EnemySlot" unique_id=2061153683]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1100.0
+offset_top = 241.0
+offset_right = 1440.0
+offset_bottom = 595.0
+script = ExtResource("7_272bh")
+is_player = false
+
+[node name="Panel" type="Panel" parent="EnemySlot/Slot2" unique_id=979053299]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerMPBar" type="TextureProgressBar" parent="." unique_id=2040058652]
+offset_left = 1871.0
+offset_top = 1207.0
+offset_right = 2483.0
+offset_bottom = 1257.0
+texture_under = SubResource("AtlasTexture_57qmd")
+texture_progress = SubResource("AtlasTexture_yf5fn")
+
+[node name="EnemyMPBar" type="TextureProgressBar" parent="." unique_id=1676821705]
+offset_left = 1859.0
+offset_top = 179.0
+offset_right = 2471.0
+offset_bottom = 229.0
+texture_under = SubResource("AtlasTexture_57qmd")
+texture_progress = SubResource("AtlasTexture_yf5fn")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerHPBar" type="TextureProgressBar" parent="." unique_id=1041815007]
+custom_minimum_size = Vector2(300, 30)
+offset_left = 1884.0
+offset_top = 1090.0
+offset_right = 2924.0
+offset_bottom = 1365.0
+scale = Vector2(0.4, 0.4)
+texture_under = SubResource("AtlasTexture_w48qg")
+texture_progress = SubResource("AtlasTexture_fcnqv")
+
+[node name="EnemyHPBar" type="TextureProgressBar" parent="." unique_id=1696531416]
+custom_minimum_size = Vector2(300, 30)
+offset_left = 1884.0
+offset_top = 76.00006
+offset_right = 2924.0
+offset_bottom = 356.00006
+scale = Vector2(0.4, 0.4)
+texture_under = SubResource("AtlasTexture_w48qg")
+texture_progress = SubResource("AtlasTexture_fcnqv")

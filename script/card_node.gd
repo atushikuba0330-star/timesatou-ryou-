@@ -45,7 +45,11 @@ func _ready():
 		$Panel/Label.text = data.name
 		power = data.power
 
-
+func get_current_power() -> int:
+	if data == null:
+		return 0
+	return int(data.power * (float(chant_progress) / float(data.cast_time)))
+	
 func update_magic_circle():
 	if data == null:
 		return
@@ -120,3 +124,40 @@ func play_zoom_out():
 		i += 1
 
 	await get_tree().create_timer(0.2).timeout
+
+func play_break_apart():
+	set_process(false)
+	
+	var pieces = magic_holder.get_children()
+	
+	if pieces.size() == 0:
+		var tween = create_tween()
+		tween.tween_property(self, "modulate:a", 0.0, 0.3)
+		await tween.finished
+		return
+	
+	for sprite in pieces:
+		var mat = ShaderMaterial.new()
+		mat.shader = load("res://dissolve.gdshader")
+		
+		var noise = FastNoiseLite.new()
+		noise.seed = randi()
+		var noise_tex = NoiseTexture2D.new()
+		noise_tex.noise = noise
+		noise_tex.width = 64
+		noise_tex.height = 64
+		mat.set_shader_parameter("noise_texture", noise_tex)
+		
+		sprite.material = mat
+		
+		var tween = create_tween()
+		tween.tween_method(
+			func(v): mat.set_shader_parameter("dissolve_amount", v),
+			0.0, 1.0, 0.6
+		)
+		tween.tween_callback(sprite.queue_free)
+	
+	var card_tween = create_tween()
+	card_tween.tween_property(self, "modulate:a", 0.0, 0.4)
+	
+	await get_tree().create_timer(0.6).timeout
