@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bkuj3jjcgw1eq"]
+
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_y5cls"]
+
+[resource]
+script = ExtResource("1_y5cls")
+cost = 2
+power = 80
+cast_time = 1
+ability = "インパクト50"

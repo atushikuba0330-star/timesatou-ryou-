@@ -29,7 +29,7 @@ func place(c):
 	card = c
 	c.get_parent().remove_child(c)
 	add_child(c)
-	c.position = Vector2.ZERO
+	c.position = $Panel.position
 
 	card.chant_progress = 1
 	card.update_magic_circle()

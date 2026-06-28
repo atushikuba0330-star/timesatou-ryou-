@@ -1,7 +1,7 @@
 extends Node2D
-var player_hp := 20
-var enemy_hp := 20
-var max_hp := 20
+var player_hp := 1000
+var enemy_hp := 1000
+var max_hp := 1000
 
 @onready var mana_manager = $ManaManager
 @onready var player_hp_bar = $PlayerHPBar

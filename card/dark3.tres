@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cyeih33e671fs"]
+
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_74w3m"]
+
+[resource]
+script = ExtResource("1_74w3m")
+cost = 6
+power = 130
+cast_time = 3
+ability = "残骸2"
