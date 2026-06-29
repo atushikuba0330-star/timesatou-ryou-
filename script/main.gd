@@ -32,10 +32,18 @@ func _ready():
 func damage_player(value):
 	player_hp -= value
 	print("プレイヤーHP", player_hp)
+	if player_hp <= 0:
+		mana_manager.set_process(false)
+		await get_tree().process_frame
+		get_tree().change_scene_to_file("res://lose.tscn")
 
 func damage_enemy(value):
 	enemy_hp -= value
 	print("エネミーHP", enemy_hp)
+	if enemy_hp <= 0:
+		mana_manager.set_process(false)
+		await get_tree().process_frame
+		get_tree().change_scene_to_file("res://win.tscn")
 
 func _input(event):
 	if event is InputEventKey and event.pressed:

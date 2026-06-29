@@ -6,9 +6,11 @@
 
 [resource]
 script = ExtResource("1_6a68v")
-cost = 3
+cost = 1
 power = 80
 cast_time = 2
+ability = "ミラージュ"
+ability_value = 5
 magic_circles = Array[Texture2D]([ExtResource("2_b5wwj"), ExtResource("2_b5wwj")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
 icon = ExtResource("1_48lnh")

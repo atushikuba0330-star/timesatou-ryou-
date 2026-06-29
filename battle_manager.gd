@@ -82,5 +82,8 @@ func _destroy_card_interrupted(slot):
 	slot.destroy_card(true)
 
 func activate_ability(slot):
+	var ability_manager = get_node_or_null("/root/Main/AbilityManager")
+	if ability_manager == null:
+		return
 	print("activate_ability呼ばれた:", slot.card.data.ability)
-	get_node("/root/Main/AbilityManager").activate_ability(slot)
+	ability_manager.activate_ability(slot)

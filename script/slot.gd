@@ -12,26 +12,25 @@ var shield_value: int = 0
 func can_place():
 	return card == null
 
-func place(c):
+func place(c, free: bool = false):
 	var mana_manager = get_node("/root/Main/ManaManager")
-
-	if is_player:
-		if mana_manager.player_mana < c.data.cost:
-			print("マナ不足")
-			c.queue_free()
-			return
-		mana_manager.player_mana -= c.data.cost
-	else:
-		if mana_manager.enemy_mana < c.data.cost:
-			c.queue_free()
-			return
-		mana_manager.enemy_mana -= c.data.cost
-
+	if not free:
+		if is_player:
+			if mana_manager.player_mana < c.data.cost:
+				print("マナ不足")
+				c.queue_free()
+				return
+			mana_manager.player_mana -= c.data.cost
+		else:
+			if mana_manager.enemy_mana < c.data.cost:
+				c.queue_free()
+				return
+			mana_manager.enemy_mana -= c.data.cost
+	
 	card = c
 	c.get_parent().remove_child(c)
 	add_child(c)
 	c.position = $Panel.position
-
 	card.chant_progress = 1
 	card.update_magic_circle()
 	state = State.CHANTING

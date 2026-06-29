@@ -39,7 +39,7 @@ func activate_ability(slot):
 					var new_card = card_scene.instantiate()
 					new_card.data = basic_card_data
 					get_tree().root.add_child(new_card)
-					target_slot.place(new_card)
+					target_slot.place(new_card, true)  # ← trueでマナ消費なし
 
 		"シールド":
 			slot.shield_value = value
