@@ -1,12 +1,13 @@
 extends Control
-var card = null
+
 @export var enemy_slot: Control
 @export var is_player: bool = true
-signal chant_finished(slot)
 
-# 状態管理
+var card = null
 enum State { EMPTY, CHANTING, COMPLETE, READY_TO_BATTLE }
 var state = State.EMPTY
+var slot_index: int = 0
+var shield_value: int = 0
 
 func can_place():
 	return card == null
@@ -35,8 +36,13 @@ func place(c):
 	card.update_magic_circle()
 	state = State.CHANTING
 
-func destroy_card():
+func destroy_card(is_break: bool = false):
 	if card:
+		if is_break:
+			if is_player:
+				get_tree().current_scene.player_break_count += 1
+			else:
+				get_tree().current_scene.enemy_break_count += 1
 		card.queue_free()
 		card = null
 	state = State.EMPTY

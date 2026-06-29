@@ -6,6 +6,7 @@ var power = 0
 var chant_progress = 0
 
 @onready var magic_holder = $Panel/Magicholder
+@onready var label_ability_count = $Panel/LabelAbilityCount
 
 func _gui_input(event):
 	if event is InputEventMouseButton and event.pressed:
@@ -22,8 +23,9 @@ func _process(delta):
 	
 	for child in magic_holder.get_children():
 		child.rotation += delta
+	
+	update_ability_count()
 
-		
 func _input(event):
 	if event is InputEventMouseButton and !event.pressed:
 		if dragging:
@@ -41,7 +43,8 @@ func try_place():
 
 func _ready():
 	if data:
-		$Panel/TextureRect.texture = data.icon
+		if data.icon:  # ← 追加
+			$Panel/TextureRect.texture = data.icon
 		$Panel/Label.text = data.name
 		power = data.power
 
@@ -161,3 +164,30 @@ func play_break_apart():
 	card_tween.tween_property(self, "modulate:a", 0.0, 0.4)
 	
 	await get_tree().create_timer(0.6).timeout
+	
+func update_ability_count():
+	if data == null or label_ability_count == null:
+		return
+	
+	if data.ability == "残骸":
+		var scene = get_tree().current_scene
+		if not scene.has_method("damage_player"):
+			label_ability_count.visible = false
+			return
+		
+		var break_count = 0
+		if is_player_card():
+			break_count = scene.player_break_count
+		else:
+			break_count = scene.enemy_break_count
+		
+		label_ability_count.text = "残骸: " + str(break_count * data.ability_value * 30)
+		label_ability_count.visible = true
+	else:
+		label_ability_count.visible = false
+
+func is_player_card():
+	var parent = get_parent()
+	if parent and parent.has_method("can_place"):
+		return parent.is_player
+	return true

@@ -5,23 +5,19 @@ func resolve_turn():
 	for slot in get_tree().get_nodes_in_group("slots"):
 		if slot.state == slot.State.READY_TO_BATTLE:
 			battle_slots.append(slot)
-
 	var processed = []
-
 	for slot in battle_slots:
 		if slot in processed:
 			continue
 		if slot.card == null:
 			continue
-
 		var enemy = slot.enemy_slot
 
-		if enemy in battle_slots and enemy not in processed:
+		if enemy in battle_slots and enemy not in processed and enemy.shield_value == 0:
 			resolve_pair(slot, enemy)
 			processed.append(slot)
 			processed.append(enemy)
 		else:
-			# 相手がREADY_TO_BATTLEでない場合
 			resolve_vs_chanting(slot)
 			processed.append(slot)
 func resolve_pair(a, b):
@@ -45,32 +41,46 @@ func resolve_pair(a, b):
 		b.destroy_card()
 
 func resolve_vs_chanting(slot):
-	var power = slot.card.get_current_power()  # ← 変更
+	var power = slot.card.get_current_power()
 	var enemy = slot.enemy_slot
-	var enemy_power = 0
-	if enemy.card != null:
-		enemy_power = enemy.card.get_current_power()  # ← 変更（将来用）
 
-	var diff = power - enemy_power
+	if enemy.shield_value > 0:
+		var diff = power
+		var cut = int(diff * (enemy.shield_value * 0.1))
+		diff = diff - cut
+		print("シールド発動 残りダメージ:", diff)
+		enemy.shield_value = 0
+		if slot.is_player:
+			get_tree().current_scene.damage_enemy(diff)
 
-	if slot.is_player:
-		get_tree().current_scene.damage_enemy(diff)
+		else:
+			get_tree().current_scene.damage_player(diff)
+		_finish_card_with_ability(slot)
+		# カードはブレイクされない
 	else:
-		get_tree().current_scene.damage_player(diff)
-
-	_finish_card_with_ability(slot)
-
-	if enemy.card != null:
-		_destroy_card_interrupted(enemy)
+		var enemy_power = 0
+		if enemy.card != null:
+			enemy_power = enemy.card.get_current_power()
+		var diff = power - enemy_power
+		if slot.is_player:
+			get_tree().current_scene.damage_enemy(diff)
+		else:
+			get_tree().current_scene.damage_player(diff)
+		_finish_card_with_ability(slot)
+		if enemy.card != null:
+			_destroy_card_interrupted(enemy)
 
 func _finish_card_with_ability(slot):
-	# アビリティ発動 → 魔法陣ズームアウト後に消える（未実装部分はここに追加）
 	if slot.card:
+		activate_ability(slot)  # ← アビリティ発動
 		await slot.card.play_zoom_out()
 		slot.destroy_card()
-
 func _destroy_card_interrupted(slot):
 	if slot.card == null:
 		return
 	await slot.card.play_break_apart()
-	slot.destroy_card()
+	slot.destroy_card(true)
+
+func activate_ability(slot):
+	print("activate_ability呼ばれた:", slot.card.data.ability)
+	get_node("/root/Main/AbilityManager").activate_ability(slot)

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d1jvc3ow51b4"]
+
+[ext_resource type="Script" uid="uid://ckmvhjhfljo77" path="res://script/card_node.gd" id="1_wnyiv"]
+[ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="3_caf56"]
+
+[node name="CardNode" type="Control" unique_id=1402117252]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wnyiv")
+
+[node name="Panel" type="Panel" parent="." unique_id=2001363972]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1548177768]
+custom_minimum_size = Vector2(270, 290)
+layout_mode = 0
+offset_left = -120.0
+offset_top = -63.0
+offset_right = 150.0
+offset_bottom = 227.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel" unique_id=1388169173]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 6.0
+offset_right = 93.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="LabelAbilityCount" type="Label" parent="Panel" unique_id=1232802112]
+layout_mode = 0
+offset_left = -2077.0
+offset_top = -588.0
+offset_right = -2037.0
+offset_bottom = -565.0
+theme_override_fonts/font = ExtResource("3_caf56")
+
+[node name="Magicholder" type="Node2D" parent="Panel" unique_id=1865848557]

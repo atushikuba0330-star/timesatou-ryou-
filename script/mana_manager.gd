@@ -8,7 +8,7 @@ func _ready():
 
 func run():
 	while true:
-		await get_tree().create_timer(4.0).timeout
+		await get_tree().create_timer(3.0).timeout
 
 		player_mana = min(player_mana + 1, max_mana)
 		enemy_mana = min(enemy_mana + 1, max_mana)
