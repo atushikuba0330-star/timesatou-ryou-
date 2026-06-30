@@ -36,6 +36,10 @@ offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("4_4hy44")
 
+[node name="TR" type="Button" parent="." unique_id=1666763872]
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="pressed" from="story" to="story" method="_on_pressed"]
 [connection signal="pressed" from="endless" to="endless" method="_on_pressed"]
 [connection signal="pressed" from="setting" to="setting" method="_on_pressed"]
