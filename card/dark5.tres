@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bx18rjb24n471"]
 
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_72mhp"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_wpmrl"]
+[ext_resource type="Texture2D" uid="uid://ctf57vm5kuye0" path="res://irasto/Normal/Ma1a-line-normal/ma1a-purple.png" id="2_q43ck"]
 
 [resource]
 script = ExtResource("1_wpmrl")
+element = "闇"
 cost = 9
 power = 180
-cast_time = 3
-ability = "残骸4"
+cast_time = 2
+ability = "残骸"
+ability_value = 4
+magic_circles = Array[Texture2D]([ExtResource("2_q43ck"), ExtResource("2_q43ck")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
+icon = ExtResource("1_72mhp")

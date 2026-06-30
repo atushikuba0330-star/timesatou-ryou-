@@ -4,16 +4,18 @@ extends Control
 var dragging = false
 var power = 0
 var chant_progress = 0
+var locked: bool = false
 
 @onready var magic_holder = $Panel/Magicholder
 @onready var label_ability_count = $Panel/LabelAbilityCount
+@onready var chain_overlay = $Panel/ChainOverlay
 
 func _gui_input(event):
+	if locked:
+		return  # ロック中はドラッグできない
 	if event is InputEventMouseButton and event.pressed:
-		
 		var copy = duplicate()
 		get_tree().root.add_child(copy)
-		
 		copy.global_position = get_global_mouse_position()
 		copy.dragging = true
 
@@ -43,10 +45,17 @@ func try_place():
 
 func _ready():
 	if data:
-		if data.icon:  # ← 追加
+		if data.icon:
 			$Panel/TextureRect.texture = data.icon
 		$Panel/Label.text = data.name
 		power = data.power
+	if chain_overlay:
+		chain_overlay.visible = locked
+
+func set_locked(value: bool):
+	locked = value
+	if chain_overlay:
+		chain_overlay.visible = value
 
 func get_current_power() -> int:
 	if data == null:

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://crlp1cx8e7ll"]
+
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_0j4oc"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_xdqwo"]
+[ext_resource type="Texture2D" uid="uid://ddhljlfainhbv" path="res://irasto/Normal/Ma1a-line-normal/ma1a-green.png" id="2_yk6ki"]
+
+[resource]
+script = ExtResource("1_xdqwo")
+element = "雷"
+cost = 3
+power = 100
+cast_time = 2
+magic_circles = Array[Texture2D]([ExtResource("2_yk6ki"), ExtResource("2_yk6ki")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
+icon = ExtResource("1_0j4oc")

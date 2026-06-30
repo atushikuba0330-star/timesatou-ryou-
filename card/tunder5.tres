@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bdesdeegpcqut"]
-
-[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_f1dss"]
-
-[resource]
-script = ExtResource("1_f1dss")
-cost = 8
-power = 300
-cast_time = 3

@@ -42,6 +42,11 @@ func destroy_card(is_break: bool = false):
 				get_tree().current_scene.player_break_count += 1
 			else:
 				get_tree().current_scene.enemy_break_count += 1
+		
+			var total = get_tree().current_scene.player_break_count + get_tree().current_scene.enemy_break_count
+			print("ブレイク合計:", total)
+			if total >= 15:
+				GameData.ultimate_unlocked = true
 		card.queue_free()
 		card = null
 	state = State.EMPTY

@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dswuww6w51ch2"]
 
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_6bglv"]
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_h4xqi"]
+[ext_resource type="Texture2D" uid="uid://bwlyuthq4dqmk" path="res://irasto/Normal/Ma1a-line-normal/ma1a-skyblue.png" id="2_6ts72"]
 
 [resource]
 script = ExtResource("1_6bglv")
+element = "水"
 cost = 4
 power = 70
 cast_time = 2
-ability = "ミラージュ1"
+ability = "ミラージュ"
+ability_value = 1
+magic_circles = Array[Texture2D]([ExtResource("2_6ts72"), ExtResource("2_6ts72")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
+icon = ExtResource("1_h4xqi")

@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b2b1q6gnjgw41"]
 
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_hx8sm"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_yr3jn"]
+[ext_resource type="Texture2D" uid="uid://bb1um6alfv07w" path="res://irasto/Normal/Ma1a-line-normal/ma1a-red.png" id="2_h7x2s"]
 
 [resource]
 script = ExtResource("1_yr3jn")
+element = "火"
 cost = 7
 power = 200
 cast_time = 3
-ability = "インパクト120"
+ability = "インパクト"
+ability_value = 3
+magic_circles = Array[Texture2D]([ExtResource("2_h7x2s"), ExtResource("2_h7x2s"), ExtResource("2_h7x2s")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])
+icon = ExtResource("1_hx8sm")

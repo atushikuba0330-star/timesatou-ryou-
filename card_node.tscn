@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ckmvhjhfljo77" path="res://script/card_node.gd" id="1_wnyiv"]
 [ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="3_caf56"]
+[ext_resource type="Texture2D" uid="uid://0o2iykehip17" path="res://irasto/27600139.png" id="3_wnyiv"]
 
 [node name="CardNode" type="Control" unique_id=1402117252]
 custom_minimum_size = Vector2(120, 160)
@@ -44,3 +45,12 @@ offset_bottom = -565.0
 theme_override_fonts/font = ExtResource("3_caf56")
 
 [node name="Magicholder" type="Node2D" parent="Panel" unique_id=1865848557]
+
+[node name="ChainOverlay" type="TextureRect" parent="Panel" unique_id=693872591]
+layout_mode = 0
+offset_left = -17.0
+offset_top = 20.0
+offset_right = 1583.0
+offset_bottom = 1220.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_wnyiv")

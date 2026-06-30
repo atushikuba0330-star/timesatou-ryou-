@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bgtfiwhmn46n0"]
+
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_j1o3a"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_xnnye"]
+
+[resource]
+script = ExtResource("2_xnnye")
+element = "雷"
+power = 400
+cast_time = 1
+ability = "スパーク"
+ability_value = 4
+icon = ExtResource("1_j1o3a")

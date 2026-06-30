@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bgu0s2qingaas" path="res://ability_manager.gd" id="6_kek77"]
 [ext_resource type="Script" uid="uid://cpxoxxbq3c3qf" path="res://script/slot.gd" id="7_272bh"]
 [ext_resource type="Script" uid="uid://dhqcdh76yrph3" path="res://script/mana_manager.gd" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://dndisvwmflryo" path="res://enemy_ai.gd" id="8_kek77"]
 [ext_resource type="Script" uid="uid://ce1lbg7tqixro" path="res://battle_manager.gd" id="10_4c57u"]
 [ext_resource type="Texture2D" uid="uid://dnl5kyvex5fm4" path="res://irasto/22302021.png" id="11_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://cfy4vyrpcw14s" path="res://irasto/2117725.png" id="12_ycdy4"]
@@ -332,3 +333,6 @@ offset_bottom = 357.0
 scale = Vector2(0.4, 0.4)
 texture_under = SubResource("AtlasTexture_w48qg")
 texture_progress = SubResource("AtlasTexture_dg77c")
+
+[node name="EnemyAI" type="Node" parent="." unique_id=1846317281]
+script = ExtResource("8_kek77")

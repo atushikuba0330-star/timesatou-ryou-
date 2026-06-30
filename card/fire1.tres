@@ -4,17 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_bg07x"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_bg07x"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iq2f1"]
-atlas = ExtResource("1_bg07x")
-region = Rect2(798, 100, 572, 905)
-
 [resource]
 script = ExtResource("2_bg07x")
+element = "火"
 cost = 1
 power = 100
 cast_time = 2
-ability = "シールド"
-ability_value = 1
 magic_circles = Array[Texture2D]([ExtResource("1_01lb8"), ExtResource("1_01lb8")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
-icon = SubResource("AtlasTexture_iq2f1")
+icon = ExtResource("1_bg07x")

@@ -46,22 +46,29 @@ func resolve_vs_chanting(slot):
 
 	if enemy.shield_value > 0:
 		var diff = power
+		diff = max(diff, 0)
 		var cut = int(diff * (enemy.shield_value * 0.1))
 		diff = diff - cut
 		print("シールド発動 残りダメージ:", diff)
+	
+		if not slot.is_player:  # ← 追加（プレイヤーのシールドが発動した場合）
+			GameData.shield_cut_total += cut
+			print("シールドカット合計:", GameData.shield_cut_total)
+			if GameData.shield_cut_total >= 500:
+				GameData.ultimate_unlocked = true
+	
 		enemy.shield_value = 0
 		if slot.is_player:
 			get_tree().current_scene.damage_enemy(diff)
-
 		else:
 			get_tree().current_scene.damage_player(diff)
 		_finish_card_with_ability(slot)
-		# カードはブレイクされない
 	else:
 		var enemy_power = 0
 		if enemy.card != null:
 			enemy_power = enemy.card.get_current_power()
 		var diff = power - enemy_power
+		diff = max(diff, 0)
 		if slot.is_player:
 			get_tree().current_scene.damage_enemy(diff)
 		else:
@@ -72,7 +79,13 @@ func resolve_vs_chanting(slot):
 
 func _finish_card_with_ability(slot):
 	if slot.card:
-		activate_ability(slot)  # ← アビリティ発動
+		if slot.card.data.element == "火" and slot.is_player:
+			GameData.fire_win_count += 1
+			print("火属性勝利数:", GameData.fire_win_count)
+			if GameData.fire_win_count >= 5:
+				GameData.ultimate_unlocked = true
+		
+		activate_ability(slot)
 		await slot.card.play_zoom_out()
 		slot.destroy_card()
 func _destroy_card_interrupted(slot):

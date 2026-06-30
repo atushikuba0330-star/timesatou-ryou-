@@ -15,7 +15,11 @@ var enemy_break_count := 0
 @onready var deck_display = $DeckDisplay
 
 func _ready():
-	GameData.set_starter_deck("水")
+	GameData.set_starter_deck(GameData.selected_element)
+	
+	var elements = ["火", "水", "雷", "光", "闇"]
+	GameData.set_enemy_deck(elements.pick_random())
+	
 	player_hp_bar.max_value = max_hp
 	enemy_hp_bar.max_value = max_hp
 	player_mp_bar.max_value = 10
@@ -24,25 +28,41 @@ func _ready():
 	for i in range(player_slots.size()):
 		player_slots[i].enemy_slot = enemy_slots[i]
 		enemy_slots[i].enemy_slot = player_slots[i]
-		player_slots[i].slot_index = i  # ← 追加
+		player_slots[i].slot_index = i
 		enemy_slots[i].slot_index = i
 		
 	display_deck()
 
 func damage_player(value):
+	if not is_inside_tree():
+		return
+	
 	player_hp -= value
 	print("プレイヤーHP", player_hp)
+	
 	if player_hp <= 0:
+		if not is_inside_tree():
+			return
 		mana_manager.set_process(false)
 		await get_tree().process_frame
+		if not is_inside_tree():
+			return
 		get_tree().change_scene_to_file("res://lose.tscn")
 
 func damage_enemy(value):
+	if not is_inside_tree():
+		return
+	
 	enemy_hp -= value
 	print("エネミーHP", enemy_hp)
+	
 	if enemy_hp <= 0:
+		if not is_inside_tree():
+			return
 		mana_manager.set_process(false)
 		await get_tree().process_frame
+		if not is_inside_tree():
+			return
 		get_tree().change_scene_to_file("res://win.tscn")
 
 func _input(event):
@@ -62,8 +82,16 @@ func _process(delta):
 	player_mp_bar.value = mana_manager.player_mana
 	enemy_mp_bar.value = mana_manager.enemy_mana
 
+	if GameData.ultimate_unlocked:  # ← 追加
+		for card in deck_display.get_children():
+			if card.locked:
+				card.set_locked(false)
+
 func display_deck():
-	for card_data in GameData.player_deck:
+	print("デッキ枚数:", GameData.player_deck.size())
+	for i in range(GameData.player_deck.size()):
 		var card = load("res://card_node.tscn").instantiate()
-		card.data = card_data
+		card.data = GameData.player_deck[i]
+		if i == 5:  # 6枚目は必殺技
+			card.set_locked(true)
 		deck_display.add_child(card)

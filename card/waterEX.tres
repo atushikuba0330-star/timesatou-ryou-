@@ -1,3 +1,13 @@
-[gd_resource type="Resource" format=3 uid="uid://brkov6klwb0lx"]
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://brkov6klwb0lx"]
+
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_i0e3l"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_riv63"]
 
 [resource]
+script = ExtResource("2_riv63")
+element = "水"
+power = 400
+cast_time = 1
+ability = "ミラージュ"
+ability_value = 4
+icon = ExtResource("1_i0e3l")

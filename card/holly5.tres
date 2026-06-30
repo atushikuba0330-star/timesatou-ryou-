@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bjn6jraanpsfp"]
 
+[ext_resource type="Texture2D" uid="uid://dfb6eg3ohv2yo" path="res://irasto/Normal/Ma1a-line-normal/ma1a-yellow.png" id="1_t2yv6"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_x5e57"]
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_ysjdt"]
 
 [resource]
 script = ExtResource("1_x5e57")
+element = "光"
 cost = 7
 power = 90
 cast_time = 3
-ability = "シールド3"
+ability = "シールド"
+ability_value = 9
+magic_circles = Array[Texture2D]([ExtResource("1_t2yv6"), ExtResource("1_t2yv6"), ExtResource("1_t2yv6")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])
+icon = ExtResource("1_ysjdt")

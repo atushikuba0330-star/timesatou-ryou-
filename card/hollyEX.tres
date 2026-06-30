@@ -1,3 +1,11 @@
-[gd_resource type="Resource" format=3 uid="uid://bvxtr5t5k6oop"]
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bvxtr5t5k6oop"]
+
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_a8mbk"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_i7yv3"]
 
 [resource]
+script = ExtResource("2_i7yv3")
+element = "光"
+power = 500
+cast_time = 1
+icon = ExtResource("1_a8mbk")

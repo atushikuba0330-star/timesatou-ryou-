@@ -1,3 +1,13 @@
-[gd_resource type="Resource" format=3 uid="uid://cecgjoxl3nkek"]
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cecgjoxl3nkek"]
+
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_oyfka"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_m66kr"]
 
 [resource]
+script = ExtResource("2_m66kr")
+element = "火"
+power = 500
+cast_time = 1
+ability = "インパクト"
+ability_value = 5
+icon = ExtResource("1_oyfka")

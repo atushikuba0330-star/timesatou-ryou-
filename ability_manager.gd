@@ -29,6 +29,12 @@ func activate_ability(slot):
 				print("対象カード:", target.card)
 				if target.card != null:
 					get_node("/root/Main/BattleManager")._destroy_card_interrupted(target)
+					
+					if slot.is_player:
+						GameData.spark_break_count += 1
+						print("スパークブレイク数:", GameData.spark_break_count)
+						if GameData.spark_break_count >= 8:
+								GameData.ultimate_unlocked = true
 
 		"ミラージュ":
 			var basic_card_data = load("res://card/water1.tres")
@@ -39,7 +45,13 @@ func activate_ability(slot):
 					var new_card = card_scene.instantiate()
 					new_card.data = basic_card_data
 					get_tree().root.add_child(new_card)
-					target_slot.place(new_card, true)  # ← trueでマナ消費なし
+					target_slot.place(new_card, true)  
+					
+					if slot.is_player:
+						GameData.mirrage_count += 1
+						print("ミラージュ生成数:", GameData.mirrage_count)
+						if GameData.mirrage_count >= 10:
+							GameData.ultimate_unlocked = true
 
 		"シールド":
 			slot.shield_value = value

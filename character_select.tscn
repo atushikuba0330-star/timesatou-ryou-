@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://t5msxrn3r8ir"]
+
+[ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="1_5duen"]
+[ext_resource type="Script" uid="uid://c5vfufvv4wyhq" path="res://character_select.gd" id="1_6yhuy"]
+[ext_resource type="Texture2D" uid="uid://bas448qlkectd" path="res://irasto/kyouikuyouusagirobo.png" id="2_6yhuy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf5fn"]
+atlas = ExtResource("2_6yhuy")
+region = Rect2(500, 300, 500, 850)
+
+[node name="CharacterSelect" type="Control" unique_id=1963511652]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -114.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6yhuy")
+
+[node name="Label" type="Label" parent="." unique_id=1412583768]
+layout_mode = 0
+offset_top = 117.0
+offset_right = 450.0
+offset_bottom = 185.0
+theme_override_fonts/font = ExtResource("1_5duen")
+theme_override_font_sizes/font_size = 50
+text = "キャラクターを選択"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=688137287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 312.0
+offset_right = -510.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FireButton" type="Button" parent="HBoxContainer" unique_id=1485615782]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/FireButton" unique_id=1610989626]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_yf5fn")
+
+[node name="Label" type="Label" parent="HBoxContainer/FireButton" unique_id=1921804139]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "教育用ウサギロボ"
+
+[node name="WaterButton" type="Button" parent="HBoxContainer" unique_id=1055281140]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/WaterButton" unique_id=1128684419]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_yf5fn")
+
+[node name="Label" type="Label" parent="HBoxContainer/WaterButton" unique_id=167059150]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "教育用ウサギロボ"
+
+[node name="ThunderButton" type="Button" parent="HBoxContainer" unique_id=1278580213]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ThunderButton" unique_id=1005358649]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_yf5fn")
+
+[node name="Label" type="Label" parent="HBoxContainer/ThunderButton" unique_id=40311523]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "教育用ウサギロボ"
+
+[node name="HollyButton" type="Button" parent="HBoxContainer" unique_id=509960231]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HollyButton" unique_id=513196160]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_yf5fn")
+
+[node name="Label" type="Label" parent="HBoxContainer/HollyButton" unique_id=2065778133]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "教育用ウサギロボ"
+
+[node name="DarkButton" type="Button" parent="HBoxContainer" unique_id=1717599282]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/DarkButton" unique_id=645299263]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_yf5fn")
+
+[node name="Label" type="Label" parent="HBoxContainer/DarkButton" unique_id=1357635392]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "教育用ウサギロボ"
+
+[node name="RightPanel" type="Panel" parent="." unique_id=538786079]
+layout_mode = 0
+offset_left = 2052.0
+offset_top = 218.0
+offset_right = 2509.0
+offset_bottom = 1443.0
+
+[node name="Label" type="Label" parent="RightPanel" unique_id=1857740622]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="DescLabel" type="Label" parent="RightPanel" unique_id=1394198302]
+layout_mode = 0
+offset_right = 451.0
+offset_bottom = 781.0
+
+[node name="StartButton" type="Button" parent="." unique_id=1229982573]
+layout_mode = 0
+offset_left = 2053.0
+offset_top = 1203.0
+offset_right = 2509.0
+offset_bottom = 1433.0
+theme_override_fonts/font = ExtResource("1_5duen")
+theme_override_font_sizes/font_size = 100
+text = "strt"
+
+[connection signal="pressed" from="HBoxContainer/FireButton" to="." method="_on_fire_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/WaterButton" to="." method="_on_water_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ThunderButton" to="." method="_on_thunder_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/HollyButton" to="." method="_on_holly_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/DarkButton" to="." method="_on_dark_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
