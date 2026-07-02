@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://du7jclqrkhan8"]
+
+[ext_resource type="Texture2D" uid="uid://cmvlj785riy2d" path="res://Magical-Theatre1-1024x576.jpg" id="1_q0umt"]
+[ext_resource type="Script" uid="uid://ddi08021o56ca" path="res://BACK.gd" id="2_q0umt"]
+
+[node name="Node2D" type="Node2D" unique_id=1735519114]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=644972124]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_q0umt")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=529866875]
+offset_left = 29.0
+offset_top = 25.0
+offset_right = 268.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 30
+text = "戻る"
+script = ExtResource("2_q0umt")
+
+[node name="Label" type="Label" parent="." unique_id=599402585]
+offset_left = 514.0
+offset_top = 7.0
+offset_right = 1154.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 30
+text = "チュートリアル"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

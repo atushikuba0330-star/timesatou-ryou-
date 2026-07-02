@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dvmxqi2krqqmx"]
+
+[ext_resource type="AudioStream" uid="uid://bxnhesbry3u20" path="res://butsupigan-from-ms-gundam.mp3" id="1_fmsfa"]
+[ext_resource type="Script" uid="uid://dntj0v3526457" path="res://se_setting.gd" id="1_ulypd"]
+
+[node name="SE setting" type="Node" unique_id=1412661132]
+script = ExtResource("1_ulypd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1914415786]
+stream = ExtResource("1_fmsfa")
+bus = &"SFX"

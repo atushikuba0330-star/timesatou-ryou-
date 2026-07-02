@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://be0krnucui37l"]
+
+[ext_resource type="Script" uid="uid://cis3s0h4evm05" path="res://bgm_player.gd" id="1_aleos"]
+
+[node name="BGMPlayer_tscn" type="Node2D" unique_id=853137099]
+script = ExtResource("1_aleos")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1549566600]

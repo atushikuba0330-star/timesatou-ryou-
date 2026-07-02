@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://ddiquwifhnuto"]
+
+[ext_resource type="Texture2D" uid="uid://cmvlj785riy2d" path="res://Magical-Theatre1-1024x576.jpg" id="1_so8l7"]
+[ext_resource type="Script" uid="uid://ddi08021o56ca" path="res://BACK.gd" id="2_2u7j1"]
+[ext_resource type="Script" uid="uid://ds60gwllue006" path="res://control.gd" id="3_gw7jw"]
+[ext_resource type="Script" uid="uid://d3hg6s2p4gnf7" path="res://otamesi.gd" id="3_wns5s"]
+
+[node name="Node2D" type="Node2D" unique_id=1289337740]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2023085381]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_so8l7")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1158428750]
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 224.0
+offset_bottom = 86.0
+text = "戻る"
+script = ExtResource("2_2u7j1")
+
+[node name="Control" type="Control" parent="." unique_id=2053400401]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 680.0
+offset_top = 233.0
+offset_right = 1086.0
+offset_bottom = 301.0
+script = ExtResource("3_gw7jw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1898937544]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -134.0
+offset_right = 308.0
+offset_bottom = -60.0
+
+[node name="HSlider" type="HSlider" parent="Control/VBoxContainer" unique_id=278883885]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="Control/VBoxContainer" unique_id=1543072713]
+layout_mode = 2
+text = "BGMオフ"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=568206813]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -6.0
+offset_right = 309.0
+offset_bottom = 40.0
+
+[node name="HSlider" type="HSlider" parent="Control/VBoxContainer2" unique_id=2074593738]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="Control/VBoxContainer2" unique_id=984742302]
+layout_mode = 2
+text = "SEオフ"
+
+[node name="otamesi" type="Button" parent="." unique_id=360532604]
+offset_left = 671.0
+offset_top = 341.0
+offset_right = 1014.0
+offset_bottom = 433.0
+text = "SE試し"
+script = ExtResource("3_wns5s")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="otamesi" to="otamesi" method="_on_pressed"]
