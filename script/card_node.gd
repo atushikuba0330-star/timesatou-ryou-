@@ -14,6 +14,7 @@ func _gui_input(event):
 		copy.global_position = get_global_mouse_position()
 		copy.dragging = true
 
+@warning_ignore("unused_parameter")
 func _process(delta):
 	if dragging:
 		global_position = get_global_mouse_position()
