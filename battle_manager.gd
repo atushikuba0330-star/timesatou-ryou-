@@ -81,7 +81,6 @@ func _finish_card_with_ability(slot):
 	if slot.card:
 		if slot.card.data.element == "火" and slot.is_player:
 			GameData.fire_win_count += 1
-			print("火属性勝利数:", GameData.fire_win_count)
 			if GameData.fire_win_count >= 5:
 				GameData.ultimate_unlocked = true
 		

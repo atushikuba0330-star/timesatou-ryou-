@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://cxsjpmt04unce"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_i5r1s"]
+
+[resource]
+script = ExtResource("1_i5r1s")
+name = "水の紋章"
+description = "ミラージュの生成枚数+1"
+relic_type = "mirrage_boost"
+value = 1

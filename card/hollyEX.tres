@@ -8,4 +8,5 @@ script = ExtResource("2_i7yv3")
 element = "光"
 power = 500
 cast_time = 1
+is_ultimate = true
 icon = ExtResource("1_a8mbk")

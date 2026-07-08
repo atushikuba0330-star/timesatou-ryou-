@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://8uemoypg4m0v"]
+
+[ext_resource type="Script" uid="uid://diciv8xj8fpg0" path="res://reward.gd" id="1_y65c6"]
+
+[node name="Reward" type="Control" unique_id=553658734]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y65c6")
+
+[node name="Label" type="Label" parent="." unique_id=1305028178]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=850598335]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 370.0
+offset_right = 2050.0
+offset_bottom = 980.0
+theme_override_constants/separation = 200
+
+[node name="EnemyCardButton" type="Button" parent="HBoxContainer" unique_id=583655249]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+
+[node name="SpecialCardButton" type="Button" parent="HBoxContainer" unique_id=1715975939]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="RelicButton" type="Button" parent="HBoxContainer" unique_id=1655940888]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="HBoxContainer/EnemyCardButton" to="." method="_on_enemy_card_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/SpecialCardButton" to="." method="_on_special_card_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/RelicButton" to="." method="_on_relic_button_pressed"]

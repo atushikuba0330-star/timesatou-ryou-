@@ -9,4 +9,5 @@ element = "闇"
 power = 300
 cast_time = 1
 ability_value = 10
+is_ultimate = true
 icon = ExtResource("1_vxs2q")

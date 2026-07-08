@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://7odbw07o2v2k"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_eo1ii"]
+
+[resource]
+script = ExtResource("1_eo1ii")
+name = "生命の聖杯"
+description = "最大HP+500"
+relic_type = "hp_up"
+value = 500

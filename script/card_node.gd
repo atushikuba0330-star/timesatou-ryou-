@@ -5,6 +5,7 @@ var dragging = false
 var power = 0
 var chant_progress = 0
 var locked: bool = false
+var actual_cast_time: int = 0
 
 @onready var magic_holder = $Panel/Magicholder
 @onready var label_ability_count = $Panel/LabelAbilityCount
@@ -49,6 +50,7 @@ func _ready():
 			$Panel/TextureRect.texture = data.icon
 		$Panel/Label.text = data.name
 		power = data.power
+		actual_cast_time = data.cast_time
 	if chain_overlay:
 		chain_overlay.visible = locked
 
@@ -60,14 +62,27 @@ func set_locked(value: bool):
 func get_current_power() -> int:
 	if data == null:
 		return 0
-	return int(data.power * (float(chant_progress) / float(data.cast_time)))
+	var base_power = int(data.power * (float(chant_progress) / float(actual_cast_time)))
+	
+	for relic in GameData.player_relics:
+		if relic.relic_type == "black_pact" and is_player_card():
+			base_power = int(base_power * 1.2)
+		if relic.relic_type == "blood_pact" and is_player_card():
+			var scene = get_tree().current_scene
+			var hp_lost = scene.max_hp - scene.player_hp
+			var bonus = int(hp_lost / 100) * relic.value
+			base_power = int(base_power * (1.0 + bonus / 100.0))
+		if relic.relic_type == "ult_boost" and is_player_card() and data.is_ultimate:
+			base_power = int(base_power * 1.5)
+	
+	return base_power
 	
 func update_magic_circle():
 	if data == null:
 		return
 
 	var order = get_display_order()
-	var target_count = min(chant_progress, data.cast_time)
+	var target_count = min(chant_progress, actual_cast_time)
 	target_count = min(target_count, order.size())
 
 	var current_count = magic_holder.get_child_count()
@@ -107,7 +122,7 @@ func update_magic_circle():
 		tween.tween_property(sprite, "scale", target_scale, 0.2)
 
 func get_display_order():
-	match data.cast_time:
+	match actual_cast_time:
 		1:
 			return [0]
 		2:
@@ -200,3 +215,13 @@ func is_player_card():
 	if parent and parent.has_method("can_place"):
 		return parent.is_player
 	return true
+
+func _on_mouse_entered():
+	var preview = get_tree().current_scene.get_node_or_null("CardPreview")
+	if preview:
+		preview.show_preview(self)
+
+func _on_mouse_exited():
+	var preview = get_tree().current_scene.get_node_or_null("CardPreview")
+	if preview:
+		preview.hide_preview()

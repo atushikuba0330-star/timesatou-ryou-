@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://tmcjqb1d7bwg"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_nr3h2"]
+
+[resource]
+script = ExtResource("1_nr3h2")
+name = "詠唱の書"
+description = "全カードの詠唱数-1（最低1）"
+relic_type = "cast_time_down"
+value = 1

@@ -13,18 +13,20 @@ script = ExtResource("1_wao2c")
 
 [node name="Label" type="Label" parent="." unique_id=131449772]
 layout_mode = 0
-offset_left = 942.0
-offset_top = 395.0
-offset_right = 982.0
-offset_bottom = 418.0
-text = "勝利"
+offset_left = 1040.0
+offset_top = 250.0
+offset_right = 1423.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 150
+text = "勝利!!"
 
 [node name="Button" type="Button" parent="." unique_id=1568415927]
 layout_mode = 0
-offset_left = 767.0
-offset_top = 564.0
-offset_right = 1467.0
-offset_bottom = 1264.0
-text = "もう一度"
+offset_left = 2165.0
+offset_top = 1100.0
+offset_right = 2415.0
+offset_bottom = 1270.0
+theme_override_font_sizes/font_size = 50
+text = "次へ"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

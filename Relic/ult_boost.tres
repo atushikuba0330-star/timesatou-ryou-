@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://k86ot7ov2ptn"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_6q4mx"]
+
+[resource]
+script = ExtResource("1_6q4mx")
+name = "業火の心臓"
+description = "必殺技のパワーが1.5倍"
+relic_type = "ult_boost"
+value = 150

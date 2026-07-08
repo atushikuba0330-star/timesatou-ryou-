@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://fq0vaekpdk3q"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_4ql3f"]
+
+[resource]
+script = ExtResource("1_4ql3f")
+name = "不死鳥の羽"
+description = "一度だけHP1以下になったときHP最大値の50%まで回復"
+relic_type = "phoenix"
+value = 50

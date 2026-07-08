@@ -10,4 +10,5 @@ power = 400
 cast_time = 1
 ability = "スパーク"
 ability_value = 4
+is_ultimate = true
 icon = ExtResource("1_j1o3a")

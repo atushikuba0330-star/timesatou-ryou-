@@ -38,6 +38,8 @@ func try_play_card():
 	var new_card = card_scene.instantiate()
 	new_card.data = reserved_card
 	get_tree().root.add_child(new_card)
+	if not GameData.enemy_used_cards.has(reserved_card):
+		GameData.enemy_used_cards.append(reserved_card)
 	target_slot.place(new_card, true)
 	
 	reserve_next_card()

@@ -8,8 +8,8 @@
 script = ExtResource("2_bg07x")
 element = "火"
 cost = 1
-power = 100
-cast_time = 2
-magic_circles = Array[Texture2D]([ExtResource("1_01lb8"), ExtResource("1_01lb8")])
-magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
+power = 1000
+cast_time = 1
+magic_circles = Array[Texture2D]([ExtResource("1_01lb8"), ExtResource("1_01lb8"), ExtResource("1_01lb8")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])
 icon = ExtResource("1_bg07x")

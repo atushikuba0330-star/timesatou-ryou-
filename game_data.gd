@@ -3,12 +3,20 @@ extends Node
 var player_deck: Array[CardData] = []
 var owned_cards: Array[CardData] = []
 
+var base_max_mana: int = 10
 var fire_win_count: int = 0
 var mirrage_count: int = 0      # ミラージュ生成枚数（水）
 var spark_break_count: int = 0  # スパークブレイク枚数（雷）
 var shield_cut_total: int = 0   # シールドカットダメージ合計（光）
 var ultimate_unlocked: bool = false  # 必殺解放フラグ
 var selected_element: String = "火"
+
+var player_relics: Array[RelicData] = []
+var phoenix_used: bool = false
+var enemy_cost_penalty: int = 0
+var enemy_cast_penalty: int = 0
+var reward_type: String = ""
+var enemy_used_cards: Array[CardData] = []
 
 func set_starter_deck(element: String):
 	player_deck.clear()
@@ -54,3 +62,15 @@ func set_enemy_deck(element: String):
 		"闇":
 			for i in range(1, 6):
 				enemy_deck.append(load("res://card/dark" + str(i) + ".tres"))
+
+func reset_battle():
+	fire_win_count = 0
+	mirrage_count = 0
+	spark_break_count = 0
+	shield_cut_total = 0
+	ultimate_unlocked = false
+	enemy_deck.clear()
+	phoenix_used = false
+	enemy_used_cards.clear()
+	enemy_cost_penalty = 0
+	enemy_cast_penalty = 0

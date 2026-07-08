@@ -15,6 +15,10 @@ var enemy_break_count := 0
 @onready var deck_display = $DeckDisplay
 
 func _ready():
+	GameData.reset_battle()
+	GameData.phoenix_used = false
+	GameData.set_starter_deck(GameData.selected_element)
+	GameData.phoenix_used = false
 	GameData.set_starter_deck(GameData.selected_element)
 	
 	var elements = ["火", "水", "雷", "光", "闇"]
@@ -30,13 +34,29 @@ func _ready():
 		enemy_slots[i].enemy_slot = player_slots[i]
 		player_slots[i].slot_index = i
 		enemy_slots[i].slot_index = i
-		
+
+	$RelicManager.apply_relics()
+	print("最大マナ:", $ManaManager.max_mana)
 	display_deck()
 
 func damage_player(value):
 	if not is_inside_tree():
 		return
 	
+	for relic in GameData.player_relics:
+		if relic.relic_type == "reflect":
+			var reflect_damage = int(value * (relic.value * 0.01))
+			damage_enemy(reflect_damage)
+			print("鏡の盾反射ダメージ:", reflect_damage)
+	
+	if player_hp - value <= 0 and not GameData.phoenix_used:
+		for relic in GameData.player_relics:
+			if relic.relic_type == "phoenix":
+				GameData.phoenix_used = true
+				player_hp = int(max_hp * 0.5)  # HP最大値の50%まで回復
+				print("不死鳥の羽発動！HP:", player_hp)
+				return
+
 	player_hp -= value
 	print("プレイヤーHP", player_hp)
 	
@@ -75,6 +95,13 @@ func _process(delta):
 	$LabelEnemy_HP.text = "Enemy HP: " + str(enemy_hp)
 	$LabelPlayer_Mana.text = "Mana: " + str(mana_manager.player_mana)
 	$LabelEnemy_Mana.text = "Enemy Mana: " + str(mana_manager.enemy_mana)
+	
+	var over_mana = mana_manager.player_mana - GameData.base_max_mana
+	if over_mana > 0:
+		$LabelOverMana.text = "+" + str(over_mana)
+		$LabelOverMana.visible = true
+	else:
+		$LabelOverMana.visible = false
 	
 	# ゲージを更新
 	player_hp_bar.value = player_hp

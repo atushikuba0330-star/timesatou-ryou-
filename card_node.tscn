@@ -54,3 +54,6 @@ offset_right = 1583.0
 offset_bottom = 1220.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_wnyiv")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

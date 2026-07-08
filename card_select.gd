@@ -1,0 +1,44 @@
+extends Control
+
+var cards_to_show: Array[CardData] = []
+
+func _ready():
+	setup_cards()
+
+func setup_cards():
+	var source = GameData.enemy_deck.filter(func(c): 
+		return c.ability != "" and not c.is_ultimate)
+	
+	source.shuffle()
+	var count = randi_range(1, min(3, source.size()))
+	cards_to_show = source.slice(0, count)
+	
+	var buttons = $HBoxContainer.get_children()
+	for i in range(buttons.size()):
+		if i < cards_to_show.size():
+			var card = cards_to_show[i]
+			var btn = buttons[i]
+			btn.visible = true
+			if card.icon:
+				btn.get_node("Panel/TextureRect").texture = card.icon
+			btn.get_node("Panel/Labelname").text = card.name
+			btn.get_node("Panel/Labelcost").text = str(card.cost)
+			btn.get_node("Panel/Labelpower").text = str(card.power)
+			btn.get_node("Panel/Labelcast").text = str(card.cast_time)
+			btn.get_node("Panel/Labelability").text = card.ability + " " + str(card.ability_value)
+		else:
+			buttons[i].visible = false
+
+func _on_button_pressed():
+	select_card(0)
+
+func _on_button_2_pressed():
+	select_card(1)
+
+func _on_button_3_pressed():
+	select_card(2)
+
+func select_card(index: int):
+	if index < cards_to_show.size():
+		GameData.owned_cards.append(cards_to_show[index])
+	get_tree().change_scene_to_file("res://deck_builder.tscn")

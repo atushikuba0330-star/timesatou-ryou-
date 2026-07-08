@@ -10,4 +10,5 @@ power = 500
 cast_time = 1
 ability = "インパクト"
 ability_value = 5
+is_ultimate = true
 icon = ExtResource("1_oyfka")

@@ -1,0 +1,247 @@
+[gd_scene format=3 uid="uid://b2l01urlhqrmh"]
+
+[ext_resource type="Script" uid="uid://bqy33u0suqnal" path="res://card_select.gd" id="1_8b6yr"]
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="2_pr3ex"]
+[ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="3_7yep5"]
+
+[node name="CardSelect" type="Control" unique_id=443806316]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8b6yr")
+
+[node name="Label" type="Label" parent="." unique_id=670965286]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2053387327]
+custom_minimum_size = Vector2(1600, 610)
+layout_mode = 0
+offset_left = 450.0
+offset_top = 370.0
+offset_right = 2050.0
+offset_bottom = 980.0
+theme_override_constants/separation = 200
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1102230464]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Button" unique_id=211438270]
+layout_mode = 0
+offset_right = 397.0
+offset_bottom = 609.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button/Panel" unique_id=813937856]
+layout_mode = 0
+offset_left = -516.00006
+offset_top = -66.0
+offset_right = 1084.0
+offset_bottom = 1134.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_pr3ex")
+
+[node name="Labelcost" type="Label" parent="HBoxContainer/Button/Panel" unique_id=738422167]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = 110.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+
+[node name="Labelname" type="Label" parent="HBoxContainer/Button/Panel" unique_id=653524152]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 51.0
+offset_right = 300.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 18
+
+[node name="Labelability" type="Label" parent="HBoxContainer/Button/Panel" unique_id=790425664]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 348.0
+offset_right = 363.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 30
+
+[node name="Labelcast" type="Label" parent="HBoxContainer/Button/Panel" unique_id=2123246291]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 35.0
+offset_right = 365.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[node name="Labelpower" type="Label" parent="HBoxContainer/Button/Panel" unique_id=657030773]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 445.0
+offset_right = 199.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 40
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1908578971]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Button2" unique_id=774546971]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 394.0
+offset_bottom = 609.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button2/Panel" unique_id=5610543]
+layout_mode = 0
+offset_left = -516.00006
+offset_top = -66.0
+offset_right = 1084.0
+offset_bottom = 1134.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_pr3ex")
+
+[node name="Labelcost" type="Label" parent="HBoxContainer/Button2/Panel" unique_id=582284050]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = 110.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+
+[node name="Labelname" type="Label" parent="HBoxContainer/Button2/Panel" unique_id=87525434]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 51.0
+offset_right = 300.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 18
+
+[node name="Labelability" type="Label" parent="HBoxContainer/Button2/Panel" unique_id=1175267136]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 348.0
+offset_right = 363.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 30
+
+[node name="Labelcast" type="Label" parent="HBoxContainer/Button2/Panel" unique_id=1524201016]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 35.0
+offset_right = 365.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[node name="Labelpower" type="Label" parent="HBoxContainer/Button2/Panel" unique_id=1853421026]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 445.0
+offset_right = 199.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 40
+
+[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1994317374]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Button3" unique_id=1372656217]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 400.0
+offset_bottom = 609.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button3/Panel" unique_id=1318071872]
+layout_mode = 0
+offset_left = -516.00006
+offset_top = -66.0
+offset_right = 1084.0
+offset_bottom = 1134.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_pr3ex")
+
+[node name="Labelcost" type="Label" parent="HBoxContainer/Button3/Panel" unique_id=2138319285]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = 110.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+
+[node name="Labelname" type="Label" parent="HBoxContainer/Button3/Panel" unique_id=939446401]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 51.0
+offset_right = 300.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 18
+
+[node name="Labelability" type="Label" parent="HBoxContainer/Button3/Panel" unique_id=1503950622]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 348.0
+offset_right = 363.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 30
+
+[node name="Labelcast" type="Label" parent="HBoxContainer/Button3/Panel" unique_id=830720232]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 35.0
+offset_right = 365.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[node name="Labelpower" type="Label" parent="HBoxContainer/Button3/Panel" unique_id=698468974]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 445.0
+offset_right = 199.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7yep5")
+theme_override_font_sizes/font_size = 40
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://c1abdg073ko8q"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_1nylg"]
+
+[resource]
+script = ExtResource("1_1nylg")
+name = "黒き契約"
+description = "毎ターン自分のHPが30減る代わりに全カードのパワー+20%"
+relic_type = "black_pact"
+value = 30

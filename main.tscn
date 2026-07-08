@@ -2,11 +2,16 @@
 
 [ext_resource type="Script" uid="uid://cac8768t2atsf" path="res://script/main.gd" id="1_kek77"]
 [ext_resource type="Script" uid="uid://bgu0s2qingaas" path="res://ability_manager.gd" id="6_kek77"]
+[ext_resource type="Texture2D" uid="uid://dmsbytc445uxt" path="res://irasto/Designer (3).png" id="6_ycdy4"]
 [ext_resource type="Script" uid="uid://cpxoxxbq3c3qf" path="res://script/slot.gd" id="7_272bh"]
 [ext_resource type="Script" uid="uid://dhqcdh76yrph3" path="res://script/mana_manager.gd" id="8_5vw27"]
 [ext_resource type="Script" uid="uid://dndisvwmflryo" path="res://enemy_ai.gd" id="8_kek77"]
+[ext_resource type="Script" uid="uid://bqmathkxwi3cd" path="res://relic_manager.gd" id="9_kek77"]
 [ext_resource type="Script" uid="uid://ce1lbg7tqixro" path="res://battle_manager.gd" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://iojwasw3qojs" path="res://card_preview.gd" id="10_dg77c"]
+[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="10_efxa6"]
 [ext_resource type="Texture2D" uid="uid://dnl5kyvex5fm4" path="res://irasto/22302021.png" id="11_ycdy4"]
+[ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="12_dg77c"]
 [ext_resource type="Texture2D" uid="uid://cfy4vyrpcw14s" path="res://irasto/2117725.png" id="12_ycdy4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
@@ -92,11 +97,20 @@ script = ExtResource("6_kek77")
 [node name="Slot" type="Control" parent="PlayerSlot" unique_id=295564124]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1100.0
+offset_left = 550.0
 offset_top = 900.0
-offset_right = 1325.0
+offset_right = 775.0
 offset_bottom = 1200.0
 script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot" unique_id=1946098389]
+layout_mode = 0
+offset_left = -11.9999695
+offset_top = -59.999992
+offset_right = 1012.0
+offset_bottom = 1476.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="PlayerSlot/Slot" unique_id=1242261818]
 custom_minimum_size = Vector2(120, 160)
@@ -109,11 +123,20 @@ offset_bottom = 210.0
 [node name="Slot5" type="Control" parent="PlayerSlot" unique_id=1731765453]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1550.0
+offset_left = 800.0
 offset_top = 900.0
-offset_right = 1775.0
+offset_right = 1025.0
 offset_bottom = 1200.0
 script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot5" unique_id=1977062761]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="PlayerSlot/Slot5" unique_id=1221334594]
 custom_minimum_size = Vector2(120, 160)
@@ -126,11 +149,20 @@ offset_bottom = 210.0
 [node name="Slot4" type="Control" parent="PlayerSlot" unique_id=1161250156]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 650.0
+offset_left = 1050.0
 offset_top = 900.0
-offset_right = 875.0
+offset_right = 1275.0
 offset_bottom = 1200.0
 script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot4" unique_id=1278909158]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="PlayerSlot/Slot4" unique_id=1626119485]
 custom_minimum_size = Vector2(120, 160)
@@ -143,11 +175,20 @@ offset_bottom = 210.0
 [node name="Slot3" type="Control" parent="PlayerSlot" unique_id=452764940]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1325.0
+offset_left = 1300.0
 offset_top = 900.0
-offset_right = 1550.0
+offset_right = 1525.0
 offset_bottom = 1200.0
 script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot3" unique_id=651163424]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="PlayerSlot/Slot3" unique_id=2104772593]
 custom_minimum_size = Vector2(120, 160)
@@ -160,11 +201,20 @@ offset_bottom = 210.0
 [node name="Slot2" type="Control" parent="PlayerSlot" unique_id=489318736]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 875.0
+offset_left = 1550.0
 offset_top = 900.0
-offset_right = 1100.0
+offset_right = 1775.0
 offset_bottom = 1200.0
 script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot2" unique_id=887754198]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="PlayerSlot/Slot2" unique_id=1428316212]
 custom_minimum_size = Vector2(120, 160)
@@ -179,12 +229,21 @@ offset_bottom = 210.0
 [node name="Slot" type="Control" parent="EnemySlot" unique_id=2061153683]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1100.0
+offset_left = 550.0
 offset_top = 240.0
-offset_right = 1325.0
+offset_right = 775.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
 is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot" unique_id=1676240037]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="EnemySlot/Slot" unique_id=979053299]
 custom_minimum_size = Vector2(120, 160)
@@ -197,12 +256,21 @@ offset_bottom = 210.0
 [node name="Slot5" type="Control" parent="EnemySlot" unique_id=1526671285]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1550.0
+offset_left = 800.0
 offset_top = 240.0
-offset_right = 1775.0
+offset_right = 1025.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
 is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot5" unique_id=1222813323]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="EnemySlot/Slot5" unique_id=1410465811]
 custom_minimum_size = Vector2(120, 160)
@@ -215,12 +283,21 @@ offset_bottom = 210.0
 [node name="Slot4" type="Control" parent="EnemySlot" unique_id=553321545]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 650.0
+offset_left = 1050.0
 offset_top = 240.0
-offset_right = 875.0
+offset_right = 1275.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
 is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot4" unique_id=301829510]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="EnemySlot/Slot4" unique_id=365986045]
 custom_minimum_size = Vector2(120, 160)
@@ -233,12 +310,21 @@ offset_bottom = 210.0
 [node name="Slot3" type="Control" parent="EnemySlot" unique_id=1407071932]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1325.0
+offset_left = 1300.0
 offset_top = 240.0
-offset_right = 1550.0
+offset_right = 1525.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
 is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot3" unique_id=44494587]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="EnemySlot/Slot3" unique_id=1043540266]
 custom_minimum_size = Vector2(120, 160)
@@ -251,12 +337,21 @@ offset_bottom = 210.0
 [node name="Slot2" type="Control" parent="EnemySlot" unique_id=870290771]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 875.0
+offset_left = 1550.0
 offset_top = 240.0
-offset_right = 1100.0
+offset_right = 1775.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
 is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot2" unique_id=335074189]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
 
 [node name="Panel" type="Panel" parent="EnemySlot/Slot2" unique_id=1514879533]
 custom_minimum_size = Vector2(120, 160)
@@ -336,3 +431,88 @@ texture_progress = SubResource("AtlasTexture_dg77c")
 
 [node name="EnemyAI" type="Node" parent="." unique_id=1846317281]
 script = ExtResource("8_kek77")
+
+[node name="RelicManager" type="Node" parent="." unique_id=337626491]
+script = ExtResource("9_kek77")
+
+[node name="CardPreview" type="Panel" parent="." unique_id=613139404]
+offset_left = 170.0
+offset_top = 200.0
+offset_right = 530.0
+offset_bottom = 750.0
+script = ExtResource("10_dg77c")
+
+[node name="PreviewIcon" type="TextureRect" parent="CardPreview" unique_id=521706138]
+layout_mode = 0
+offset_left = -472.0
+offset_top = -62.0
+offset_right = 1128.0
+offset_bottom = 1138.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_efxa6")
+
+[node name="Labelcost" type="Label" parent="CardPreview" unique_id=237307857]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 1.0
+offset_right = 102.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_dg77c")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+
+[node name="Labelname" type="Label" parent="CardPreview" unique_id=1996249456]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 46.0
+offset_right = 280.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_dg77c")
+theme_override_font_sizes/font_size = 18
+
+[node name="Labelcast" type="Label" parent="CardPreview" unique_id=900632355]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 26.0
+offset_right = 345.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_dg77c")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[node name="Labelpower" type="Label" parent="CardPreview" unique_id=1017337369]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 420.0
+offset_right = 185.0
+offset_bottom = 455.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Labelability" type="Label" parent="CardPreview" unique_id=1740986636]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 323.0
+offset_right = 330.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="Labelcurrentpower" type="Label" parent="CardPreview" unique_id=1395320191]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 420.0
+offset_right = 335.0
+offset_bottom = 455.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="LabelOverMana" type="Label" parent="." unique_id=1486513152]
+offset_left = 2464.0
+offset_top = 1172.0
+offset_right = 2504.0
+offset_bottom = 1214.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_dg77c")
+theme_override_font_sizes/font_size = 30

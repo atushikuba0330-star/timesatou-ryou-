@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://dap3wpj6tgvb1"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_jwtxl"]
+
+[resource]
+script = ExtResource("1_jwtxl")
+name = "移動のダイス"
+description = "詠唱完了時にランダムな空きスロットに移動"
+relic_type = "move_dice"

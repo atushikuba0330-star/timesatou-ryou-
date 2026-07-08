@@ -6,12 +6,11 @@
 
 [resource]
 script = ExtResource("1_kd2en")
+name = "ブリッツランス"
 element = "雷"
-cost = 6
-power = 150
-cast_time = 3
-ability = "スパーク"
-ability_value = 2
-magic_circles = Array[Texture2D]([ExtResource("2_5o426"), ExtResource("2_5o426"), ExtResource("2_5o426")])
-magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])
+cost = 4
+power = 450
+cast_time = 4
+magic_circles = Array[Texture2D]([ExtResource("2_5o426"), ExtResource("2_5o426"), ExtResource("2_5o426"), ExtResource("2_5o426"), ExtResource("2_5o426")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80), Vector2(100, 140), Vector2(60, 80)])
 icon = ExtResource("1_s0fkq")
