@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://22em87vaarkl"]
+
+[ext_resource type="Texture2D" uid="uid://cmvlj785riy2d" path="res://Magical-Theatre1-1024x576.jpg" id="1_0epbq"]
+[ext_resource type="Script" uid="uid://byibw4j6q1ujd" path="res://button.gd" id="1_otobo"]
+[ext_resource type="Script" uid="uid://c6wd0olc67dr5" path="res://ended.gd" id="3_e2b1l"]
+[ext_resource type="Script" uid="uid://lb3wh2in4evu" path="res://end.gd" id="4_oclhh"]
+
+[node name="StratMeny" type="Control" unique_id=828081556]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = -5.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=53115063]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 1150.0
+offset_bottom = 648.0
+texture = ExtResource("1_0epbq")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1037335585]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35700002
+anchor_top = 0.62100005
+anchor_right = 0.693
+anchor_bottom = 0.799
+offset_left = 3.2349854
+offset_top = -2.545044
+offset_right = 3.835022
+offset_bottom = -2.6010132
+theme_override_font_sizes/font_size = 30
+text = "GAME STERT"
+script = ExtResource("1_otobo")
+
+[node name="Control" type="Control" parent="." unique_id=1740444233]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_e2b1l")
+
+[node name="END" type="Button" parent="." unique_id=1143667075]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 580.0
+offset_right = 1123.0
+offset_bottom = 637.0
+theme_override_font_sizes/font_size = 20
+text = "ゲーム終了だぁ"
+script = ExtResource("4_oclhh")
+
+[node name="Label" type="Label" parent="." unique_id=126214041]
+layout_mode = 0
+offset_left = 55.0
+offset_top = -810.0
+offset_right = 1509.0
+offset_bottom = -7.0
+text = "殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺殺
+
+"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="END" to="Control" method="_on_end_pressed"]

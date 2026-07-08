@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://sfcg0ycdtvx7"]
+
+[ext_resource type="Texture2D" uid="uid://cmvlj785riy2d" path="res://Magical-Theatre1-1024x576.jpg" id="1_8312p"]
+[ext_resource type="Script" uid="uid://ddi08021o56ca" path="res://BACK.gd" id="1_ep62s"]
+
+[node name="ikusa1-1" type="Node2D" unique_id=1829541595]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2044522953]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_8312p")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1725622871]
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 174.0
+offset_bottom = 85.0
+text = "メニューに戻る"
+script = ExtResource("1_ep62s")
+
+[node name="Label" type="Label" parent="." unique_id=1450792392]
+offset_left = 244.0
+offset_top = 1.0
+offset_right = 950.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 30
+text = "たぶん戦闘画面"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
