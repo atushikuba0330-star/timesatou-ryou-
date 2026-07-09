@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cggkon0cj2sqx"]
+
+[ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_76aiv"]
+[ext_resource type="Script" uid="uid://bnstrkad773dn" path="res://goback.gd" id="2_27gb3"]
+[ext_resource type="Script" uid="uid://bjgphhuvy3uqn" path="res://go1-1.gd" id="3_bwkhw"]
+
+[node name="Node2D" type="Node2D" unique_id=1181554307]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1019585892]
+offset_right = 2540.0
+offset_bottom = 1350.0
+texture = ExtResource("1_76aiv")
+
+[node name="Label" type="Label" parent="." unique_id=1116915831]
+offset_left = 696.0
+offset_top = 64.0
+offset_right = 1685.0
+offset_bottom = 205.0
+theme_override_font_sizes/font_size = 80
+text = "ストーリー"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=178663683]
+offset_left = 83.0
+offset_top = 83.0
+offset_right = 599.0
+offset_bottom = 238.0
+theme_override_font_sizes/font_size = 60
+text = "戻る"
+script = ExtResource("2_27gb3")
+
+[node name="Button2" type="Button" parent="." unique_id=1775905380]
+offset_left = 1916.0
+offset_top = 86.0
+offset_right = 2432.0
+offset_bottom = 241.0
+theme_override_font_sizes/font_size = 60
+text = "1-1"
+script = ExtResource("3_bwkhw")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

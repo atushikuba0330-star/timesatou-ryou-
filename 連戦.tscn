@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dyx2hry1ju4ba"]
+
+[ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_xdil5"]
+
+[node name="連戦" type="Node2D" unique_id=44093148]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1277645529]
+offset_right = 2540.0
+offset_bottom = 1350.0
+texture = ExtResource("1_xdil5")
+
+[node name="Label" type="Label" parent="." unique_id=1910763530]
+offset_left = 672.0
+offset_right = 1859.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 100
+text = "エンドレスモード"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=373876843]
+offset_right = 553.0
+offset_bottom = 186.0
+theme_override_font_sizes/font_size = 60
+text = "戻る"

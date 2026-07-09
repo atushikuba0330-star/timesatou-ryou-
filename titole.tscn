@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cj1bygret3wjg"]
+
+[ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_gv4gg"]
+[ext_resource type="Script" uid="uid://3sb7luw7mu6s" path="res://STRAT.gd" id="2_a0tst"]
+[ext_resource type="Script" uid="uid://ebnp75ivpkr3" path="res://GameEND.gd" id="3_2dqne"]
+[ext_resource type="Script" uid="uid://qovljx7i4van" path="res://endED1.gd" id="4_jqani"]
+
+[node name="Node2D" type="Node2D" unique_id=1442747071]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1290733454]
+offset_right = 2540.0
+offset_bottom = 1350.0
+texture = ExtResource("1_gv4gg")
+
+[node name="Button" type="Button" parent="." unique_id=510887054]
+offset_left = 906.0
+offset_top = 926.0
+offset_right = 1669.0
+offset_bottom = 1128.0
+theme_override_font_sizes/font_size = 100
+text = "STRAT"
+script = ExtResource("2_a0tst")
+
+[node name="Button2" type="Button" parent="." unique_id=1750195566]
+offset_left = 1936.0
+offset_top = 1152.0
+offset_right = 2483.0
+offset_bottom = 1311.0
+theme_override_font_sizes/font_size = 50
+text = "ゲーム終了だぁ"
+script = ExtResource("3_2dqne")
+
+[node name="end" type="Control" parent="." unique_id=137399389]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_jqani")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

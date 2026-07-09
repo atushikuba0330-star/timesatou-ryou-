@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://q6glj4h7f1uf"]
+
+[ext_resource type="Script" uid="uid://bfxhm6vr0qdib" path="res://bgm_player.gd" id="1_yfopc"]
+[ext_resource type="AudioStream" uid="uid://cesaqrxkhfiat" path="res://BGM (1).mp3" id="2_sxx0c"]
+
+[node name="Bgmplayer" type="Node" unique_id=440700207]
+script = ExtResource("1_yfopc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=413212157]
+stream = ExtResource("2_sxx0c")
