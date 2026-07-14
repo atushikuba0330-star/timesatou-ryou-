@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://1lkmaaemx5yy"]
+
+[ext_resource type="Script" uid="uid://dntj0v3526457" path="res://se_setting.gd" id="1_1mlu7"]
+[ext_resource type="AudioStream" uid="uid://cjbwjiwvd8jkh" path="res://SE (1).wav" id="2_1mlu7"]
+
+[node name="SE setting" type="Node" unique_id=1412661132]
+script = ExtResource("1_1mlu7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1914415786]
+stream = ExtResource("2_1mlu7")
+bus = &"SFX"
