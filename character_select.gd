@@ -25,6 +25,7 @@ func select_character(element: String):
 
 func _on_start_button_pressed():
 	GameData.selected_element = temp_selected_element
+	GameData.player_deck.clear()  # 新しいランは初期デッキから開始する
 	get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_fire_button_pressed():

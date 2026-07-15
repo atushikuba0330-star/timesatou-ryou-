@@ -20,9 +20,9 @@ mouse_filter = 2
 [node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1548177768]
 custom_minimum_size = Vector2(270, 290)
 layout_mode = 0
-offset_left = -120.0
+offset_left = -75.0
 offset_top = -63.0
-offset_right = 150.0
+offset_right = 195.0
 offset_bottom = 227.0
 mouse_filter = 2
 expand_mode = 1
