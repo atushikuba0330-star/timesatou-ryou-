@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dfb6eg3ohv2yo" path="res://irasto/Normal/Ma1a-line-normal/ma1a-yellow.png" id="1_t2yv6"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_x5e57"]
-[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_ysjdt"]
+[ext_resource type="Texture2D" uid="uid://pkyxhlmwibwc" path="res://irasto/まほー/光/ルクス.png" id="1_ysjdt"]
 
 [resource]
 script = ExtResource("1_x5e57")

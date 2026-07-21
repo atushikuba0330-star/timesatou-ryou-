@@ -10,20 +10,12 @@ func apply_relic(relic: RelicData):
 			get_tree().current_scene.max_hp += relic.value
 			get_tree().current_scene.player_hp += relic.value
 		"max_mana_up":
-			get_node("/root/Main/ManaManager").max_mana += relic.value
-		"enemy_mana_down":
-			get_node("/root/Main/ManaManager").enemy_mana = max(
-				get_node("/root/Main/ManaManager").enemy_mana,
-				get_node("/root/Main/ManaManager").max_mana - relic.value
-			)
-			get_node("/root/Main/ManaManager").max_mana -= relic.value
+			var mana_manager = get_node("/root/Main/ManaManager")
+			mana_manager.max_mana += relic.value
 		"enemy_mana_down":
 			var mana_manager = get_node("/root/Main/ManaManager")
 			mana_manager.enemy_max_mana -= relic.value
 			mana_manager.enemy_mana = min(mana_manager.enemy_mana, mana_manager.enemy_max_mana)
-		"max_mana_up":
-			var mana_manager = get_node("/root/Main/ManaManager")
-			mana_manager.max_mana += relic.value
 		"move_dice":
 			pass
 		"enemy_cost_up":

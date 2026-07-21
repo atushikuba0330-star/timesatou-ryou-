@@ -16,11 +16,10 @@ var enemy_break_count := 0
 
 func _ready():
 	GameData.reset_battle()
-	GameData.phoenix_used = false
-	GameData.set_starter_deck(GameData.selected_element)
-	GameData.phoenix_used = false
-	GameData.set_starter_deck(GameData.selected_element)
-	
+	GameData.ultimate_unlocked = true
+	if GameData.player_deck.is_empty():
+		GameData.set_starter_deck(GameData.selected_element)
+
 	var elements = ["火", "水", "雷", "光", "闇"]
 	GameData.set_enemy_deck(elements.pick_random())
 	
@@ -40,50 +39,10 @@ func _ready():
 	display_deck()
 
 func damage_player(value):
-	if not is_inside_tree():
-		return
-	
-	for relic in GameData.player_relics:
-		if relic.relic_type == "reflect":
-			var reflect_damage = int(value * (relic.value * 0.01))
-			damage_enemy(reflect_damage)
-			print("鏡の盾反射ダメージ:", reflect_damage)
-	
-	if player_hp - value <= 0 and not GameData.phoenix_used:
-		for relic in GameData.player_relics:
-			if relic.relic_type == "phoenix":
-				GameData.phoenix_used = true
-				player_hp = int(max_hp * 0.5)  # HP最大値の50%まで回復
-				print("不死鳥の羽発動！HP:", player_hp)
-				return
-
-	player_hp -= value
-	print("プレイヤーHP", player_hp)
-	
-	if player_hp <= 0:
-		if not is_inside_tree():
-			return
-		mana_manager.set_process(false)
-		await get_tree().process_frame
-		if not is_inside_tree():
-			return
-		get_tree().change_scene_to_file("res://lose.tscn")
+	BattleDamage.damage_player(self, value)
 
 func damage_enemy(value):
-	if not is_inside_tree():
-		return
-	
-	enemy_hp -= value
-	print("エネミーHP", enemy_hp)
-	
-	if enemy_hp <= 0:
-		if not is_inside_tree():
-			return
-		mana_manager.set_process(false)
-		await get_tree().process_frame
-		if not is_inside_tree():
-			return
-		get_tree().change_scene_to_file("res://win.tscn")
+	BattleDamage.damage_enemy(self, value)
 
 func _input(event):
 	if event is InputEventKey and event.pressed:

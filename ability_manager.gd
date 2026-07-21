@@ -49,7 +49,7 @@ func activate_ability(slot):
 			var target_slots = _get_adjacent_enemy_slots(slot, spark_range)
 			for target in target_slots:
 				if target.card != null:
-					get_node("/root/Main/BattleManager")._destroy_card_interrupted(target)
+					get_node("/root/Main/BattleManager").destroy_card_interrupted(target)
 					if slot.is_player:
 						GameData.spark_break_count += 1
 						if GameData.spark_break_count >= 8:

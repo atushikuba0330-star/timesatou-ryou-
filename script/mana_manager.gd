@@ -20,4 +20,5 @@ func run():
 				get_tree().current_scene.damage_player(relic.value)
 
 		get_tree().call_group("slots", "progress_turn")
+		BattleEffects.fire_completed_projectiles(get_tree())
 		get_node("/root/Main/BattleManager").resolve_turn()

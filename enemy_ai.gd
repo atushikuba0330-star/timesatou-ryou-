@@ -22,18 +22,19 @@ func try_play_card():
 		return
 	
 	var mana_manager = get_node("/root/Main/ManaManager")
-	if mana_manager.enemy_mana < reserved_card.cost:
+	var actual_cost = max(reserved_card.cost + GameData.enemy_cost_penalty, 0)
+	if mana_manager.enemy_mana < actual_cost:
 		return
-	
+
 	var enemy_slots = get_tree().get_nodes_in_group("slots").filter(func(s): return not s.is_player)
 	var empty_slots = enemy_slots.filter(func(s): return s.can_place())
-	
+
 	if empty_slots.size() == 0:
 		return
-	
+
 	var target_slot = empty_slots.pick_random()
-	
-	mana_manager.enemy_mana -= reserved_card.cost
+
+	mana_manager.enemy_mana -= actual_cost
 	var card_scene = load("res://card_node.tscn")
 	var new_card = card_scene.instantiate()
 	new_card.data = reserved_card

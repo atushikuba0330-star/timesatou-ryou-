@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bvxtr5t5k6oop"]
 
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_a8mbk"]
+[ext_resource type="Texture2D" uid="uid://dfb6eg3ohv2yo" path="res://irasto/Normal/Ma1a-line-normal/ma1a-yellow.png" id="2_64ua5"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_i7yv3"]
 
 [resource]
@@ -9,4 +10,5 @@ element = "光"
 power = 500
 cast_time = 1
 is_ultimate = true
+magic_circles = Array[Texture2D]([ExtResource("2_64ua5")])
 icon = ExtResource("1_a8mbk")
