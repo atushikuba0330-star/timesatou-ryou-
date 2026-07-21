@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cj1bygret3wjg"]
 
-[ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_gv4gg"]
+[ext_resource type="Texture2D" uid="uid://q3g0yl566iww" path="res://2026-07-21_160456.png" id="1_jqani"]
 [ext_resource type="Script" uid="uid://3sb7luw7mu6s" path="res://STRAT.gd" id="2_a0tst"]
 [ext_resource type="Script" uid="uid://ebnp75ivpkr3" path="res://GameEND.gd" id="3_2dqne"]
 [ext_resource type="Script" uid="uid://qovljx7i4van" path="res://endED1.gd" id="4_jqani"]
@@ -10,7 +10,7 @@
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1290733454]
 offset_right = 2540.0
 offset_bottom = 1350.0
-texture = ExtResource("1_gv4gg")
+texture = ExtResource("1_jqani")
 
 [node name="Button" type="Button" parent="." unique_id=510887054]
 offset_left = 906.0
@@ -38,4 +38,4 @@ offset_bottom = 40.0
 script = ExtResource("4_jqani")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="end" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
