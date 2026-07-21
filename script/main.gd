@@ -16,6 +16,7 @@ var enemy_break_count := 0
 
 func _ready():
 	GameData.reset_battle()
+	GameData.ultimate_unlocked = true
 	if GameData.player_deck.is_empty():
 		GameData.set_starter_deck(GameData.selected_element)
 

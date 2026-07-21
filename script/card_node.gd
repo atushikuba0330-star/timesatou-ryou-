@@ -13,7 +13,10 @@ var actual_cast_time: int = 0
 
 func _gui_input(event):
 	if locked:
-		return  # ロック中はドラッグできない
+		return
+	var parent = get_parent()
+	if parent.is_in_group("slots"):
+		return  
 	if event is InputEventMouseButton and event.pressed:
 		var copy = duplicate()
 		get_tree().root.add_child(copy)

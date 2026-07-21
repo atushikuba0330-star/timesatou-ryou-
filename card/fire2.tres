@@ -12,6 +12,7 @@ power = 80
 cast_time = 1
 ability = "インパクト"
 ability_value = 1
+projectile_icon = ExtResource("2_foyme")
 magic_circles = Array[Texture2D]([ExtResource("2_foyme")])
 magic_positions = Array[Vector2]([Vector2(60, 80)])
 icon = ExtResource("1_1ds2u")

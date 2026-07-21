@@ -20,10 +20,11 @@ func resolve_turn():
 		else:
 			CombatResolver.resolve_vs_chanting(self, slot)
 			processed.append(slot)
+			processed.append(enemy)
 
-func finish_card_with_ability(slot):
+func finish_card_with_ability(slot, count_as_win: bool = true):
 	if slot.card:
-		if slot.card.data.element == "火" and slot.is_player:
+		if count_as_win and slot.card.data.element == "火" and slot.is_player:
 			GameData.fire_win_count += 1
 			if GameData.fire_win_count >= 5:
 				GameData.ultimate_unlocked = true

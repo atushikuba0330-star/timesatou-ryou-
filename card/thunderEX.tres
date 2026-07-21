@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bgtfiwhmn46n0"]
 
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_j1o3a"]
+[ext_resource type="Texture2D" uid="uid://ddhljlfainhbv" path="res://irasto/Normal/Ma1a-line-normal/ma1a-green.png" id="2_1lw2h"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_xnnye"]
 
 [resource]
@@ -11,4 +12,5 @@ cast_time = 1
 ability = "スパーク"
 ability_value = 4
 is_ultimate = true
+magic_circles = Array[Texture2D]([ExtResource("2_1lw2h")])
 icon = ExtResource("1_j1o3a")

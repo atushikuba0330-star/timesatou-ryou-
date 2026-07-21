@@ -9,6 +9,7 @@ extends Control
 var card = null
 var slot_index: int = 0
 var shield_value: int = 0
+var just_completed: bool = false
 enum State { EMPTY, CHANTING, COMPLETE, READY_TO_BATTLE }
 var state = State.EMPTY
 
@@ -115,6 +116,10 @@ func progress_turn():
 		if card.chant_progress >= card.actual_cast_time:
 			state = State.COMPLETE
 			print("詠唱完了:", name)
+			if card.data.is_ultimate:
+				BattleEffects.fire_ultimate_burst(get_tree(), card, self, enemy_slot)
+			else:
+				just_completed = true
 			
 			# 賢者の指輪
 			if is_player:

@@ -23,6 +23,7 @@ GameData="*uid://xu7jkg8cu2ar"
 
 window/size/viewport_width=2540
 window/size/viewport_height=1350
+window/stretch/mode="viewport"
 
 [physics]
 

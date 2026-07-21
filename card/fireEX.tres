@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_oyfka"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_m66kr"]
+[ext_resource type="Texture2D" uid="uid://bb1um6alfv07w" path="res://irasto/Normal/Ma1a-line-normal/ma1a-red.png" id="2_uwrfj"]
 
 [resource]
 script = ExtResource("2_m66kr")
@@ -11,4 +12,5 @@ cast_time = 1
 ability = "インパクト"
 ability_value = 5
 is_ultimate = true
+magic_circles = Array[Texture2D]([ExtResource("2_uwrfj")])
 icon = ExtResource("1_oyfka")
