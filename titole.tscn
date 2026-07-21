@@ -38,4 +38,4 @@ offset_bottom = 40.0
 script = ExtResource("4_jqani")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="end" method="_on_button_2_pressed"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dyx2hry1ju4ba"]
 
 [ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_xdil5"]
+[ext_resource type="Script" uid="uid://41emyst12bhc" path="res://BACK.gd" id="2_6y1j5"]
 
 [node name="連戦" type="Node2D" unique_id=44093148]
 
@@ -23,3 +24,6 @@ offset_right = 553.0
 offset_bottom = 186.0
 theme_override_font_sizes/font_size = 60
 text = "戻る"
+script = ExtResource("2_6y1j5")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
