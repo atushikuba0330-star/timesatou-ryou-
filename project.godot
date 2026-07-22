@@ -17,8 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SePlayer="*uid://b8jqi4apgibgd"
 BgmPlayer="*uid://q6glj4h7f1uf"
+SePlayer="*uid://b8jqi4apgibgd"
+Titole="*uid://cj1bygret3wjg"
 
 [display]
 
