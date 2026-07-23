@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b8jqi4apgibgd"]
+
+[ext_resource type="Script" uid="uid://imlfnmtd2wpj" path="res://se_player.gd" id="1_ioqbf"]
+[ext_resource type="AudioStream" uid="uid://d3veickyliaw1" path="res://SE (1).wav" id="2_qise5"]
+[ext_resource type="Script" uid="uid://5flj3afd3rqb" path="res://SE.gd" id="3_2wnuf"]
+
+[node name="SEPlayer" type="Node" unique_id=207494387]
+script = ExtResource("1_ioqbf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2091801387]
+stream = ExtResource("2_qise5")
+bus = &"SFX"
+
+[node name="Node" type="Node" parent="." unique_id=1047785381]
+script = ExtResource("3_2wnuf")
