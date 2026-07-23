@@ -6,9 +6,14 @@ func _ready():
 	setup_cards()
 
 func setup_cards():
-	var source = GameData.enemy_deck.filter(func(c): 
-		return c.ability != "" and not c.is_ultimate)
-	
+	var source: Array[CardData] = []
+	# 相手のカードと特殊カードを1つの選択肢に統合し、所持していない全カードからランダムに選ばせる
+	var neutral_pool = _get_neutral_cards().filter(func(c):
+		return c not in GameData.player_deck and c not in GameData.owned_cards)
+	var enemy_pool = GameData.enemy_deck.filter(func(c):
+		return c.ability != "" and not c.is_ultimate and c not in GameData.player_deck and c not in GameData.owned_cards)
+	source = neutral_pool + enemy_pool
+
 	source.shuffle()
 	var count = randi_range(1, min(3, source.size()))
 	cards_to_show = source.slice(0, count)
@@ -42,3 +47,12 @@ func select_card(index: int):
 	if index < cards_to_show.size():
 		GameData.owned_cards.append(cards_to_show[index])
 	get_tree().change_scene_to_file("res://deck_builder.tscn")
+
+func _get_neutral_cards() -> Array[CardData]:
+	var names = ["haste", "break", "drain", "steal", "heal", "seal", "delay", "sendback", "sacrifice", "reinforce"]
+	var cards: Array[CardData] = []
+	for n in names:
+		var card = load("res://card/neutral_" + n + ".tres")
+		if card:
+			cards.append(card)
+	return cards

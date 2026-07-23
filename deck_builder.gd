@@ -2,6 +2,8 @@ extends Control
 
 const ABILITY_SLOT_START := 1
 const ABILITY_SLOT_COUNT := 4
+const NEUTRAL_SLOT_START := 5
+const NEUTRAL_SLOT_COUNT := 3
 
 const CARD_FONT := preload("res://irasto/Cinzel-VariableFont_wght.ttf")
 
@@ -29,8 +31,9 @@ func _populate_deck_row():
 		var card = GameData.player_deck[i]
 		var btn = _make_card_display(card)
 		var is_ability_slot = i >= ABILITY_SLOT_START and i < ABILITY_SLOT_START + ABILITY_SLOT_COUNT
+		var is_neutral_slot = i >= NEUTRAL_SLOT_START and i < NEUTRAL_SLOT_START + NEUTRAL_SLOT_COUNT
 
-		if is_ability_slot:
+		if is_ability_slot or is_neutral_slot:
 			btn.pressed.connect(_on_ability_slot_pressed.bind(i))
 			if i == selected_slot_index:
 				btn.modulate = Color(1.0, 1.0, 0.5)  # 選択中をハイライト
@@ -80,6 +83,18 @@ func _make_card_display(card: CardData) -> Button:
 	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
 	vbox.add_theme_constant_override("separation", 4)
 	btn.add_child(vbox)
+
+	if card == null:
+		var empty_label = Label.new()
+		empty_label.text = "特殊カード\n(空き枠)"
+		empty_label.add_theme_font_override("font", CARD_FONT)
+		empty_label.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
+		empty_label.add_theme_font_size_override("font_size", 15)
+		empty_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		empty_label.autowrap_mode = TextServer.AUTOWRAP_WORD
+		empty_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		vbox.add_child(empty_label)
+		return btn
 
 	if card.icon:
 		var icon = TextureRect.new()
@@ -157,13 +172,24 @@ func _on_ability_slot_pressed(index: int):
 
 func _on_pool_card_pressed(card: CardData):
 	if selected_slot_index == -1:
-		print("先に入れ替えたいアビリティスロットを選んでください")
+		print("先に入れ替えたいスロットを選んでください")
+		return
+
+	var is_neutral_slot = selected_slot_index >= NEUTRAL_SLOT_START and selected_slot_index < NEUTRAL_SLOT_START + NEUTRAL_SLOT_COUNT
+
+	if is_neutral_slot and not card.is_instant:
+		print("この枠には特殊(ニュートラル)カードしか置けません")
+		return
+	if not is_neutral_slot and card.is_instant:
+		print("特殊(ニュートラル)カードは専用枠にしか置けません")
 		return
 
 	var old_card = GameData.player_deck[selected_slot_index]
+
 	GameData.player_deck[selected_slot_index] = card
 	GameData.owned_cards.erase(card)
-	GameData.owned_cards.append(old_card)
+	if old_card != null:
+		GameData.owned_cards.append(old_card)
 	selected_slot_index = -1
 	refresh_all()
 

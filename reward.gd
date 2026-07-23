@@ -16,11 +16,8 @@ func setup_rewards():
 	else:
 		$HBoxContainer/RelicButton.text = "遺物なし"
 	
-	# 特殊カード
-	$HBoxContainer/SpecialCardButton.text = "特殊カード\n（準備中）"
-	
-	# 相手のカード
-	$HBoxContainer/EnemyCardButton.text = "相手のカード\nランダム3枚から選ぶ"
+	# カード(相手のカード+特殊カードを統合)
+	$HBoxContainer/CardButton.text = "カード\nランダム3枚から選ぶ"
 
 func _get_all_relics() -> Array:
 	var relics = []
@@ -35,12 +32,9 @@ func _get_all_relics() -> Array:
 			relics.append(relic)
 	return relics
 
-func _on_enemy_card_button_pressed():
-	GameData.reward_type = "enemy"
+func _on_card_button_pressed():
+	GameData.reward_type = "card"
 	get_tree().change_scene_to_file("res://card_select.tscn")
-
-func _on_special_card_button_pressed():
-	get_tree().change_scene_to_file("res://deck_builder.tscn")
 
 func _on_relic_button_pressed():
 	if reward_relic:

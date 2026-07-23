@@ -4,6 +4,10 @@ var enemy_hp := 1000
 var max_hp := 1000
 var player_break_count := 0
 var enemy_break_count := 0
+var time_scale_steps = [1.0, 1.5, 2.0]
+var time_scale_index = 0
+var is_paused = false
+var pre_pause_time_scale = 1.0
 
 @onready var mana_manager = $ManaManager
 @onready var player_hp_bar = $PlayerHPBar
@@ -46,8 +50,29 @@ func damage_enemy(value):
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_ESCAPE:
-			get_tree().quit()
+		if event.keycode == KEY_SPACE:
+			_toggle_pause()
+		elif event.keycode == KEY_E:
+			_change_speed(1)
+		elif event.keycode == KEY_Q:
+			_change_speed(-1)
+
+func _toggle_pause():
+	is_paused = not is_paused
+	if is_paused:
+		pre_pause_time_scale = Engine.time_scale
+		Engine.time_scale = 0.0
+	else:
+		Engine.time_scale = pre_pause_time_scale
+
+func _change_speed(direction: int):
+	if is_paused:
+		return
+	time_scale_index = clamp(time_scale_index + direction, 0, time_scale_steps.size() - 1)
+	Engine.time_scale = time_scale_steps[time_scale_index]
+
+func _exit_tree():
+	Engine.time_scale = 1.0
 
 func _process(delta):
 	$LabelPlayer_HP.text = "HP: " + str(player_hp)
@@ -76,8 +101,11 @@ func _process(delta):
 func display_deck():
 	print("デッキ枚数:", GameData.player_deck.size())
 	for i in range(GameData.player_deck.size()):
+		var data = GameData.player_deck[i]
+		if data == null:  # ニュートラル専用枠が空きの場合は表示しない
+			continue
 		var card = load("res://card_node.tscn").instantiate()
-		card.data = GameData.player_deck[i]
-		if i == 5:  # 6枚目は必殺技
+		card.data = data
+		if data.is_ultimate:
 			card.set_locked(true)
 		deck_display.add_child(card)

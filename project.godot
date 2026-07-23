@@ -11,13 +11,16 @@ config_version=5
 [application]
 
 config/name="prototype04"
-run/main_scene="uid://r46n3orrfhic"
+run/main_scene="uid://cj1bygret3wjg"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameData="*uid://xu7jkg8cu2ar"
+SePlayer="*res://se_player.tscn"
+BgmPlayer="*res://bgm_player.tscn"
+EscMenu="*res://esc_menu.tscn"
 
 [display]
 

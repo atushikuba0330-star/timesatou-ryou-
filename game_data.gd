@@ -24,23 +24,33 @@ func set_starter_deck(element: String):
 		"火":
 			for i in range(1, 6):
 				player_deck.append(load("res://card/fire" + str(i) + ".tres"))
+			_append_empty_neutral_slots()
 			player_deck.append(load("res://card/fireEX.tres"))  # ← 追加
 		"水":
 			for i in range(1, 6):
 				player_deck.append(load("res://card/water" + str(i) + ".tres"))
+			_append_empty_neutral_slots()
 			player_deck.append(load("res://card/waterEX.tres"))  # ← 追加
 		"雷":
 			for i in range(1, 6):
 				player_deck.append(load("res://card/thunder" + str(i) + ".tres"))
+			_append_empty_neutral_slots()
 			player_deck.append(load("res://card/thunderEX.tres"))  # ← 追加
 		"光":
 			for i in range(1, 6):
 				player_deck.append(load("res://card/holly" + str(i) + ".tres"))
+			_append_empty_neutral_slots()
 			player_deck.append(load("res://card/hollyEX.tres"))  # ← 追加
 		"闇":
 			for i in range(1, 6):
 				player_deck.append(load("res://card/dark" + str(i) + ".tres"))
+			_append_empty_neutral_slots()
 			player_deck.append(load("res://card/darkEX.tres"))  # ← 追加
+
+# ニュートラルカード専用枠(3枠)を空きとして追加
+func _append_empty_neutral_slots():
+	for i in range(3):
+		player_deck.append(null)
 
 var enemy_deck: Array[CardData] = []
 

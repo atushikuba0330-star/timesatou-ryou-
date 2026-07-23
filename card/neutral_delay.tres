@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b7oder6o8ggrs"]
+
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dx85sxgwqgpwt" path="res://irasto/ka-do6.png" id="1_d2lkc"]
+[ext_resource type="Texture2D" uid="uid://dai52q61t8ps2" path="res://irasto/Normal/Ma1a-line-normal/ma1a-gray.png" id="3"]
+
+[resource]
+script = ExtResource("1")
+name = "遅延"
+element = "無"
+cost = 4
+cast_time = 1
+ability = "遅延"
+ability_value = 1
+is_instant = true
+magic_circles = Array[Texture2D]([ExtResource("3")])
+magic_positions = Array[Vector2]([Vector2(60, 80)])
+icon = ExtResource("1_d2lkc")

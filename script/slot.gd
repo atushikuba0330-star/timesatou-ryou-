@@ -10,6 +10,7 @@ var card = null
 var slot_index: int = 0
 var shield_value: int = 0
 var just_completed: bool = false
+var sealed: bool = false
 enum State { EMPTY, CHANTING, COMPLETE, READY_TO_BATTLE }
 var state = State.EMPTY
 
@@ -24,7 +25,7 @@ func _process(delta):
 		shield_overlay.visible = shield_value > 0
 
 func can_place():
-	return card == null
+	return card == null and not sealed
 
 # ==================
 # カード配置
@@ -97,7 +98,9 @@ func destroy_card(is_break: bool = false):
 func progress_turn():
 	if card == null or state == State.EMPTY:
 		return
-	
+	if sealed:
+		return
+
 	if state == State.CHANTING:
 		print("詠唱進捗:", card.chant_progress, "/", card.actual_cast_time, " slot:", name)
 		card.chant_progress += 1
@@ -118,7 +121,7 @@ func progress_turn():
 			print("詠唱完了:", name)
 			if card.data.is_ultimate:
 				BattleEffects.fire_ultimate_burst(get_tree(), card, self, enemy_slot)
-			else:
+			elif not card.data.is_instant:
 				just_completed = true
 			
 			# 賢者の指輪
