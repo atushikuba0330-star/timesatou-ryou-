@@ -27,7 +27,8 @@ offset_top = 1152.0
 offset_right = 2483.0
 offset_bottom = 1311.0
 theme_override_font_sizes/font_size = 50
-text = "ゲーム終了だぁ"
+text = "ゲーム終了
+"
 script = ExtResource("3_2dqne")
 
 [node name="end" type="Control" parent="." unique_id=137399389]
