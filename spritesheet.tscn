@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://do8fmg0a1wpoc"]
+
+[ext_resource type="Texture2D" uid="uid://c2rcyhfrn77o6" path="res://Assets/Warped shooting fx files/Assets/Pixelart/Bolt/spritesheet.png" id="1_2gepv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yd3e5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2gepv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Spritesheet" type="Sprite2D" unique_id=1733789851]
+position = Vector2(241, 150)
+texture = ExtResource("1_2gepv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2137094128]
+light_mask = 0
+position = Vector2(266, 118.50001)
+scale = Vector2(1.3124999, 1.7812495)
+sprite_frames = SubResource("SpriteFrames_yd3e5")

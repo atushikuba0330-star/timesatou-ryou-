@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://06jxifjn00sa"]
+
+[ext_resource type="Texture2D" uid="uid://dqsn8vfu1ubme" path="res://Assets/masks for  particles transparent/45.png" id="1_j331d"]
+
+[sub_resource type="Gradient" id="Gradient_7j848"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_riqys"]
+gradient = SubResource("Gradient_7j848")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bhunq"]
+particle_flag_disable_z = true
+spread = 180.0
+flatness = 0.125
+initial_velocity_min = 523.61
+initial_velocity_max = 622.32
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 531.5
+orbit_velocity_min = 0.8240001
+orbit_velocity_max = 0.8240001
+radial_velocity_min = -2.2351742e-05
+radial_velocity_max = -2.2351742e-05
+scale_min = 0.099999994
+scale_max = 0.59999996
+color_ramp = SubResource("GradientTexture1D_riqys")
+
+[node name="TestParticle" type="Node2D" unique_id=899020375]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=497140574]
+amount = 16
+texture = ExtResource("1_j331d")
+lifetime = 3.0
+speed_scale = 1.76
+randomness = 0.27
+process_material = SubResource("ParticleProcessMaterial_bhunq")

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://f38w20chv22x"]
+
+[ext_resource type="Script" uid="uid://da1usreb3mxmn" path="res://code_wave_beam.gd" id="1_6a62c"]
+[ext_resource type="Texture2D" uid="uid://ch8bvm5t1ao08" path="res://Assets/masks for  particles transparent/26.png" id="2_picot"]
+
+[sub_resource type="Animation" id="Animation_6a62c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_picot"]
+resource_name = "wave"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.25, 0.31, 0.4, 0.53333336, 0.6933334, 0.75333333, 0.84333336, 0.93, 0.98999995),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -17.08), Vector2(0, 1.385), Vector2(0, -4.66), Vector2(0, 4.93), Vector2(0, -17.08), Vector2(0, 1.385), Vector2(0, -4.66), Vector2(0, 4.93), Vector2(0, 1.385), Vector2(0, -4.66)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oxbpi"]
+_data = {
+&"RESET": SubResource("Animation_6a62c"),
+&"wave": SubResource("Animation_picot")
+}
+
+[node name="CodeWaveBeam" type="Node2D" unique_id=862334229]
+script = ExtResource("1_6a62c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1944481760]
+texture = ExtResource("2_picot")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1959090848]
+libraries/ = SubResource("AnimationLibrary_oxbpi")

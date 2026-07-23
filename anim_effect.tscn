@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://i4q41d836chh"]
+
+[ext_resource type="Texture2D" uid="uid://dm0elcbc6xfdi" path="res://Assets/masks for  particles transparent/37.png" id="1_3qevp"]
+
+[sub_resource type="Animation" id="Animation_5ot6k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/Sprite2D:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y6sgv"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.4, 0.43333334, 0.46666667, 0.5, 0.53333336, 0.56666666, 0.6, 0.6333333, 0.6666667, 0.7, 0.73333335, 0.76666665, 0.8, 0.8333333, 0.8666667, 0.9, 0.93333334, 0.96666664, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.00023271061409236259, 0.0018616849127389007, 0.006283185780460443, 0.014893479301911206, 0.029088824818607195, 0.050265486243683544, 0.07981972675881632, 0.11914783441528964, 0.16964602411848162, 0.23271059854885756, 0.30973777846346806, 0.40212388994946835, 0.511265165467254, 0.6385578140705306, 0.7853982, 0.9531826753223172, 1.1433070720113392, 1.357168192947853, 1.5961617322383859, 1.8616847883908605, 2.155132587378006, 2.4779022277077445, 2.831389309859844, 3.216991119595747, 3.6361023211276233, 4.090121323738032, 4.580441668118027, 5.108462512564245, 5.675577397767739, 6.2831855]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.4, 0.43333334, 0.46666667, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.0583509, 1.0583509), Vector2(1.1022109, 1.1022109), Vector2(1.134464, 1.134464), Vector2(1.1575834, 1.1575834), Vector2(1.1736627, 1.1736627), Vector2(1.184448, 1.184448), Vector2(1.1913698, 1.1913698), Vector2(1.1955736, 1.1955736), Vector2(1.197952, 1.197952), Vector2(1.199177, 1.199177), Vector2(1.1997304, 1.1997304), Vector2(1.199936, 1.199936), Vector2(1.1999916, 1.1999916), Vector2(1.1999998, 1.1999998), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/Sprite2D:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.14, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tqpd7"]
+_data = {
+&"RESET": SubResource("Animation_5ot6k"),
+&"start": SubResource("Animation_y6sgv")
+}
+
+[node name="AnimEffect" type="Node2D" unique_id=697043417]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=594251358]
+libraries/ = SubResource("AnimationLibrary_tqpd7")
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer" unique_id=1087191909]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(434, 312)
+texture = ExtResource("1_3qevp")

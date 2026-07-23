@@ -23,6 +23,17 @@ GameData="*uid://xu7jkg8cu2ar"
 
 window/size/viewport_width=2540
 window/size/viewport_height=1350
+window/size/resizable=false
+window/size/borderless=true
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="viewport"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red"
+}
 
 [physics]
 
