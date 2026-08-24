@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ddgr25oldvn42"]
+
+[ext_resource type="Texture2D" uid="uid://cmvlj785riy2d" path="res://Magical-Theatre1-1024x576.jpg" id="1_kdubu"]
+[ext_resource type="Script" uid="uid://brex7002rqinm" path="res://ikusa.gd" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://csbun1wvgdohr" path="res://Settei.gd" id="3_epypp"]
+[ext_resource type="Script" uid="uid://hebtaipdx6b6" path="res://タイトルに戻す.gd" id="4_0hol4"]
+[ext_resource type="Script" uid="uid://2q1k3nx7p1nw" path="res://TR.gd" id="6_kdubu"]
+[ext_resource type="Script" uid="uid://bjmg7slmsxvnp" path="res://rennsenn.gd" id="7_d21ai"]
+
+[node name="Node2D" type="Node2D" unique_id=1512555797]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1968014647]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_kdubu")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=786233740]
+offset_left = 89.0
+offset_top = 224.0
+offset_right = 416.0
+offset_bottom = 276.0
+text = "ストーリー"
+script = ExtResource("2_0e48y")
+
+[node name="Button2" type="Button" parent="." unique_id=2093973947]
+offset_left = 75.0
+offset_top = 449.0
+offset_right = 428.0
+offset_bottom = 498.0
+text = "設定"
+script = ExtResource("3_epypp")
+
+[node name="タイトルに戻す" type="Button" parent="." unique_id=1891259164]
+offset_left = 73.0
+offset_top = 577.0
+offset_right = 426.0
+offset_bottom = 626.0
+text = "タイトルに戻る"
+script = ExtResource("4_0hol4")
+
+[node name="rennsenn" type="Button" parent="." unique_id=1960311999]
+offset_left = 87.0
+offset_top = 314.0
+offset_right = 411.0
+offset_bottom = 367.0
+text = "連戦"
+script = ExtResource("7_d21ai")
+
+[node name="Button3" type="Button" parent="." unique_id=984322697]
+offset_left = 93.0
+offset_top = 71.0
+offset_right = 380.0
+offset_bottom = 125.0
+text = "チュートリアル"
+script = ExtResource("6_kdubu")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="タイトルに戻す" to="タイトルに戻す" method="_on_pressed"]
+[connection signal="pressed" from="rennsenn" to="rennsenn" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c0mq00cffrgld"]
+
+[ext_resource type="Script" uid="uid://bn6xpspn2t7w2" path="res://bgm_player_1.gd" id="1_e1uyy"]
+[ext_resource type="AudioStream" uid="uid://lbsur2j5dbq3" path="res://BGM (1).mp3" id="2_e1uyy"]
+
+[node name="Node" type="Node" unique_id=50163373]
+script = ExtResource("1_e1uyy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1264566839]
+stream = ExtResource("2_e1uyy")
+autoplay = true
+mix_target = 2
+bus = &"Music"
+parameters/looping = true

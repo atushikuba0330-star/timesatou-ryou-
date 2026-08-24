@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://ddiquwifhnuto"]
+
+[ext_resource type="Texture2D" uid="uid://b2m2tfby8bm4c" path="res://白.png" id="1_so8l7"]
+[ext_resource type="Script" uid="uid://ddi08021o56ca" path="res://BACK.gd" id="2_2u7j1"]
+[ext_resource type="Script" uid="uid://ds60gwllue006" path="res://control.gd" id="3_gw7jw"]
+[ext_resource type="Script" uid="uid://d3hg6s2p4gnf7" path="res://otamesi.gd" id="3_wns5s"]
+[ext_resource type="Script" uid="uid://72yd7myegrnv" path="res://BGMSlider.gd" id="4_hnwo0"]
+[ext_resource type="Script" uid="uid://bu1pe760gqcsv" path="res://usodadonndokodo_nn.gd" id="4_wns5s"]
+[ext_resource type="Script" uid="uid://c3k53t0dp4rdb" path="res://kokoronomisosiru.gd" id="5_h66re"]
+[ext_resource type="Script" uid="uid://djmd6aikvka8p" path="res://SESlider.gd" id="5_hkfbf"]
+[ext_resource type="Script" uid="uid://b5ugtlt2blc0i" path="res://uwaaaaaa.gd" id="6_3rdwp"]
+
+[node name="Node2D" type="Node2D" unique_id=1289337740]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2023085381]
+offset_left = -3.0
+offset_right = 1149.0
+offset_bottom = 648.0
+texture = ExtResource("1_so8l7")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1158428750]
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 224.0
+offset_bottom = 86.0
+text = "戻る"
+script = ExtResource("2_2u7j1")
+
+[node name="Control" type="Control" parent="." unique_id=2053400401]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 680.0
+offset_top = 233.0
+offset_right = 1086.0
+offset_bottom = 301.0
+script = ExtResource("3_gw7jw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1898937544]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -134.0
+offset_right = 308.0
+offset_bottom = -60.0
+
+[node name="HSlider" type="HSlider" parent="Control/VBoxContainer" unique_id=278883885]
+modulate = Color(0.6117647, 0.18039216, 0.21176471, 1)
+layout_mode = 2
+script = ExtResource("4_hnwo0")
+
+[node name="CheckBox" type="CheckBox" parent="Control/VBoxContainer" unique_id=1543072713]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+text = "BGMオフ"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=568206813]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -6.0
+offset_right = 309.0
+offset_bottom = 40.0
+
+[node name="HSlider" type="HSlider" parent="Control/VBoxContainer2" unique_id=2074593738]
+modulate = Color(0.6117647, 0.18039216, 0.21176471, 1)
+layout_mode = 2
+script = ExtResource("5_hkfbf")
+
+[node name="CheckBox" type="CheckBox" parent="Control/VBoxContainer2" unique_id=984742302]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+text = "SEオフ"
+
+[node name="otamesi" type="Button" parent="." unique_id=360532604]
+offset_left = 671.0
+offset_top = 341.0
+offset_right = 1014.0
+offset_bottom = 433.0
+text = "ブッピガァン"
+script = ExtResource("3_wns5s")
+
+[node name="usodadonndokodo-nn" type="Button" parent="." unique_id=1939729486]
+offset_left = 670.0
+offset_top = 457.0
+offset_right = 1018.0
+offset_bottom = 521.0
+text = "嘘だどんどこどーん"
+script = ExtResource("4_wns5s")
+
+[node name="kokoronomisosiru" type="Button" parent="." unique_id=2084901443]
+offset_left = 371.0
+offset_top = 452.0
+offset_right = 643.0
+offset_bottom = 522.0
+text = "心の　味☆噌☆汁☆"
+script = ExtResource("5_h66re")
+
+[node name="uwaaaaaa" type="Button" parent="." unique_id=1128964638]
+offset_left = 373.0
+offset_top = 371.0
+offset_right = 640.0
+offset_bottom = 437.0
+text = "橘さん
+※音量注意
+"
+script = ExtResource("6_3rdwp")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="otamesi" to="otamesi" method="_on_pressed"]
+[connection signal="pressed" from="usodadonndokodo-nn" to="usodadonndokodo-nn" method="_on_pressed"]
+[connection signal="pressed" from="kokoronomisosiru" to="kokoronomisosiru" method="_on_pressed"]
+[connection signal="pressed" from="uwaaaaaa" to="uwaaaaaa" method="_on_pressed"]

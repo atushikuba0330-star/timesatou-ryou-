@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://mgu4valitl63"]
+
+[ext_resource type="Texture2D" uid="uid://cmvlj785riy2d" path="res://Magical-Theatre1-1024x576.jpg" id="1_nwf0u"]
+[ext_resource type="Script" uid="uid://ddi08021o56ca" path="res://BACK.gd" id="2_nwf0u"]
+
+[node name="rennsenn" type="Node2D" unique_id=1007735560]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1906125806]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_nwf0u")
+
+[node name="Button" type="Button" parent="." unique_id=167119178]
+offset_left = 51.0
+offset_top = 60.0
+offset_right = 270.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 30
+text = "戻る"
+script = ExtResource("2_nwf0u")
+
+[node name="Label" type="Label" parent="." unique_id=192908920]
+offset_left = 478.0
+offset_top = 19.0
+offset_right = 669.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 30
+text = "連戦"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
