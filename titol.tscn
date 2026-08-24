@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dxmnujpp7410x"]
+
+[ext_resource type="Texture2D" uid="uid://q3g0yl566iww" path="res://2026-07-21_160456.png" id="1_03gon"]
+
+[node name="Node2D" type="Node2D" unique_id=123505313]
+position = Vector2(43, 16)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1926880056]
+position = Vector2(1227, 659)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=968747053]
+offset_left = -43.0
+offset_top = -16.0
+offset_right = 2496.0
+offset_bottom = 1334.0
+texture = ExtResource("1_03gon")
+
+[node name="Button" type="Button" parent="." unique_id=152615732]
+offset_left = 917.0
+offset_top = 900.0
+offset_right = 1617.0
+offset_bottom = 1047.0
+theme_override_font_sizes/font_size = 40
+text = "Tap to Start"
