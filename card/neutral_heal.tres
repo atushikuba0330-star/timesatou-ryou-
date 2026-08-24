@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dw02xad5v3uu0"]
+
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dx85sxgwqgpwt" path="res://irasto/ka-do6.png" id="1_0apwi"]
+[ext_resource type="Texture2D" uid="uid://dai52q61t8ps2" path="res://irasto/Normal/Ma1a-line-normal/ma1a-gray.png" id="3"]
+
+[resource]
+script = ExtResource("1")
+name = "回復"
+element = "無"
+cost = 5
+cast_time = 1
+ability = "回復"
+ability_value = 4
+is_instant = true
+magic_circles = Array[Texture2D]([ExtResource("3")])
+magic_positions = Array[Vector2]([Vector2(60, 80)])
+icon = ExtResource("1_0apwi")

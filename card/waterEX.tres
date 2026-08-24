@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://brkov6klwb0lx"]
 
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_i0e3l"]
+[ext_resource type="Texture2D" uid="uid://bwlyuthq4dqmk" path="res://irasto/Normal/Ma1a-line-normal/ma1a-skyblue.png" id="2_dadxt"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_riv63"]
 
 [resource]
@@ -11,4 +12,5 @@ cast_time = 1
 ability = "ミラージュ"
 ability_value = 4
 is_ultimate = true
+magic_circles = Array[Texture2D]([ExtResource("2_dadxt")])
 icon = ExtResource("1_i0e3l")

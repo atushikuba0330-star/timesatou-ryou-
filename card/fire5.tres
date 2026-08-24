@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://5p7dxu1x1khe"]
 
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_b0hiu"]
-[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_ean40"]
+[ext_resource type="Texture2D" uid="uid://21b5j3eotu86" path="res://irasto/まほー/炎/ラフラム.png" id="1_ean40"]
 [ext_resource type="Texture2D" uid="uid://bb1um6alfv07w" path="res://irasto/Normal/Ma1a-line-normal/ma1a-red.png" id="2_yevor"]
 
 [resource]

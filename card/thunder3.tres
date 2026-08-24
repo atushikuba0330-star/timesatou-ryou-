@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c4dcaxcp2djhl"]
 
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_1o6sf"]
-[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_jlvrj"]
+[ext_resource type="Texture2D" uid="uid://bdv2n0o5bfq87" path="res://irasto/まほー/雷/シュテーク.png" id="1_aipks"]
 [ext_resource type="Texture2D" uid="uid://ddhljlfainhbv" path="res://irasto/Normal/Ma1a-line-normal/ma1a-green.png" id="2_2ygwg"]
 
 [resource]
@@ -15,4 +15,4 @@ ability = "スパーク"
 ability_value = 3
 magic_circles = Array[Texture2D]([ExtResource("2_2ygwg"), ExtResource("2_2ygwg"), ExtResource("2_2ygwg"), ExtResource("2_2ygwg")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80), Vector2(100, 140)])
-icon = ExtResource("1_jlvrj")
+icon = ExtResource("1_aipks")

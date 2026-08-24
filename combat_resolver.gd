@@ -8,23 +8,28 @@ extends RefCounted
 static func resolve_pair(battle_manager, a, b) -> void:
 	if a.card == null or b.card == null:
 		return
-
 	var power_a = a.card.get_current_power()
 	var power_b = b.card.get_current_power()
 	var diff = power_a - power_b
 	var tree = battle_manager.get_tree()
 
 	if diff > 0:
-		tree.current_scene.damage_enemy(diff)
+		if a.is_player:
+			tree.current_scene.damage_enemy(diff)
+		else:
+			tree.current_scene.damage_player(diff)
 		b.destroy_card()
 		battle_manager.finish_card_with_ability(a)
 	elif diff < 0:
-		tree.current_scene.damage_player(-diff)
+		if b.is_player:
+			tree.current_scene.damage_enemy(-diff)
+		else:
+			tree.current_scene.damage_player(-diff)
 		a.destroy_card()
 		battle_manager.finish_card_with_ability(b)
 	else:
-		a.destroy_card()
-		b.destroy_card()
+		battle_manager.finish_card_with_ability(a, false)
+		battle_manager.finish_card_with_ability(b, false)
 
 static func resolve_vs_chanting(battle_manager, slot) -> void:
 	var tree = battle_manager.get_tree()
@@ -34,7 +39,7 @@ static func resolve_vs_chanting(battle_manager, slot) -> void:
 	if enemy.shield_value > 0:
 		var diff = max(power, 0)
 		var cut = int(diff * (enemy.shield_value * 0.1))
-		diff = diff - cut
+		diff = max(diff - cut,0)
 		print("シールド発動 残りダメージ:", diff)
 
 		if not slot.is_player:  # プレイヤーのシールドが発動した場合

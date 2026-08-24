@@ -11,6 +11,14 @@ func resolve_turn():
 			continue
 		if slot.card == null:
 			continue
+
+		# ニュートラルカード(即時発動): 戦闘を介さず効果を発動して消える
+		if slot.card.data.is_instant:
+			NeutralCardEffects.trigger(get_tree(), slot)
+			slot.destroy_card()
+			processed.append(slot)
+			continue
+
 		var enemy = slot.enemy_slot
 
 		if enemy in battle_slots and enemy not in processed and enemy.shield_value == 0:
@@ -20,13 +28,18 @@ func resolve_turn():
 		else:
 			CombatResolver.resolve_vs_chanting(self, slot)
 			processed.append(slot)
+			processed.append(enemy)
 
-func finish_card_with_ability(slot):
+func finish_card_with_ability(slot, count_as_win: bool = true):
 	if slot.card:
-		if slot.card.data.element == "火" and slot.is_player:
+		if count_as_win and slot.card.data.element == "火" and slot.is_player:
 			GameData.fire_win_count += 1
 			if GameData.fire_win_count >= 5:
 				GameData.ultimate_unlocked = true
+
+		# 基礎攻撃カード(アビリティ無し)が通常解決したら、自分側の封印を1つ解除する
+		if slot.card.data.ability == "" and not slot.card.data.is_ultimate and not slot.card.data.is_instant:
+			NeutralCardEffects.release_seal(get_tree(), slot.is_player)
 
 		activate_ability(slot)
 		await slot.card.play_zoom_out()
