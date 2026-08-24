@@ -20,7 +20,7 @@ func try_play_card():
 	if reserved_card == null:
 		reserve_next_card()
 		return
-	
+
 	var mana_manager = get_node("/root/Main/ManaManager")
 	var actual_cost = max(reserved_card.cost + GameData.enemy_cost_penalty, 0)
 	if mana_manager.enemy_mana < actual_cost:
@@ -42,5 +42,5 @@ func try_play_card():
 	if not GameData.enemy_used_cards.has(reserved_card):
 		GameData.enemy_used_cards.append(reserved_card)
 	target_slot.place(new_card, true)
-	
+
 	reserve_next_card()
