@@ -1,217 +1,68 @@
 [gd_scene format=3 uid="uid://cen1x4ut4tuke"]
 
-[ext_resource type="Script" uid="uid://ckmvhjhfljo77" path="res://script/card_node.gd" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cac8768t2atsf" path="res://script/main.gd" id="1_kek77"]
-[ext_resource type="Resource" uid="uid://ieyuam5uue14" path="res://card/prototype1.tres" id="2_0xm2m"]
-[ext_resource type="Resource" uid="uid://8ec3uoqtbqw5" path="res://card/prototype2.tres" id="3_7mycd"]
-[ext_resource type="Resource" uid="uid://cu8bdhlsxfc86" path="res://card/prototype3.tres" id="4_272bh"]
-[ext_resource type="Resource" uid="uid://dhnfqvxikgmqh" path="res://card/prototype4.tres" id="5_5vw27"]
-[ext_resource type="Resource" uid="uid://bibr06oqfdtp6" path="res://card/prototype5.tres" id="6_kek77"]
+[ext_resource type="Texture2D" uid="uid://cg74cf5h8ag0u" path="res://irasto/ChatGPT Image 2026年8月1日 12_16_21.png" id="2_w48qg"]
+[ext_resource type="Script" uid="uid://bgu0s2qingaas" path="res://ability_manager.gd" id="6_kek77"]
+[ext_resource type="Texture2D" uid="uid://dmsbytc445uxt" path="res://irasto/Designer (3).png" id="6_ycdy4"]
 [ext_resource type="Script" uid="uid://cpxoxxbq3c3qf" path="res://script/slot.gd" id="7_272bh"]
 [ext_resource type="Script" uid="uid://dhqcdh76yrph3" path="res://script/mana_manager.gd" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://dndisvwmflryo" path="res://enemy_ai.gd" id="8_kek77"]
+[ext_resource type="Script" uid="uid://bqmathkxwi3cd" path="res://relic_manager.gd" id="9_kek77"]
+[ext_resource type="Script" uid="uid://ce1lbg7tqixro" path="res://battle_manager.gd" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://iojwasw3qojs" path="res://card_preview.gd" id="10_dg77c"]
+[ext_resource type="Texture2D" uid="uid://dnl5kyvex5fm4" path="res://irasto/22302021.png" id="11_ycdy4"]
+[ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="12_dg77c"]
+[ext_resource type="Texture2D" uid="uid://cfy4vyrpcw14s" path="res://irasto/2117725.png" id="12_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://dx85sxgwqgpwt" path="res://irasto/ka-do6.png" id="13_w48qg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
+atlas = ExtResource("11_ycdy4")
+region = Rect2(0, 3245, 608, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0u6y"]
+atlas = ExtResource("12_ycdy4")
+region = Rect2(118, 800, 1032, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57qmd"]
+atlas = ExtResource("11_ycdy4")
+region = Rect2(25, 3245, 557, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf5fn"]
+atlas = ExtResource("11_ycdy4")
+region = Rect2(25, 2504, 557, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
+atlas = ExtResource("12_ycdy4")
+region = Rect2(356, 800, 785, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcnqv"]
+atlas = ExtResource("12_ycdy4")
+region = Rect2(356, 95, 785, 280)
+margin = Rect2(0, -8, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg77c"]
+atlas = ExtResource("12_ycdy4")
+region = Rect2(350, 95, 805, 280)
+margin = Rect2(0, -8, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vivmo"]
+atlas = ExtResource("13_w48qg")
+region = Rect2(0, 0, 1134, 850)
 
 [node name="Main" type="Node2D" unique_id=166516908]
 script = ExtResource("1_kek77")
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=550873136]
-offset_left = 2123.0
-offset_top = 453.0
-offset_right = 2491.0
-offset_bottom = 777.0
+[node name="ChatGptImage2026年8月1日121621" type="Sprite2D" parent="." unique_id=259103776]
+position = Vector2(1267, 674.25)
+scale = Vector2(1.507177, 1.4171095)
+texture = ExtResource("2_w48qg")
+
+[node name="DeckDisplay" type="GridContainer" parent="." unique_id=550873136]
+offset_left = 1978.0
+offset_top = 415.0
+offset_right = 2488.0
+offset_bottom = 985.0
 columns = 3
-
-[node name="CardNode" type="Control" parent="GridContainer" unique_id=1366478347]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 2
-script = ExtResource("1_ig7tw")
-data = ExtResource("2_0xm2m")
-
-[node name="Panel" type="Panel" parent="GridContainer/CardNode" unique_id=337367531]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="GridContainer/CardNode/Panel" unique_id=1464816964]
-custom_minimum_size = Vector2(270, 290)
-layout_mode = 0
-offset_left = -120.0
-offset_top = -63.0
-offset_right = 150.0
-offset_bottom = 227.0
-mouse_filter = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="GridContainer/CardNode/Panel" unique_id=1053026721]
-layout_mode = 0
-offset_left = 53.0
-offset_top = 6.0
-offset_right = 93.0
-offset_bottom = 29.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[node name="CardNode2" type="Control" parent="GridContainer" unique_id=32199314]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 2
-script = ExtResource("1_ig7tw")
-data = ExtResource("3_7mycd")
-
-[node name="Panel" type="Panel" parent="GridContainer/CardNode2" unique_id=188654023]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="GridContainer/CardNode2/Panel" unique_id=1699026620]
-custom_minimum_size = Vector2(270, 290)
-layout_mode = 0
-offset_left = -125.0
-offset_top = -60.0
-offset_right = 145.0
-offset_bottom = 230.0
-mouse_filter = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="GridContainer/CardNode2/Panel" unique_id=1855603886]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 10.0
-offset_right = 84.0
-offset_bottom = 33.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[node name="CardNode3" type="Control" parent="GridContainer" unique_id=867869832]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 2
-script = ExtResource("1_ig7tw")
-data = ExtResource("4_272bh")
-
-[node name="Panel" type="Panel" parent="GridContainer/CardNode3" unique_id=66065873]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="GridContainer/CardNode3/Panel" unique_id=378292547]
-custom_minimum_size = Vector2(270, 290)
-layout_mode = 0
-offset_left = -125.0
-offset_top = -58.0
-offset_right = 145.0
-offset_bottom = 232.0
-mouse_filter = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="GridContainer/CardNode3/Panel" unique_id=1945590765]
-layout_mode = 0
-offset_left = 43.0
-offset_top = 10.0
-offset_right = 83.0
-offset_bottom = 33.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[node name="CardNode4" type="Control" parent="GridContainer" unique_id=326990018]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 2
-script = ExtResource("1_ig7tw")
-data = ExtResource("5_5vw27")
-
-[node name="Panel" type="Panel" parent="GridContainer/CardNode4" unique_id=832242707]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="GridContainer/CardNode4/Panel" unique_id=660922852]
-custom_minimum_size = Vector2(270, 290)
-layout_mode = 0
-offset_left = -118.0
-offset_top = -61.0
-offset_right = 152.0
-offset_bottom = 229.0
-mouse_filter = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="GridContainer/CardNode4/Panel" unique_id=1977310894]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 8.0
-offset_right = 88.0
-offset_bottom = 31.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[node name="CardNode5" type="Control" parent="GridContainer" unique_id=1097073312]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 2
-script = ExtResource("1_ig7tw")
-data = ExtResource("6_kek77")
-
-[node name="Panel" type="Panel" parent="GridContainer/CardNode5" unique_id=338201539]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="GridContainer/CardNode5/Panel" unique_id=2025408064]
-custom_minimum_size = Vector2(270, 290)
-layout_mode = 0
-offset_left = -127.0
-offset_top = -60.0
-offset_right = 143.0
-offset_bottom = 230.0
-mouse_filter = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="GridContainer/CardNode5/Panel" unique_id=1850691950]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 10.0
-offset_right = 79.0
-offset_bottom = 33.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[node name="Slot" type="Control" parent="." unique_id=295564124 node_paths=PackedStringArray("enemy_slot")]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 1106.0
-offset_top = 903.0
-offset_right = 1446.0
-offset_bottom = 1257.0
-script = ExtResource("7_272bh")
-enemy_slot = NodePath("../Slot2")
-
-[node name="Panel" type="Panel" parent="Slot" unique_id=1242261818]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Slot2" type="Control" parent="." unique_id=2061153683 node_paths=PackedStringArray("enemy_slot")]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 1100.0
-offset_top = 241.0
-offset_right = 1440.0
-offset_bottom = 595.0
-script = ExtResource("7_272bh")
-enemy_slot = NodePath("../Slot")
-is_player = false
-
-[node name="Panel" type="Panel" parent="Slot2" unique_id=979053299]
-custom_minimum_size = Vector2(120, 160)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="ManaManager" type="Control" parent="." unique_id=923551341]
 layout_mode = 3
@@ -219,6 +70,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("8_5vw27")
+metadata/_edit_use_anchors_ = true
 
 [node name="LabelPlayer_HP" type="Label" parent="." unique_id=1759646058]
 offset_left = 803.0
@@ -243,3 +95,439 @@ offset_left = 838.0
 offset_top = 332.0
 offset_right = 878.0
 offset_bottom = 355.0
+
+[node name="BattleManager" type="Node" parent="." unique_id=1314963196]
+script = ExtResource("10_4c57u")
+
+[node name="AbilityManager" type="Node" parent="." unique_id=926559697]
+script = ExtResource("6_kek77")
+
+[node name="PlayerSlot" type="Node" parent="." unique_id=697633319]
+
+[node name="Slot" type="Control" parent="PlayerSlot" unique_id=295564124]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 550.0
+offset_top = 900.0
+offset_right = 775.0
+offset_bottom = 1200.0
+script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot" unique_id=1946098389]
+layout_mode = 0
+offset_left = -11.9999695
+offset_top = -59.999992
+offset_right = 1012.0
+offset_bottom = 1476.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="PlayerSlot/Slot" unique_id=1242261818]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="Slot5" type="Control" parent="PlayerSlot" unique_id=1731765453]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 800.0
+offset_top = 900.0
+offset_right = 1025.0
+offset_bottom = 1200.0
+script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot5" unique_id=1977062761]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="PlayerSlot/Slot5" unique_id=1221334594]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="Slot4" type="Control" parent="PlayerSlot" unique_id=1161250156]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1050.0
+offset_top = 900.0
+offset_right = 1275.0
+offset_bottom = 1200.0
+script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot4" unique_id=1278909158]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="PlayerSlot/Slot4" unique_id=1626119485]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="Slot3" type="Control" parent="PlayerSlot" unique_id=452764940]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1300.0
+offset_top = 900.0
+offset_right = 1525.0
+offset_bottom = 1200.0
+script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot3" unique_id=651163424]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="PlayerSlot/Slot3" unique_id=2104772593]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="Slot2" type="Control" parent="PlayerSlot" unique_id=489318736]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1550.0
+offset_top = 900.0
+offset_right = 1775.0
+offset_bottom = 1200.0
+script = ExtResource("7_272bh")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot2" unique_id=887754198]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="PlayerSlot/Slot2" unique_id=1428316212]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="EnemySlot" type="Node" parent="." unique_id=212027387]
+
+[node name="Slot" type="Control" parent="EnemySlot" unique_id=2061153683]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 550.0
+offset_top = 240.0
+offset_right = 775.0
+offset_bottom = 540.0
+script = ExtResource("7_272bh")
+is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot" unique_id=1676240037]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="EnemySlot/Slot" unique_id=979053299]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="Slot5" type="Control" parent="EnemySlot" unique_id=1526671285]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 800.0
+offset_top = 240.0
+offset_right = 1025.0
+offset_bottom = 540.0
+script = ExtResource("7_272bh")
+is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot5" unique_id=1222813323]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="EnemySlot/Slot5" unique_id=1410465811]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="Slot4" type="Control" parent="EnemySlot" unique_id=553321545]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1050.0
+offset_top = 240.0
+offset_right = 1275.0
+offset_bottom = 540.0
+script = ExtResource("7_272bh")
+is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot4" unique_id=301829510]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="EnemySlot/Slot4" unique_id=365986045]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="Slot3" type="Control" parent="EnemySlot" unique_id=1407071932]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1300.0
+offset_top = 240.0
+offset_right = 1525.0
+offset_bottom = 540.0
+script = ExtResource("7_272bh")
+is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot3" unique_id=44494587]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="EnemySlot/Slot3" unique_id=1043540266]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="Slot2" type="Control" parent="EnemySlot" unique_id=870290771]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1550.0
+offset_top = 240.0
+offset_right = 1775.0
+offset_bottom = 540.0
+script = ExtResource("7_272bh")
+is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot2" unique_id=335074189]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_ycdy4")
+
+[node name="Panel" type="Panel" parent="EnemySlot/Slot2" unique_id=1514879533]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1788043568]
+offset_left = 1950.0
+offset_top = 1207.0
+offset_right = 2619.0
+offset_bottom = 1257.0
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_g4v7s")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1093853626]
+offset_left = 1950.0
+offset_top = 189.0
+offset_right = 2619.0
+offset_bottom = 239.0
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_g4v7s")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1814993638]
+offset_left = 1945.9999
+offset_top = 1094.0001
+offset_right = 2978.0
+offset_bottom = 1374.0001
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_d0u6y")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1896018797]
+offset_left = 1953.9999
+offset_top = 77.0
+offset_right = 2986.0
+offset_bottom = 357.0
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_d0u6y")
+
+[node name="PlayerMPBar" type="TextureProgressBar" parent="." unique_id=2040058652]
+offset_left = 1972.0
+offset_top = 1207.0
+offset_right = 2584.0
+offset_bottom = 1257.0
+scale = Vector2(0.8, 0.8)
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_57qmd")
+texture_progress = SubResource("AtlasTexture_yf5fn")
+
+[node name="EnemyMPBar" type="TextureProgressBar" parent="." unique_id=46821814]
+offset_left = 1972.0
+offset_top = 189.0
+offset_right = 2584.0
+offset_bottom = 239.0
+scale = Vector2(0.8, 0.8)
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_57qmd")
+texture_progress = SubResource("AtlasTexture_yf5fn")
+
+[node name="PlayerHPBar" type="TextureProgressBar" parent="." unique_id=1041815007]
+custom_minimum_size = Vector2(300, 30)
+offset_left = 2041.0
+offset_top = 1094.0
+offset_right = 2833.5
+offset_bottom = 1374.0
+scale = Vector2(0.4, 0.4)
+texture_under = SubResource("AtlasTexture_w48qg")
+texture_progress = SubResource("AtlasTexture_fcnqv")
+
+[node name="EnemyHPBar" type="TextureProgressBar" parent="." unique_id=1696531416]
+custom_minimum_size = Vector2(300, 30)
+offset_left = 2049.0
+offset_top = 77.0
+offset_right = 3089.0
+offset_bottom = 357.0
+scale = Vector2(0.4, 0.4)
+texture_under = SubResource("AtlasTexture_w48qg")
+texture_progress = SubResource("AtlasTexture_dg77c")
+
+[node name="EnemyAI" type="Node" parent="." unique_id=1846317281]
+script = ExtResource("8_kek77")
+
+[node name="RelicManager" type="Node" parent="." unique_id=337626491]
+script = ExtResource("9_kek77")
+
+[node name="CardPreview" type="Panel" parent="." unique_id=613139404]
+offset_left = 170.0
+offset_top = 200.0
+offset_right = 530.0
+offset_bottom = 750.0
+script = ExtResource("10_dg77c")
+
+[node name="PreviewIcon" type="TextureRect" parent="CardPreview" unique_id=521706138]
+layout_mode = 0
+offset_left = -307.0
+offset_top = -62.0
+offset_right = 1293.0
+offset_bottom = 1138.0
+scale = Vector2(0.6, 0.6)
+texture = SubResource("AtlasTexture_vivmo")
+expand_mode = 1
+
+[node name="Labelcost" type="Label" parent="CardPreview" unique_id=237307857]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 1.0
+offset_right = 102.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_dg77c")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+
+[node name="Labelname" type="Label" parent="CardPreview" unique_id=1996249456]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 46.0
+offset_right = 280.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_dg77c")
+theme_override_font_sizes/font_size = 18
+
+[node name="Labelcast" type="Label" parent="CardPreview" unique_id=900632355]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 26.0
+offset_right = 345.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_dg77c")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[node name="Labelpower" type="Label" parent="CardPreview" unique_id=1017337369]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 420.0
+offset_right = 185.0
+offset_bottom = 455.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Labelability" type="Label" parent="CardPreview" unique_id=1740986636]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 323.0
+offset_right = 330.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="Labelcurrentpower" type="Label" parent="CardPreview" unique_id=1395320191]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 420.0
+offset_right = 335.0
+offset_bottom = 455.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="LabelOverMana" type="Label" parent="." unique_id=1486513152]
+offset_left = 2464.0
+offset_top = 1172.0
+offset_right = 2504.0
+offset_bottom = 1214.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_dg77c")
+theme_override_font_sizes/font_size = 30

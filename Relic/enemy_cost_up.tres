@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://cvkhf1tskhqeh"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_2qlpy"]
+
+[resource]
+script = ExtResource("1_2qlpy")
+name = "呪いの印"
+description = "相手の全カードのコスト+1"
+relic_type = "enemy_cost_up"
+value = 1

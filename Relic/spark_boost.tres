@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://31ojdyj6aosc"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_tluuj"]
+
+[resource]
+script = ExtResource("1_tluuj")
+name = "雷の紋章"
+description = "スパークの範囲+1"
+relic_type = "spark_boost"
+value = 1

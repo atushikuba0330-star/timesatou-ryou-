@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://5dcg88gdx51l"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_8gnuq"]
+
+[resource]
+script = ExtResource("1_8gnuq")
+name = "マナの結晶"
+description = "最大マナ+2"
+relic_type = "max_mana_up"
+value = 2

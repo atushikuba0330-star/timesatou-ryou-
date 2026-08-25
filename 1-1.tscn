@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dgs1uivejpg2q"]
+
+[ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_7ydrx"]
+[ext_resource type="Script" uid="uid://bqrc65umcybdb" path="res://1_1.gd" id="1_joqva"]
+[ext_resource type="Script" uid="uid://cdgksm5r0oytu" path="res://BACK2BGMkirikae.gd" id="3_mphkv"]
+
+[node name="Node2D" type="Node2D" unique_id=749734886]
+script = ExtResource("1_joqva")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=626936671]
+offset_right = 2540.0
+offset_bottom = 1350.0
+texture = ExtResource("1_7ydrx")
+
+[node name="Button" type="Button" parent="." unique_id=110680235]
+offset_left = 36.0
+offset_top = 50.0
+offset_right = 462.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 60
+text = "戻る"
+script = ExtResource("3_mphkv")
+
+[node name="Button2" type="Button" parent="." unique_id=564486947]
+offset_left = 1955.0
+offset_top = 50.0
+offset_right = 2432.0
+offset_bottom = 196.0
+theme_override_font_sizes/font_size = 60
+text = "戦闘終了用"
+script = ExtResource("3_mphkv")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

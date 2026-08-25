@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://cuybgrxuda8lq"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_1bw7d"]
+
+[resource]
+script = ExtResource("1_1bw7d")
+name = "光の紋章"
+description = "シールドのダメージカット+10%"
+relic_type = "shield_boost"
+value = 10

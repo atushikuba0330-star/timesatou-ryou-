@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://clxwd2uoqr01f"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_tov43"]
+
+[resource]
+script = ExtResource("1_tov43")
+name = "混沌のダイス"
+description = "アビリティ発動時にランダムなアビリティが代わりに発動"
+relic_type = "chaos_dice"

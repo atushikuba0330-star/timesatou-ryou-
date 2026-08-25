@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ddq7v0nffbnsn"]
+
+[ext_resource type="Script" uid="uid://d2k33il4gdtqn" path="res://win.gd" id="1_wao2c"]
+
+[node name="Win" type="Control" unique_id=785774155]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wao2c")
+
+[node name="Label" type="Label" parent="." unique_id=131449772]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 250.0
+offset_right = 1423.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 150
+text = "勝利!!"
+
+[node name="Button" type="Button" parent="." unique_id=1568415927]
+layout_mode = 0
+offset_left = 2165.0
+offset_top = 1100.0
+offset_right = 2415.0
+offset_bottom = 1270.0
+theme_override_font_sizes/font_size = 50
+text = "次へ"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

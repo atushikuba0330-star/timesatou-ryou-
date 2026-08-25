@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://c2npgjlqlpswc"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_y1t8k"]
+
+[resource]
+script = ExtResource("1_y1t8k")
+name = "腐敗の毒"
+description = "相手の最大マナ-2"
+relic_type = "enemy_mana_down"
+value = 2

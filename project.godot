@@ -11,14 +11,22 @@ config_version=5
 [application]
 
 config/name="prototype04"
-run/main_scene="uid://cen1x4ut4tuke"
+run/main_scene="uid://cj1bygret3wjg"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameData="*uid://xu7jkg8cu2ar"
+SePlayer="*res://se_player.tscn"
+BgmPlayer="*res://bgm_player.tscn"
+EscMenu="*res://esc_menu.tscn"
 
 [display]
 
 window/size/viewport_width=2540
 window/size/viewport_height=1350
+window/stretch/mode="viewport"
 
 [physics]
 

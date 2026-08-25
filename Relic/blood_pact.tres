@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://b2qjk0ycviy1w"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_c3wdx"]
+
+[resource]
+script = ExtResource("1_c3wdx")
+name = "血の契約"
+description = "HP-100ごとにパワー+5%"
+relic_type = "blood_pact"
+value = 5

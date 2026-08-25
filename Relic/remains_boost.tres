@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://wrrqisrjhuct"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_85ew0"]
+
+[resource]
+script = ExtResource("1_85ew0")
+name = "影の紋章"
+description = "残骸の威力+15"
+relic_type = "remains_boost"
+value = 15

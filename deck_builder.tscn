@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://b20xg15s2pnri"]
+
+[ext_resource type="Script" uid="uid://ch3ke4yu7l8k1" path="res://deck_builder.gd" id="1_script"]
+[ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="2_font"]
+
+[node name="DeckBuilder" type="Control" unique_id=2011409539]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1166725725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 40
+
+[node name="VBox" type="VBoxContainer" parent="Margin" unique_id=2124940897]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="TitleLabel" type="Label" parent="Margin/VBox" unique_id=1931729492]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 50
+text = "デッキ編成"
+
+[node name="DeckLabel" type="Label" parent="Margin/VBox" unique_id=2006412672]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "現在のデッキ(アビリティカード4枚のみ入れ替え可)"
+
+[node name="DeckRow" type="HBoxContainer" parent="Margin/VBox" unique_id=1228293171]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PoolLabel" type="Label" parent="Margin/VBox" unique_id=788341163]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "所持カード(スロットを選択→カードをタップで入れ替え)"
+
+[node name="PoolScroll" type="ScrollContainer" parent="Margin/VBox" unique_id=1307405601]
+custom_minimum_size = Vector2(0, 520)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PoolGrid" type="GridContainer" parent="Margin/VBox/PoolScroll" unique_id=907813340]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 7
+
+[node name="RelicLabel" type="Label" parent="Margin/VBox" unique_id=541160669]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "所持しているお宝"
+
+[node name="RelicGrid" type="GridContainer" parent="Margin/VBox" unique_id=379987466]
+layout_mode = 2
+
+[node name="ConfirmButton" type="Button" parent="Margin/VBox" unique_id=2103955742]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "編成完了 → 次の戦闘へ"

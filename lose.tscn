@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://beqyg770nmere"]
+
+[ext_resource type="Script" uid="uid://bljn83xvy86h0" path="res://lose.gd" id="1_rtc1j"]
+
+[node name="Lose" type="Control" unique_id=699804192]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rtc1j")
+
+[node name="Label" type="Label" parent="." unique_id=670515310]
+layout_mode = 0
+offset_left = 1090.0
+offset_top = 696.0
+offset_right = 1130.0
+offset_bottom = 719.0
+text = "敗北"
+
+[node name="Button" type="Button" parent="." unique_id=1911438875]
+layout_mode = 0
+offset_left = 1080.0
+offset_top = 824.0
+offset_right = 1152.0
+offset_bottom = 855.0
+text = "もう一度"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

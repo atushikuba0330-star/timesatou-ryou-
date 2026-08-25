@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://bkf80ggfeywln"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_f08jb"]
+
+[resource]
+script = ExtResource("1_f08jb")
+name = "鏡の盾"
+description = "受けたダメージの10%を相手に返す"
+relic_type = "reflect"
+value = 10

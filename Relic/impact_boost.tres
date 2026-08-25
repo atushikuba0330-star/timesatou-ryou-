@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://d25k1l6lf5wsm"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_7wev0"]
+
+[resource]
+script = ExtResource("1_7wev0")
+name = "炎の紋章"
+description = "インパクトの威力+50"
+relic_type = "impact_boost"
+value = 50

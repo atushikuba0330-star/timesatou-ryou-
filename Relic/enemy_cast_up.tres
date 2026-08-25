@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://bkhqbgwxxmus8"]
+
+[ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_86cpg"]
+
+[resource]
+script = ExtResource("1_86cpg")
+name = "封印の鎖"
+description = "相手の詠唱数+1"
+relic_type = "enemy_cast_up"
+value = 1
