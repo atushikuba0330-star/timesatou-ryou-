@@ -47,6 +47,10 @@ margin = Rect2(0, -8, 0, 0)
 [node name="Main" type="Node2D" unique_id=166516908]
 script = ExtResource("1_kek77")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1246132209]
+position = Vector2(1270, 675)
+zoom = Vector2(0.995, 0.995)
+
 [node name="DeckDisplay" type="GridContainer" parent="." unique_id=550873136]
 offset_left = 1910.0
 offset_top = 415.0
