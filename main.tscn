@@ -52,6 +52,9 @@ region = Rect2(0, 0, 1134, 850)
 [node name="Main" type="Node2D" unique_id=166516908]
 script = ExtResource("1_kek77")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1193686480]
+position = Vector2(1270, 675)
+
 [node name="ChatGptImage2026年8月1日121621" type="Sprite2D" parent="." unique_id=259103776]
 position = Vector2(1267, 674.25)
 scale = Vector2(1.507177, 1.4171095)

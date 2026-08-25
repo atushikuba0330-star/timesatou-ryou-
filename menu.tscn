@@ -17,44 +17,52 @@ offset_right = 2540.0
 offset_bottom = 1350.0
 texture = ExtResource("1_l48gv")
 
+[node name="TR" type="Button" parent="." unique_id=1666763872]
+offset_left = 201.0
+offset_top = 287.0
+offset_right = 679.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 40
+text = "チュートリアル"
+script = ExtResource("5_ytr4m")
+
 [node name="story" type="Button" parent="." unique_id=2019634792]
-offset_left = 144.0
-offset_top = 324.0
-offset_right = 612.0
-offset_bottom = 442.0
+offset_left = 212.0
+offset_top = 534.0
+offset_right = 680.0
+offset_bottom = 652.0
+theme_override_font_sizes/font_size = 40
 text = "ストーリーモード"
 script = ExtResource("1_lti8b")
 
 [node name="endless" type="Button" parent="." unique_id=222835492]
-offset_left = 151.0
-offset_top = 568.0
-offset_right = 618.0
-offset_bottom = 681.0
+offset_left = 212.0
+offset_top = 723.0
+offset_right = 679.0
+offset_bottom = 836.0
+theme_override_font_sizes/font_size = 40
 text = "エンドレスモード"
 script = ExtResource("2_ouk20")
 
 [node name="setting" type="Button" parent="." unique_id=1879020622]
-offset_left = 159.0
-offset_top = 802.0
-offset_right = 621.0
-offset_bottom = 918.0
+offset_left = 215.0
+offset_top = 905.0
+offset_right = 677.0
+offset_bottom = 1021.0
+theme_override_font_sizes/font_size = 40
 text = "設定"
 script = ExtResource("3_mae5d")
 
 [node name="Button" type="Button" parent="." unique_id=647146203]
-offset_left = 145.0
-offset_top = 1114.0
-offset_right = 639.0
-offset_bottom = 1220.0
+offset_left = 194.0
+offset_top = 1087.0
+offset_right = 679.0
+offset_bottom = 1217.0
+theme_override_font_sizes/font_size = 40
+text = "タイトルに戻る"
 script = ExtResource("4_4hy44")
 
-[node name="TR" type="Button" parent="." unique_id=1666763872]
-offset_left = 145.0
-offset_top = 127.0
-offset_right = 594.0
-offset_bottom = 255.0
-script = ExtResource("5_ytr4m")
-
+[connection signal="pressed" from="TR" to="TR" method="_on_pressed"]
 [connection signal="pressed" from="story" to="story" method="_on_pressed"]
 [connection signal="pressed" from="endless" to="endless" method="_on_pressed"]
 [connection signal="pressed" from="setting" to="setting" method="_on_pressed"]
