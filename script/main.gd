@@ -19,6 +19,8 @@ var pre_pause_time_scale = 1.0
 @onready var deck_display = $DeckDisplay
 
 func _ready():
+	BgmPlayer.play_bgm("battle")
+
 	GameData.reset_battle()
 	GameData.ultimate_unlocked = true
 	if GameData.player_deck.is_empty():
