@@ -150,7 +150,7 @@ offset_right = 2509.0
 offset_bottom = 1433.0
 theme_override_fonts/font = ExtResource("1_5duen")
 theme_override_font_sizes/font_size = 100
-text = "strt"
+text = "Bet"
 
 [connection signal="pressed" from="HBoxContainer/FireButton" to="." method="_on_fire_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/WaterButton" to="." method="_on_water_button_pressed"]
