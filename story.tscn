@@ -6,6 +6,9 @@
 
 [node name="Node2D" type="Node2D" unique_id=1181554307]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1960137059]
+position = Vector2(1269, 675)
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1019585892]
 offset_right = 2540.0
 offset_bottom = 1350.0

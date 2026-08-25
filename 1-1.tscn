@@ -7,6 +7,9 @@
 [node name="Node2D" type="Node2D" unique_id=749734886]
 script = ExtResource("1_joqva")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1090030393]
+position = Vector2(1270, 675)
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=626936671]
 offset_right = 2540.0
 offset_bottom = 1350.0
