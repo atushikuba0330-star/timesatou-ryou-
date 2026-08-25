@@ -5,7 +5,10 @@ func _ready():
 
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
-		toggle_menu()
+		var current_scene = get_tree().current_scene.name
+		if current_scene == "Main":  # ← バトルシーン名に合わせて変更
+			toggle_menu()
+
 
 func toggle_menu():
 	visible = not visible
