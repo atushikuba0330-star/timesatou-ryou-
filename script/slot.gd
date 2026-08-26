@@ -112,7 +112,6 @@ func place(c, free: bool = false):
 
 	effect.global_position =global_position
 
-	effect.play_effect("RESET")
 
 
 # ==================
