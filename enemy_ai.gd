@@ -14,6 +14,10 @@ func reserve_next_card():
 func run():
 	while true:
 		await get_tree().create_timer(2.0).timeout
+
+		if get_tree().paused:
+			continue
+
 		try_play_card()
 
 func try_play_card():

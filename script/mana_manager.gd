@@ -29,6 +29,9 @@ func run():
 		# 3秒待機
 		await get_tree().create_timer(3.0).timeout
 
+		if get_tree().paused:
+			continue
+
 		# プレイヤーマナ回復
 		# 上限(max_mana)を超えない
 		player_mana = min(player_mana + 1, max_mana)
