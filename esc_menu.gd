@@ -16,9 +16,11 @@ func toggle_menu():
 
 func _on_resume_pressed():
 	toggle_menu()
+	SePlayer.play_se("res://SE (1).wav")
 
 func _on_title_pressed():
 	get_tree().paused = false
 	visible = false
 	get_tree().change_scene_to_file("res://menu.tscn")
 	BgmPlayer.play_bgm("Home")
+	SePlayer.play_se("res://SE (1).wav")
