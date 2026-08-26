@@ -12,6 +12,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=942316464]
+layout_mode = 0
+offset_right = 2540.0
+offset_bottom = 1350.0
+
 [node name="Margin" type="MarginContainer" parent="." unique_id=1166725725]
 layout_mode = 1
 anchors_preset = 15

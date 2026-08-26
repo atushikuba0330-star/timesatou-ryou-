@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqy33u0suqnal" path="res://card_select.gd" id="1_8b6yr"]
 [ext_resource type="Texture2D" uid="uid://dx85sxgwqgpwt" path="res://irasto/ka-do6.png" id="2_7yep5"]
+[ext_resource type="Texture2D" uid="uid://bsbyev5xkpvxb" path="res://ChatGPT Image 2026年8月26日 15_37_17.png" id="2_d53v7"]
 [ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="3_7yep5"]
 
 [node name="CardSelect" type="Control" unique_id=443806316]
@@ -12,6 +13,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8b6yr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1580212979]
+layout_mode = 0
+offset_right = 2540.0
+offset_bottom = 1350.0
+texture = ExtResource("2_d53v7")
 
 [node name="Label" type="Label" parent="." unique_id=670965286]
 layout_mode = 0
