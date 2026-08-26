@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://7mc61yncdmpm"]
 
+[ext_resource type="Script" uid="uid://trriyst0q382" path="res://animation_2d.gd" id="1_qb78i"]
 [ext_resource type="Texture2D" uid="uid://c2rcyhfrn77o6" path="res://Assets/Warped shooting fx files/Assets/Pixelart/Bolt/spritesheet.png" id="1_utj1r"]
 [ext_resource type="Texture2D" uid="uid://d23wcdxr33tfg" path="res://Assets/Efect custom/sousatuF.png" id="2_bt8x0"]
 [ext_resource type="Texture2D" uid="uid://ct88xi3qfkfge" path="res://Assets/Warped shooting fx files/Assets/Pixelart/hits/Hits-6/spritesheet.png" id="3_xwayi"]
@@ -438,8 +439,9 @@ _data = {
 &"splashanimation": SubResource("Animation_cq4kp")
 }
 
-[node name="Node2D" type="Node2D" unique_id=1515298376]
+[node name="BattleEffect" type="Node2D" unique_id=1515298376]
 position = Vector2(196, 195)
+script = ExtResource("1_qb78i")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1176945159]
 libraries/ = SubResource("AnimationLibrary_bt8x0")

@@ -54,6 +54,10 @@ script = ExtResource("1_kek77")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1193686480]
 position = Vector2(1270, 675)
+limit_left = 0
+limit_top = 0
+limit_right = 2530
+limit_bottom = 1340
 
 [node name="ChatGptImage2026年8月1日121621" type="Sprite2D" parent="." unique_id=259103776]
 position = Vector2(1267, 674.25)
@@ -247,7 +251,6 @@ offset_top = 240.0
 offset_right = 775.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
-is_player = false
 
 [node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot" unique_id=1676240037]
 layout_mode = 0
@@ -274,7 +277,6 @@ offset_top = 240.0
 offset_right = 1025.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
-is_player = false
 
 [node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot5" unique_id=1222813323]
 layout_mode = 0
@@ -301,7 +303,6 @@ offset_top = 240.0
 offset_right = 1275.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
-is_player = false
 
 [node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot4" unique_id=301829510]
 layout_mode = 0
@@ -328,7 +329,6 @@ offset_top = 240.0
 offset_right = 1525.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
-is_player = false
 
 [node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot3" unique_id=44494587]
 layout_mode = 0
@@ -355,7 +355,6 @@ offset_top = 240.0
 offset_right = 1775.0
 offset_bottom = 540.0
 script = ExtResource("7_272bh")
-is_player = false
 
 [node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot2" unique_id=335074189]
 layout_mode = 0
