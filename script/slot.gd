@@ -188,6 +188,8 @@ func progress_turn():
 			state = State.COMPLETE
 
 			print("詠唱完了:", name)
+			
+			_fire_projectile_effect()
 
 			if card.data.is_ultimate:
 				BattleEffects.fire_ultimate_burst(
@@ -255,3 +257,16 @@ func _move_to_random_slot():
 	target.card = c
 
 	target.state = State.CHANTING
+	
+func _fire_projectile_effect():
+	if card == null:
+		return
+	
+	var effect_scene = preload("res://animation2dtest.tscn")
+
+	var effect = effect_scene.instantiate()
+
+	get_tree().current_scene.add_child(effect)
+
+	effect.launch(global_position,enemy_slot.global_position)
+	

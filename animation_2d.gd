@@ -1,9 +1,22 @@
 extends Node2D
 
-func play_effect(anim_name: String):
+var target_position: Vector2
 
-	$AnimationPlayer.play(anim_name)
+func launch(start_pos, end_pos):
 
-	await $AnimationPlayer.animation_finished
+	global_position = start_pos
+
+	target_position = end_pos
+
+	var tween = create_tween()
+
+	tween.tween_property(
+		self,
+		"global_position",
+		target_position,
+		0.5
+	)
+
+	await tween.finished
 
 	queue_free()
