@@ -2,11 +2,31 @@
 
 [ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="1_5duen"]
 [ext_resource type="Script" uid="uid://c5vfufvv4wyhq" path="res://character_select.gd" id="1_6yhuy"]
-[ext_resource type="Texture2D" uid="uid://bas448qlkectd" path="res://irasto/kyouikuyouusagirobo.png" id="2_6yhuy"]
+[ext_resource type="Texture2D" uid="uid://c8e3mwjl0rsja" path="res://Character files/炎キャラNE.png" id="3_aoibv"]
+[ext_resource type="Texture2D" uid="uid://b73ohgu7invua" path="res://Character files/水キャラNE.png" id="4_mn8d4"]
+[ext_resource type="Texture2D" uid="uid://bx2nxy8ua5l84" path="res://Character files/雷キャラNE.png" id="5_7yigr"]
+[ext_resource type="Texture2D" uid="uid://ca6ljbtf7hhyi" path="res://Character files/光キャラNE.png" id="6_4hbjg"]
+[ext_resource type="Texture2D" uid="uid://balrdw7a1ead6" path="res://Character files/闇キャラNE.png" id="7_4hbjg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yf5fn"]
-atlas = ExtResource("2_6yhuy")
-region = Rect2(500, 300, 500, 850)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq6wd"]
+atlas = ExtResource("3_aoibv")
+region = Rect2(84.10556, 41.671104, 303.2765, 498.27658)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8d0rx"]
+atlas = ExtResource("4_mn8d4")
+region = Rect2(77.94699, 49.881462, 242.72385, 490.06604)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aq61o"]
+atlas = ExtResource("5_7yigr")
+region = Rect2(100.52594, 23.710396, 243.75012, 514.1845)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fes3t"]
+atlas = ExtResource("6_4hbjg")
+region = Rect2(90.26276, 24.736713, 289.9344, 546.5135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hbjg"]
+atlas = ExtResource("7_4hbjg")
+region = Rect2(94, 58.718464, 265, 462.23532)
 
 [node name="CharacterSelect" type="Control" unique_id=1963511652]
 layout_mode = 3
@@ -46,10 +66,10 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/FireButton" unique_id=1610989626]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 800.0
+offset_bottom = 1400.0
 scale = Vector2(0.5, 0.5)
-texture = SubResource("AtlasTexture_yf5fn")
+texture = SubResource("AtlasTexture_pq6wd")
 
 [node name="Label" type="Label" parent="HBoxContainer/FireButton" unique_id=1921804139]
 layout_mode = 0
@@ -63,10 +83,10 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/WaterButton" unique_id=1128684419]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 800.0
+offset_bottom = 1400.0
 scale = Vector2(0.5, 0.5)
-texture = SubResource("AtlasTexture_yf5fn")
+texture = SubResource("AtlasTexture_8d0rx")
 
 [node name="Label" type="Label" parent="HBoxContainer/WaterButton" unique_id=167059150]
 layout_mode = 0
@@ -80,10 +100,10 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/ThunderButton" unique_id=1005358649]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 800.0
+offset_bottom = 1400.0
 scale = Vector2(0.5, 0.5)
-texture = SubResource("AtlasTexture_yf5fn")
+texture = SubResource("AtlasTexture_aq61o")
 
 [node name="Label" type="Label" parent="HBoxContainer/ThunderButton" unique_id=40311523]
 layout_mode = 0
@@ -97,10 +117,10 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HollyButton" unique_id=513196160]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 800.0
+offset_bottom = 1400.0
 scale = Vector2(0.5, 0.5)
-texture = SubResource("AtlasTexture_yf5fn")
+texture = SubResource("AtlasTexture_fes3t")
 
 [node name="Label" type="Label" parent="HBoxContainer/HollyButton" unique_id=2065778133]
 layout_mode = 0
@@ -114,10 +134,10 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/DarkButton" unique_id=645299263]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 800.0
+offset_bottom = 1400.0
 scale = Vector2(0.5, 0.5)
-texture = SubResource("AtlasTexture_yf5fn")
+texture = SubResource("AtlasTexture_4hbjg")
 
 [node name="Label" type="Label" parent="HBoxContainer/DarkButton" unique_id=1357635392]
 layout_mode = 0
