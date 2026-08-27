@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ch3ke4yu7l8k1" path="res://deck_builder.gd" id="1_script"]
 [ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="2_font"]
+[ext_resource type="Texture2D" uid="uid://dynigqedrc1yh" path="res://ChatGPT Image 2026年8月26日 16_16_51.png" id="2_pcmq2"]
 
 [node name="DeckBuilder" type="Control" unique_id=2011409539]
 layout_mode = 3
@@ -16,6 +17,7 @@ script = ExtResource("1_script")
 layout_mode = 0
 offset_right = 2540.0
 offset_bottom = 1350.0
+texture = ExtResource("2_pcmq2")
 
 [node name="Margin" type="MarginContainer" parent="." unique_id=1166725725]
 layout_mode = 1
