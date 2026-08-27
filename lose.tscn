@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bljn83xvy86h0" path="res://lose.gd" id="1_rtc1j"]
 [ext_resource type="Texture2D" uid="uid://bbqf5wvitafbm" path="res://ChatGPT Image 2026年8月27日 10_30_04.png" id="2_pl8j0"]
+[ext_resource type="Script" uid="uid://cdgksm5r0oytu" path="res://BACK2BGMkirikae.gd" id="3_46blr"]
 
 [node name="Lose" type="Control" unique_id=699804192]
 layout_mode = 3
@@ -20,18 +21,33 @@ texture = ExtResource("2_pl8j0")
 
 [node name="Label" type="Label" parent="." unique_id=670515310]
 layout_mode = 0
-offset_left = 1090.0
-offset_top = 696.0
-offset_right = 1130.0
-offset_bottom = 719.0
+offset_left = 1081.0
+offset_top = 122.0
+offset_right = 1665.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 90
 text = "敗北"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=1911438875]
 layout_mode = 0
-offset_left = 1080.0
-offset_top = 824.0
-offset_right = 1152.0
-offset_bottom = 855.0
-text = "もう一度"
+offset_left = 1088.0
+offset_top = 450.0
+offset_right = 1753.0
+offset_bottom = 643.0
+theme_override_font_sizes/font_size = 60
+text = "RETRY"
+
+[node name="Button2" type="Button" parent="." unique_id=1333346311]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 874.0
+offset_right = 1758.0
+offset_bottom = 1028.0
+theme_override_font_sizes/font_size = 60
+text = "メニューに戻る"
+script = ExtResource("3_46blr")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
