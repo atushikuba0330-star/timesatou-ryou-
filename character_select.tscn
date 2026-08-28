@@ -11,7 +11,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pq6wd"]
 atlas = ExtResource("3_aoibv")
-region = Rect2(84.10556, 41.671104, 303.2765, 498.27658)
+region = Rect2(100.5, 60.350037, 340, 503.25012)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8d0rx"]
 atlas = ExtResource("4_mn8d4")
@@ -23,11 +23,11 @@ region = Rect2(100.52594, 23.710396, 243.75012, 514.1845)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fes3t"]
 atlas = ExtResource("6_4hbjg")
-region = Rect2(90.26276, 24.736713, 289.9344, 546.5135)
+region = Rect2(112.3497, 47.449825, 282.1501, 545.6001)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4hbjg"]
 atlas = ExtResource("7_4hbjg")
-region = Rect2(94, 58.718464, 265, 462.23532)
+region = Rect2(94, 80.99983, 283.44974, 466.4001)
 
 [node name="CharacterSelect" type="Control" unique_id=1963511652]
 layout_mode = 3
