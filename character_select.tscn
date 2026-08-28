@@ -102,7 +102,9 @@ texture = SubResource("AtlasTexture_8d0rx")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "教育用ウサギロボ"
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 20
+text = "アナスタシア"
 
 [node name="ThunderButton" type="Button" parent="HBoxContainer" unique_id=1278580213]
 custom_minimum_size = Vector2(400, 300)
@@ -119,7 +121,9 @@ texture = SubResource("AtlasTexture_aq61o")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "教育用ウサギロボ"
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 20
+text = "リブラ"
 
 [node name="HollyButton" type="Button" parent="HBoxContainer" unique_id=509960231]
 custom_minimum_size = Vector2(400, 300)
@@ -136,7 +140,9 @@ texture = SubResource("AtlasTexture_fes3t")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "教育用ウサギロボ"
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 20
+text = "ルミナ"
 
 [node name="DarkButton" type="Button" parent="HBoxContainer" unique_id=1717599282]
 custom_minimum_size = Vector2(400, 300)
@@ -153,7 +159,9 @@ texture = SubResource("AtlasTexture_4hbjg")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "教育用ウサギロボ"
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 20
+text = "ネクロア"
 
 [node name="RightPanel" type="Panel" parent="." unique_id=538786079]
 layout_mode = 0
