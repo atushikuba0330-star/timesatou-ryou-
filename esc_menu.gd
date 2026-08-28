@@ -14,6 +14,9 @@ func toggle_menu():
 	visible = not visible
 	get_tree().paused = visible
 
+	var main = get_tree().current_scene
+	main.is_paused = visible
+
 func _on_resume_pressed():
 	toggle_menu()
 	SePlayer.play_se("res://SE (1).wav")

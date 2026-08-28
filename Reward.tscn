@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://fwilca27ha4"]
+[gd_scene format=3 uid="uid://8uemoypg4m0v"]
 
 [ext_resource type="Script" uid="uid://diciv8xj8fpg0" path="res://reward.gd" id="1_y65c6"]
+[ext_resource type="Texture2D" uid="uid://d24h1hgxcxj6h" path="res://ChatGPT Image 2026年8月26日 15_04_19.png" id="2_801r7"]
 
 [node name="Reward" type="Control" unique_id=553658734]
 layout_mode = 3
@@ -10,6 +11,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y65c6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=519904215]
+layout_mode = 0
+offset_right = 2540.0
+offset_bottom = 1350.0
+texture = ExtResource("2_801r7")
 
 [node name="Label" type="Label" parent="." unique_id=1305028178]
 layout_mode = 0

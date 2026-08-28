@@ -35,8 +35,10 @@ func _get_all_relics() -> Array:
 func _on_card_button_pressed():
 	GameData.reward_type = "card"
 	get_tree().change_scene_to_file("res://card_select.tscn")
+	SePlayer.play_se("res://SE (1).wav")
 
 func _on_relic_button_pressed():
 	if reward_relic:
 		GameData.player_relics.append(reward_relic)
 	get_tree().change_scene_to_file("res://deck_builder.tscn")
+	SePlayer.play_se("res://SE (1).wav")

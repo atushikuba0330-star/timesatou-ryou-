@@ -195,3 +195,4 @@ func _on_pool_card_pressed(card: CardData):
 
 func _on_confirm_pressed():
 	get_tree().change_scene_to_file("res://main.tscn")
+	SePlayer.play_se("res://SE (1).wav")

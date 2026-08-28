@@ -36,12 +36,15 @@ func setup_cards():
 
 func _on_button_pressed():
 	select_card(0)
+	SePlayer.play_se("res://audiostock_53254.mp3")
 
 func _on_button_2_pressed():
 	select_card(1)
+	SePlayer.play_se("res://audiostock_53254.mp3")
 
 func _on_button_3_pressed():
 	select_card(2)
+	SePlayer.play_se("res://audiostock_53254.mp3")
 
 func select_card(index: int):
 	if index < cards_to_show.size():

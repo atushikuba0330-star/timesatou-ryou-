@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://5flj3afd3rqb" path="res://SE.gd" id="3_2wnuf"]
 [ext_resource type="AudioStream" uid="uid://os1vutspahng" path="res://audiostock_1604995.mp3" id="3_k3d6d"]
 [ext_resource type="AudioStream" uid="uid://cx3ncltxbfew3" path="res://audiostock_1511517.mp3" id="4_mncjs"]
+[ext_resource type="AudioStream" uid="uid://box4fa1jqq254" path="res://audiostock_53254.mp3" id="5_mncjs"]
 
 [node name="SEPlayer" type="Node" unique_id=207494387]
 script = ExtResource("1_ioqbf")
@@ -20,6 +21,9 @@ bus = &"SFX"
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=1599291600]
 stream = ExtResource("4_mncjs")
 bus = &"SFX"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="." unique_id=1862438718]
+stream = ExtResource("5_mncjs")
 
 [node name="Node" type="Node" parent="." unique_id=1047785381]
 script = ExtResource("3_2wnuf")
