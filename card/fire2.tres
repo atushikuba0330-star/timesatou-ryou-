@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cs3ub4o8u5hjw" path="res://irasto/まほー/炎/フゥスピラル.png" id="1_1ds2u"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_y5cls"]
 [ext_resource type="Texture2D" uid="uid://bb1um6alfv07w" path="res://irasto/Normal/Ma1a-line-normal/ma1a-red.png" id="2_foyme"]
+[ext_resource type="PackedScene" uid="uid://chdvcgqswhce5" path="res://Assets/Effect Animation/fireshoot.tscn" id="3_foyme"]
 
 [resource]
 script = ExtResource("1_y5cls")
@@ -12,7 +13,7 @@ power = 80
 cast_time = 1
 ability = "インパクト"
 ability_value = 1
-projectile_icon = ExtResource("2_foyme")
+projectile_icon = ExtResource("3_foyme")
 magic_circles = Array[Texture2D]([ExtResource("2_foyme")])
 magic_positions = Array[Vector2]([Vector2(60, 80)])
 icon = ExtResource("1_1ds2u")
