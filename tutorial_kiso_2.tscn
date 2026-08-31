@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bg3pdryfhu8vp"]
+
+[ext_resource type="Texture2D" uid="uid://cg74cf5h8ag0u" path="res://irasto/ChatGPT Image 2026年8月1日 12_16_21.png" id="1_usufj"]
+[ext_resource type="Texture2D" uid="uid://dnl5kyvex5fm4" path="res://irasto/22302021.png" id="2_8oj54"]
+[ext_resource type="Texture2D" uid="uid://cfy4vyrpcw14s" path="res://irasto/2117725.png" id="3_q48jv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjf7f"]
+atlas = ExtResource("2_8oj54")
+region = Rect2(0, 3245, 608, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfupj"]
+atlas = ExtResource("2_8oj54")
+region = Rect2(0, 3245, 608, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mkbl"]
+atlas = ExtResource("3_q48jv")
+region = Rect2(118, 800, 1032, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rktfn"]
+atlas = ExtResource("3_q48jv")
+region = Rect2(118, 800, 1032, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q2i3"]
+atlas = ExtResource("2_8oj54")
+region = Rect2(25, 3245, 557, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5atmw"]
+atlas = ExtResource("2_8oj54")
+region = Rect2(25, 2504, 557, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yhiw"]
+atlas = ExtResource("2_8oj54")
+region = Rect2(25, 3245, 557, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpqrm"]
+atlas = ExtResource("2_8oj54")
+region = Rect2(25, 2504, 557, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_antvv"]
+atlas = ExtResource("3_q48jv")
+region = Rect2(356, 800, 785, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odit6"]
+atlas = ExtResource("3_q48jv")
+region = Rect2(356, 95, 785, 280)
+margin = Rect2(0, -8, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l741q"]
+atlas = ExtResource("3_q48jv")
+region = Rect2(356, 800, 785, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pacq"]
+atlas = ExtResource("3_q48jv")
+region = Rect2(350, 95, 805, 280)
+margin = Rect2(0, -8, 0, 0)
+
+[node name="tutorial_kiso2" type="Node2D" unique_id=1977623677]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1582004273]
+position = Vector2(1271, 677)
+
+[node name="UI" type="Node" parent="." unique_id=874201434]
+
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=315009466]
+offset_right = 2541.0
+offset_bottom = 1351.0
+texture = ExtResource("1_usufj")
+
+[node name="TextureRect2" type="TextureRect" parent="UI" unique_id=737533587]
+offset_left = 1950.0
+offset_top = 1207.0
+offset_right = 2619.0
+offset_bottom = 1257.0
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_hjf7f")
+
+[node name="TextureRect3" type="TextureRect" parent="UI" unique_id=1266064428]
+offset_left = 1950.0
+offset_top = 189.0
+offset_right = 2619.0
+offset_bottom = 239.0
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_mfupj")
+
+[node name="TextureRect4" type="TextureRect" parent="UI" unique_id=1563672550]
+offset_left = 1945.9999
+offset_top = 1094.0001
+offset_right = 2978.0
+offset_bottom = 1374.0001
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_2mkbl")
+
+[node name="TextureRect5" type="TextureRect" parent="UI" unique_id=923424460]
+offset_left = 1953.9999
+offset_top = 77.0
+offset_right = 2986.0
+offset_bottom = 357.0
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_rktfn")
+
+[node name="PlayerMPBar" type="TextureProgressBar" parent="UI" unique_id=658698743]
+offset_left = 1972.0
+offset_top = 1207.0
+offset_right = 2584.0
+offset_bottom = 1257.0
+scale = Vector2(0.8, 0.8)
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_5q2i3")
+texture_progress = SubResource("AtlasTexture_5atmw")
+
+[node name="EnemyMPBar" type="TextureProgressBar" parent="UI" unique_id=200120141]
+offset_left = 3549.6
+offset_top = 1358.2
+offset_right = 4161.6
+offset_bottom = 1408.2
+scale = Vector2(0.8, 0.8)
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_7yhiw")
+texture_progress = SubResource("AtlasTexture_jpqrm")
+
+[node name="PlayerHPBar" type="TextureProgressBar" parent="UI" unique_id=491741386]
+custom_minimum_size = Vector2(300, 30)
+offset_left = 2041.0
+offset_top = 1094.0
+offset_right = 2833.5
+offset_bottom = 1374.0
+scale = Vector2(0.4, 0.4)
+texture_under = SubResource("AtlasTexture_antvv")
+texture_progress = SubResource("AtlasTexture_odit6")
+
+[node name="EnemyHPBar" type="TextureProgressBar" parent="UI" unique_id=686040912]
+custom_minimum_size = Vector2(300, 30)
+offset_left = 2049.0
+offset_top = 77.0
+offset_right = 3089.0
+offset_bottom = 357.0
+scale = Vector2(0.4, 0.4)
+texture_under = SubResource("AtlasTexture_l741q")
+texture_progress = SubResource("AtlasTexture_6pacq")
