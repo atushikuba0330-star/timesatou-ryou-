@@ -11,7 +11,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pq6wd"]
 atlas = ExtResource("3_aoibv")
-region = Rect2(84.10556, 41.671104, 303.2765, 498.27658)
+region = Rect2(100.5, 60.350037, 340, 503.25012)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8d0rx"]
 atlas = ExtResource("4_mn8d4")
@@ -23,11 +23,11 @@ region = Rect2(100.52594, 23.710396, 243.75012, 514.1845)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fes3t"]
 atlas = ExtResource("6_4hbjg")
-region = Rect2(90.26276, 24.736713, 289.9344, 546.5135)
+region = Rect2(112.3497, 47.449825, 282.1501, 545.6001)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4hbjg"]
 atlas = ExtResource("7_4hbjg")
-region = Rect2(94, 58.718464, 265, 462.23532)
+region = Rect2(94, 80.99983, 283.44974, 466.4001)
 
 [node name="CharacterSelect" type="Control" unique_id=1963511652]
 layout_mode = 3
@@ -74,17 +74,19 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/FireButton" unique_id=1610989626]
 layout_mode = 0
+offset_top = 45.0
 offset_right = 800.0
-offset_bottom = 1400.0
+offset_bottom = 1445.0
 scale = Vector2(0.5, 0.5)
 texture = SubResource("AtlasTexture_pq6wd")
 
 [node name="Label" type="Label" parent="HBoxContainer/FireButton" unique_id=1921804139]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 10.0
+offset_right = 170.0
+offset_bottom = 55.0
 theme_override_constants/outline_size = 25
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
 text = "リーサン"
 
 [node name="WaterButton" type="Button" parent="HBoxContainer" unique_id=1055281140]
@@ -93,17 +95,19 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/WaterButton" unique_id=1128684419]
 layout_mode = 0
+offset_top = 45.0
 offset_right = 800.0
-offset_bottom = 1400.0
+offset_bottom = 1445.0
 scale = Vector2(0.5, 0.5)
 texture = SubResource("AtlasTexture_8d0rx")
 
 [node name="Label" type="Label" parent="HBoxContainer/WaterButton" unique_id=167059150]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 10.0
+offset_right = 250.0
+offset_bottom = 55.0
 theme_override_constants/outline_size = 25
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
 text = "アナスタシア"
 
 [node name="ThunderButton" type="Button" parent="HBoxContainer" unique_id=1278580213]
@@ -112,17 +116,19 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/ThunderButton" unique_id=1005358649]
 layout_mode = 0
+offset_top = 45.0
 offset_right = 800.0
-offset_bottom = 1400.0
+offset_bottom = 1445.0
 scale = Vector2(0.5, 0.5)
 texture = SubResource("AtlasTexture_aq61o")
 
 [node name="Label" type="Label" parent="HBoxContainer/ThunderButton" unique_id=40311523]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 10.0
+offset_right = 130.0
+offset_bottom = 55.0
 theme_override_constants/outline_size = 25
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
 text = "リブラ"
 
 [node name="HollyButton" type="Button" parent="HBoxContainer" unique_id=509960231]
@@ -131,17 +137,19 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HollyButton" unique_id=513196160]
 layout_mode = 0
+offset_top = 45.0
 offset_right = 800.0
-offset_bottom = 1400.0
+offset_bottom = 1445.0
 scale = Vector2(0.5, 0.5)
 texture = SubResource("AtlasTexture_fes3t")
 
 [node name="Label" type="Label" parent="HBoxContainer/HollyButton" unique_id=2065778133]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 10.0
+offset_right = 130.0
+offset_bottom = 55.0
 theme_override_constants/outline_size = 25
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
 text = "ルミナ"
 
 [node name="DarkButton" type="Button" parent="HBoxContainer" unique_id=1717599282]
@@ -150,17 +158,19 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/DarkButton" unique_id=645299263]
 layout_mode = 0
+offset_top = 45.0
 offset_right = 800.0
-offset_bottom = 1400.0
+offset_bottom = 1445.0
 scale = Vector2(0.5, 0.5)
 texture = SubResource("AtlasTexture_4hbjg")
 
 [node name="Label" type="Label" parent="HBoxContainer/DarkButton" unique_id=1357635392]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 10.0
+offset_right = 170.0
+offset_bottom = 55.0
 theme_override_constants/outline_size = 25
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
 text = "ネクロア"
 
 [node name="RightPanel" type="Panel" parent="." unique_id=538786079]
