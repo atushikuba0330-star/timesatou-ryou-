@@ -21,7 +21,7 @@ offset_top = 926.0
 offset_right = 1669.0
 offset_bottom = 1128.0
 theme_override_font_sizes/font_size = 100
-text = "STRAT"
+text = "START"
 script = ExtResource("2_a0tst")
 
 [node name="Button2" type="Button" parent="." unique_id=1750195566]

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://h0tchpiv12x4"]
+
+[ext_resource type="Texture2D" uid="uid://ct88xi3qfkfge" path="res://Assets/Warped shooting fx files/Assets/Pixelart/hits/Hits-6/spritesheet.png" id="1_0uxl8"]
+[ext_resource type="Script" uid="uid://bmsvnlhfve5q5" path="res://Assets/Effect Animation/splash_offsettest.gd" id="2_ygq2n"]
+
+[node name="splashOffset" type="Sprite2D" unique_id=329578664]
+scale = Vector2(9.93, 5.7)
+texture = ExtResource("1_0uxl8")
+hframes = 7
+frame = 6
+script = ExtResource("2_ygq2n")
