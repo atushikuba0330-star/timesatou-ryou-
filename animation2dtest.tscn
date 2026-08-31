@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://d3ivwotbny4j8" path="res://Assets/Warped shooting fx files/Assets/Pixelart/waveform/spritesheet.png" id="12_1r5lw"]
 [ext_resource type="Texture2D" uid="uid://o4ib761ki1q5" path="res://Assets/Warped shooting fx files/Assets/Pixelart/hits/Hits-2/spritesheet.png" id="15_t3ahh"]
 [ext_resource type="PackedScene" uid="uid://boirpehvscnjm" path="res://Assets/Effect Animation/sprite_2d.tscn" id="16_wywkg"]
+[ext_resource type="Texture2D" uid="uid://dv65hxufx3l2t" path="res://Assets/Free Pixel Effects Pack/19_freezing_spritesheet.png" id="17_qb78i"]
 
 [node name="BattleEffect" type="Node2D" unique_id=1515298376]
 position = Vector2(196, 195)
@@ -121,3 +122,9 @@ hframes = 7
 
 [node name="Sprite2D" parent="." unique_id=621344713 instance=ExtResource("16_wywkg")]
 position = Vector2(-1094, 722)
+
+[node name="test F" type="Sprite2D" parent="." unique_id=1189008443]
+position = Vector2(1734, 849)
+texture = ExtResource("17_qb78i")
+hframes = 10
+vframes = 10

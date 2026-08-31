@@ -12,6 +12,7 @@ func show_preview(card):
 	$Labelability.text = str(card.data.ability) + str(card.data.ability_value)
 	if card.data.icon:
 		$PreviewIcon.texture = card.data.icon
+		
 	
 	var current_power = card.get_current_power()
 	var parent = card.get_parent()
