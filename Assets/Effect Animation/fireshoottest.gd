@@ -1,10 +1,12 @@
-extends Node2D
+extends Sprite2D
 
 func launch(start_pos, end_pos):
 
 	global_position = start_pos
 
-	$AnimationPlayer.play("RESET")
+	frame = 0
+
+	_play_animation()
 
 	var tween = create_tween()
 
@@ -18,3 +20,12 @@ func launch(start_pos, end_pos):
 	await tween.finished
 
 	queue_free()
+
+
+func _play_animation():
+
+	for i in range(hframes):
+
+		frame = i
+
+		await get_tree().create_timer(0.05).timeout

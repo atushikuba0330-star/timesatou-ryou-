@@ -10,7 +10,7 @@ extends Resource
 @export var ability_value: int
 @export var is_ultimate: bool = false
 @export var is_instant: bool = false
-@export var projectile_icon: Texture2D
+@export var projectile_icon: PackedScene
 @export var magic_circles: Array[Texture2D]
 @export var magic_positions: Array[Vector2]
 @export var icon: Texture2D

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bb1um6alfv07w" path="res://irasto/Normal/Ma1a-line-normal/ma1a-red.png" id="1_01lb8"]
 [ext_resource type="Texture2D" uid="uid://45tbv2qponnj" path="res://irasto/まほー/炎/エクスプロズ.png" id="1_bg07x"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_bg07x"]
+[ext_resource type="PackedScene" uid="uid://chdvcgqswhce5" path="res://Assets/Effect Animation/fireshoot.tscn" id="3_spac3"]
 
 [resource]
 script = ExtResource("2_bg07x")
@@ -10,6 +11,7 @@ element = "火"
 cost = 1
 power = 100
 cast_time = 1
+projectile_icon = ExtResource("3_spac3")
 magic_circles = Array[Texture2D]([ExtResource("1_01lb8"), ExtResource("1_01lb8"), ExtResource("1_01lb8")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])
 icon = ExtResource("1_bg07x")
