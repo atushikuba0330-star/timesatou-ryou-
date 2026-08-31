@@ -34,6 +34,7 @@ var pre_pause_time_scale = 1.0
 
 
 func _ready():
+	BgmPlayer.play_bgm("battle")
 
 	# Camera2D有効化
 	camera.enabled = true
@@ -216,3 +217,5 @@ func display_deck():
 			card.set_locked(true)
 
 		deck_display.add_child(card)
+		
+		
