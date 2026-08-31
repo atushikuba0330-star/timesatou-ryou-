@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b0n5bxsb6gfe0"]
+
+[ext_resource type="Texture2D" uid="uid://donr5vi4ryv4h" path="res://Assets/Pixel Art VFX - Starcaller - FREE Version/VFX 2/sprite-sheet/sprite-sheet.png" id="1_gj0mq"]
+[ext_resource type="Texture2D" uid="uid://c1c4jtqsgmwvy" path="res://Assets/Magic Pack 9 files/Magic Pack 9 files/spritesheets/Fire-bomb.png" id="2_go7n0"]
+[ext_resource type="Script" uid="uid://dxc510posiig6" path="res://Assets/Effect Animation/meteortest.gd" id="2_tuqdb"]
+[ext_resource type="Script" uid="uid://l4kdockwjsxl" path="res://Assets/Effect Animation/meteorexplosiontest.gd" id="4_fe6p0"]
+
+[node name="meteor" type="Sprite2D" unique_id=1182764107]
+modulate = Color(1, 0.54901963, 0.5254902, 1)
+self_modulate = Color(1, 0.93333334, 0, 1)
+scale = Vector2(3.425, 3.425)
+texture = ExtResource("1_gj0mq")
+hframes = 5
+vframes = 2
+frame = 3
+script = ExtResource("2_tuqdb")
+
+[node name="meteorexplosion" type="Sprite2D" parent="." unique_id=1877603517]
+position = Vector2(-27.73719, 25.109497)
+scale = Vector2(5.925, 5.925)
+texture = ExtResource("2_go7n0")
+hframes = 14
+script = ExtResource("4_fe6p0")

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://chdvcgqswhce5"]
+
+[ext_resource type="Texture2D" uid="uid://wmt7aov2fwlh" path="res://Assets/Efect custom/tamaF.png" id="1_exhqc"]
+[ext_resource type="Script" uid="uid://d2it1xhjqtpfl" path="res://Assets/Effect Animation/fireshoottest.gd" id="2_4henm"]
+
+[node name="fireshoot" type="Sprite2D" unique_id=1981167205]
+rotation = -1.5707964
+scale = Vector2(11.937499, 13.363637)
+texture = ExtResource("1_exhqc")
+hframes = 5
+frame = 4
+script = ExtResource("2_4henm")
