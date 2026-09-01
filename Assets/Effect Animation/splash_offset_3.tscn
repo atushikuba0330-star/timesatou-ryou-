@@ -7,6 +7,8 @@ load_path = "res://.godot/imported/Water Splash 01 - Spritesheet.png-46ac8886445
 script/source = "extends Sprite2D
 
 func launch(start_pos, end_pos):
+	
+	await get_tree().create_timer(1).timeout
 
 	# 対面スロットに表示
 	global_position = end_pos+ Vector2(150, 0)
