@@ -1,22 +1,44 @@
 [gd_scene format=3 uid="uid://7mc61yncdmpm"]
 
-[ext_resource type="Texture2D" uid="uid://c2rcyhfrn77o6" path="res://Assets/Warped shooting fx files/Assets/Pixelart/Bolt/spritesheet.png" id="1_utj1r"]
 [ext_resource type="PackedScene" uid="uid://drbm4fxt7545w" path="res://animation_player.tscn" id="1_wywkg"]
-[ext_resource type="Texture2D" uid="uid://d23wcdxr33tfg" path="res://Assets/Efect custom/sousatuF.png" id="2_bt8x0"]
 [ext_resource type="PackedScene" uid="uid://chdvcgqswhce5" path="res://Assets/Effect Animation/fireshoot.tscn" id="3_ulh1w"]
-[ext_resource type="Texture2D" uid="uid://ct88xi3qfkfge" path="res://Assets/Warped shooting fx files/Assets/Pixelart/hits/Hits-6/spritesheet.png" id="3_xwayi"]
 [ext_resource type="PackedScene" uid="uid://b0n5bxsb6gfe0" path="res://Assets/Effect Animation/meteor.tscn" id="4_ulh1w"]
-[ext_resource type="Texture2D" uid="uid://cth020yu4202i" path="res://Assets/Efect custom/spark.png" id="5_qs5qk"]
-[ext_resource type="Texture2D" uid="uid://dfqsjojdyied1" path="res://Assets/Super Pixel Effects Mini Pack 1/Super Pixel Effects Mini Pack 1/spritesheet/fx2_electric_burst_large_violet/spritesheet.png" id="6_tpubu"]
-[ext_resource type="Texture2D" uid="uid://brcue5j7icqrj" path="res://Assets/Efect custom/01.png" id="8_4xx4e"]
-[ext_resource type="Texture2D" uid="uid://byptnt3hnxuxi" path="res://Assets/Holy VFX 01-02/Holy VFX 01/Holy VFX 01 Repeatable.png" id="9_wrh4s"]
+[ext_resource type="PackedScene" uid="uid://b32v1qoqmvbfs" path="res://Assets/Effect Animation/rain_effect_test.tscn" id="9_mnv8u"]
 [ext_resource type="PackedScene" uid="uid://w3umetaeqwvb" path="res://Assets/Effect Animation/darkshoot.tscn" id="9_wywkg"]
-[ext_resource type="Texture2D" uid="uid://cqd373oakbl3d" path="res://Assets/Free Pixel Effects Pack/12_nebula_spritesheet.png" id="10_yk4s8"]
-[ext_resource type="Texture2D" uid="uid://pqmk3jepvlxj" path="res://Assets/Warped shooting fx files/Assets/Pixelart/Pulse/spritesheet.png" id="11_6kyi8"]
-[ext_resource type="Texture2D" uid="uid://d3ivwotbny4j8" path="res://Assets/Warped shooting fx files/Assets/Pixelart/waveform/spritesheet.png" id="12_1r5lw"]
-[ext_resource type="Texture2D" uid="uid://o4ib761ki1q5" path="res://Assets/Warped shooting fx files/Assets/Pixelart/hits/Hits-2/spritesheet.png" id="15_t3ahh"]
+[ext_resource type="PackedScene" uid="uid://dw0ml2xfa85qo" path="res://Assets/Effect Animation/hollyshoot.tscn" id="11_qb78i"]
+[ext_resource type="PackedScene" uid="uid://bda261rcj13wo" path="res://Assets/Effect Animation/sparkshoot.tscn" id="14_t3ahh"]
 [ext_resource type="PackedScene" uid="uid://boirpehvscnjm" path="res://Assets/Effect Animation/sprite_2d.tscn" id="16_wywkg"]
-[ext_resource type="Texture2D" uid="uid://dv65hxufx3l2t" path="res://Assets/Free Pixel Effects Pack/19_freezing_spritesheet.png" id="17_qb78i"]
+[ext_resource type="PackedScene" uid="uid://dhffpobnqjg8g" path="res://Assets/Effect Animation/splash_offset_3.tscn" id="18_t3ahh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4xx4e"]
+load_path = "res://.godot/imported/spritesheet.png-25bea359d3e9369e0be02fac24ee7007.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mnv8u"]
+load_path = "res://.godot/imported/sousatuF.png-8f79dff3f68c351582ceaa2ddca984b8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wrh4s"]
+load_path = "res://.godot/imported/spritesheet.png-08e0646fb4156ba724fd64f3e3bebf0d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yk4s8"]
+load_path = "res://.godot/imported/spark.png-ca6b6219d42b1280deef545d74d3621c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6kyi8"]
+load_path = "res://.godot/imported/spritesheet.png-7b7386bef5eed8b748c826c9423359d0.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1r5lw"]
+load_path = "res://.godot/imported/01.png-63b81627f11f3dcfb14d77bf93c40147.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78cms"]
+load_path = "res://.godot/imported/12_nebula_spritesheet.png-018f61e2a9e9d4f40dde52dafb922d5d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ulh1w"]
+load_path = "res://.godot/imported/spritesheet.png-889c197e54d4200b24b4f541a1f7d01f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wywkg"]
+load_path = "res://.godot/imported/spritesheet.png-d4e6633b266ab88d277aafc94732b423.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qb78i"]
+load_path = "res://.godot/imported/19_freezing_spritesheet.png-71f38350ed94a9cba43c3eccc2de0fd0.ctex"
 
 [node name="BattleEffect" type="Node2D" unique_id=1515298376]
 position = Vector2(196, 195)
@@ -26,7 +48,7 @@ position = Vector2(196, 195)
 [node name="Spritesheet" type="Sprite2D" parent="." unique_id=1995997748]
 position = Vector2(59, -52)
 scale = Vector2(6, 4.596)
-texture = ExtResource("1_utj1r")
+texture = SubResource("CompressedTexture2D_4xx4e")
 hframes = 4
 
 [node name="sparksheet" type="Sprite2D" parent="." unique_id=2096891203]
@@ -34,13 +56,13 @@ modulate = Color(0.8156863, 1, 0.5686275, 1)
 self_modulate = Color(1, 1, 0.7607843, 1)
 position = Vector2(759, -65)
 scale = Vector2(6.215, 3.116)
-texture = ExtResource("1_utj1r")
+texture = SubResource("CompressedTexture2D_4xx4e")
 hframes = 4
 
 [node name="fireOffset" type="Sprite2D" parent="." unique_id=99096640]
 position = Vector2(-85, 1663)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("2_bt8x0")
+texture = SubResource("CompressedTexture2D_mnv8u")
 hframes = 4
 
 [node name="fireshoot" parent="." unique_id=1981167205 instance=ExtResource("3_ulh1w")]
@@ -53,13 +75,13 @@ position = Vector2(10, 1945.0001)
 [node name="splashOffset" type="Sprite2D" parent="." unique_id=371557560]
 position = Vector2(24, 164)
 scale = Vector2(4.32, 4.32)
-texture = ExtResource("3_xwayi")
+texture = SubResource("CompressedTexture2D_wrh4s")
 hframes = 7
 
 [node name="sparkOffset" type="Sprite2D" parent="." unique_id=1519473263]
 position = Vector2(719, 119)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("5_qs5qk")
+texture = SubResource("CompressedTexture2D_yk4s8")
 hframes = 4
 vframes = 2
 
@@ -67,7 +89,7 @@ vframes = 2
 modulate = Color(0.5756685, 0.9065993, 3.85046e-07, 1)
 position = Vector2(741.00006, 302)
 scale = Vector2(2.725, 2.725)
-texture = ExtResource("6_tpubu")
+texture = SubResource("CompressedTexture2D_6kyi8")
 hframes = 16
 
 [node name="darkshoot" parent="." unique_id=1280095515 instance=ExtResource("9_wywkg")]
@@ -77,24 +99,18 @@ position = Vector2(1172, -59)
 modulate = Color(0.73275095, 0.00048227012, 0.7482542, 1)
 position = Vector2(1187, 204.99997)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("8_4xx4e")
+texture = SubResource("CompressedTexture2D_1r5lw")
 hframes = 9
 frame = 3
 
-[node name="hollyshoot" type="Sprite2D" parent="." unique_id=1772433961]
-modulate = Color(0.82676965, 0.87329227, 0.8586157, 1)
-self_modulate = Color(0.9999996, 0.9614802, 0.8978144, 1)
+[node name="hollyshoot" parent="." unique_id=804451614 instance=ExtResource("11_qb78i")]
 position = Vector2(1581, -77)
-scale = Vector2(6, 6)
-texture = ExtResource("9_wrh4s")
-hframes = 8
-frame = 7
 
 [node name="hollyOffset" type="Sprite2D" parent="." unique_id=1649767534]
 modulate = Color(1, 0.79607844, 0.53333336, 1)
 position = Vector2(1637.9998, 173.99995)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("10_yk4s8")
+texture = SubResource("CompressedTexture2D_78cms")
 hframes = 8
 vframes = 8
 
@@ -102,22 +118,17 @@ vframes = 8
 position = Vector2(43.57, 387)
 rotation = 3.1415927
 scale = Vector2(6, 6)
-texture = ExtResource("11_6kyi8")
+texture = SubResource("CompressedTexture2D_ulh1w")
 hframes = 4
 
-[node name="sparkshoot２" type="Sprite2D" parent="." unique_id=1561752386]
-modulate = Color(0.40784314, 0.9137255, 0.20392157, 1)
+[node name="sparkshoot２" parent="." unique_id=1095710832 instance=ExtResource("14_t3ahh")]
 position = Vector2(711, 443.99997)
-rotation = 3.1415927
-scale = Vector2(5, 3.5)
-texture = ExtResource("12_1r5lw")
-hframes = 4
 
 [node name="hollyOffset2" type="Sprite2D" parent="." unique_id=1946935018]
 modulate = Color(0.9655258, 0.75717676, 0.3228286, 1)
 position = Vector2(1616, 386)
 scale = Vector2(7, 7)
-texture = ExtResource("15_t3ahh")
+texture = SubResource("CompressedTexture2D_wywkg")
 hframes = 7
 
 [node name="Sprite2D" parent="." unique_id=621344713 instance=ExtResource("16_wywkg")]
@@ -125,6 +136,13 @@ position = Vector2(-1094, 722)
 
 [node name="test F" type="Sprite2D" parent="." unique_id=1189008443]
 position = Vector2(1734, 849)
-texture = ExtResource("17_qb78i")
+texture = SubResource("CompressedTexture2D_qb78i")
 hframes = 10
 vframes = 10
+
+[node name="splashOffset_3" parent="." unique_id=691106018 instance=ExtResource("18_t3ahh")]
+position = Vector2(1432, 2030)
+scale = Vector2(8.850762, 9.007494)
+
+[node name="rainEffectTest" parent="." unique_id=932443399 instance=ExtResource("9_mnv8u")]
+position = Vector2(-788, 205)

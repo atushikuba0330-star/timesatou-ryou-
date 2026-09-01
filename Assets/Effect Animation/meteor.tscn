@@ -1,23 +1,79 @@
 [gd_scene format=3 uid="uid://b0n5bxsb6gfe0"]
 
-[ext_resource type="Texture2D" uid="uid://donr5vi4ryv4h" path="res://Assets/Pixel Art VFX - Starcaller - FREE Version/VFX 2/sprite-sheet/sprite-sheet.png" id="1_gj0mq"]
-[ext_resource type="Texture2D" uid="uid://c1c4jtqsgmwvy" path="res://Assets/Magic Pack 9 files/Magic Pack 9 files/spritesheets/Fire-bomb.png" id="2_go7n0"]
-[ext_resource type="Script" uid="uid://dxc510posiig6" path="res://Assets/Effect Animation/meteortest.gd" id="2_tuqdb"]
-[ext_resource type="Script" uid="uid://l4kdockwjsxl" path="res://Assets/Effect Animation/meteorexplosiontest.gd" id="4_fe6p0"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_otiji"]
+load_path = "res://.godot/imported/sprite-sheet.png-1014285634b6b937ae3588aba9a01361.ctex"
+
+[sub_resource type="GDScript" id="GDScript_rkox0"]
+script/source = "extends Sprite2D
+
+func _ready():
+	$meteorexplosion.visible = false
+
+
+func launch(start_pos, end_pos):
+
+	# 対面スロットに落とす
+	global_position = end_pos+ Vector2(200, 30)
+
+	frame = 0
+
+	await _play_meteor_animation()
+
+
+
+	# 爆発表示
+	$meteorexplosion.visible = true
+
+	await $meteorexplosion.play_explosion()
+
+	queue_free()
+
+
+func _play_meteor_animation():
+
+	for i in range(hframes * vframes):
+
+		frame = i
+
+		await get_tree().create_timer(0.05).timeout
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_slaqq"]
+load_path = "res://.godot/imported/Fire-bomb.png-81bd5ae98326c990966ba0546a64be47.ctex"
+
+[sub_resource type="GDScript" id="GDScript_tuqdb"]
+script/source = "extends Sprite2D
+
+func _ready():
+	visible = false
+
+
+func play_explosion():
+
+	visible = true
+
+	frame = 0
+
+	for i in range(hframes * vframes):
+
+		frame = i
+
+		await get_tree().create_timer(0.05).timeout
+"
 
 [node name="meteor" type="Sprite2D" unique_id=1182764107]
 modulate = Color(1, 0.54901963, 0.5254902, 1)
 self_modulate = Color(1, 0.93333334, 0, 1)
 scale = Vector2(3.425, 3.425)
-texture = ExtResource("1_gj0mq")
+texture = SubResource("CompressedTexture2D_otiji")
 hframes = 5
 vframes = 2
 frame = 3
-script = ExtResource("2_tuqdb")
+script = SubResource("GDScript_rkox0")
 
 [node name="meteorexplosion" type="Sprite2D" parent="." unique_id=1877603517]
 position = Vector2(-27.73719, 25.109497)
 scale = Vector2(5.925, 5.925)
-texture = ExtResource("2_go7n0")
+texture = SubResource("CompressedTexture2D_slaqq")
 hframes = 14
-script = ExtResource("4_fe6p0")
+script = SubResource("GDScript_tuqdb")

@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://chdvcgqswhce5"]
+[gd_scene format=3 uid="uid://dw0ml2xfa85qo"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fwnnb"]
-load_path = "res://.godot/imported/tamaF.png-d67eadd159f77b003804e7a83249026e.ctex"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eoq22"]
+load_path = "res://.godot/imported/Holy VFX 01 Repeatable.png-af8b6959638ae0664454c6d6c5cf5da8.ctex"
 
 [sub_resource type="GDScript" id="GDScript_dlgb4"]
 script/source = "extends Sprite2D
@@ -37,10 +37,12 @@ func _play_animation():
 		await get_tree().create_timer(0.05).timeout
 "
 
-[node name="fireshoot" type="Sprite2D" unique_id=1981167205]
+[node name="hollyshoot" type="Sprite2D" unique_id=804451614]
+modulate = Color(0.82676965, 0.87329227, 0.8586157, 1)
+self_modulate = Color(0.9999996, 0.9614802, 0.8978144, 1)
 rotation = -1.5707964
-scale = Vector2(11.937499, 13.363637)
-texture = SubResource("CompressedTexture2D_fwnnb")
-hframes = 5
-frame = 4
+scale = Vector2(6, 6)
+texture = SubResource("CompressedTexture2D_eoq22")
+hframes = 8
+frame = 7
 script = SubResource("GDScript_dlgb4")
