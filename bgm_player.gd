@@ -6,6 +6,7 @@ func _ready():
 	var config = ConfigFile.new()
 	var err = config.load("user://settings.cfg")
 
+
 	if err == OK:
 		var bgm_value = config.get_value("audio", "bgm_volume", 100)
 		var bgm_toggle = config.get_value("audio", "bgm_toggle", true)
@@ -60,3 +61,8 @@ func fade_to_bgm(GM_name, duration := 1.5):
 
 func _switch_bgm(B_name):
 	play_bgm(B_name)
+
+
+func _on_audio_stream_player_finished() -> void:
+	player.play()  # 終わったらもう一度再生
+	pass # Replace with function body.

@@ -4,6 +4,17 @@ extends RefCounted
 
 # 詠唱が完了した瞬間に、飛び道具(projectile.tscn)を1つ画面に出して、
 # 発射位置(from_position)から着地位置(to_position)へ飛ばすための関数。
+# 属性別SEリスト（例）
+static var se_list = {
+	"火": preload("res://audiostock_1450572.wav"),
+	"水": preload("res://audiostock_903941.wav"),
+	"雷": preload("res://audiostock_60265.mp3"),
+	"光": preload("res://audiostock_57407.wav"),
+	"闇": preload("res://audiostock_1640462.wav")
+
+
+}
+
 
 
 static func spawn_projectile(
@@ -36,7 +47,6 @@ static func fire_completed_projectiles(tree) -> void:
 	var slots = tree.get_nodes_in_group("slots")
 	var handled = []
 
-
 	for slot in slots:
 		if slot in handled:
 			continue
@@ -46,6 +56,10 @@ static func fire_completed_projectiles(tree) -> void:
 
 		var enemy = slot.enemy_slot
 
+		var element = slot.card.data.element
+		var se_player = tree.get_root().get_node("/root/Main/SePlayer1")
+		se_player.stream = BattleEffects.se_list[element]
+		se_player.play()
 
 		if enemy.just_completed:
 			# 同時発動：中間地点でぶつける

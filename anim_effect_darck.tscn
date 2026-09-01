@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dkdriapcuhn5o"]
+
+[ext_resource type="Texture2D" uid="uid://dmbt7jodqmvda" path="res://Assets/Magic Pack 9 files/Magic Pack 9 files/spritesheets/Dark-Bolt.png" id="1_te6en"]
+
+[node name="effect TR" type="Node2D" unique_id=500604258]
+
+[node name="DarkBolt" type="Sprite2D" parent="." unique_id=90549843]
+texture = ExtResource("1_te6en")
+hframes = 11
