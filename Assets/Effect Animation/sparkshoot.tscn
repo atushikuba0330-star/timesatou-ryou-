@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://chdvcgqswhce5"]
+[gd_scene format=3 uid="uid://bda261rcj13wo"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fwnnb"]
-load_path = "res://.godot/imported/tamaF.png-d67eadd159f77b003804e7a83249026e.ctex"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ol44"]
+load_path = "res://.godot/imported/spritesheet.png-be348f746263df2b6cea86e3a2844b51.ctex"
 
 [sub_resource type="GDScript" id="GDScript_dlgb4"]
 script/source = "extends Sprite2D
@@ -37,10 +37,10 @@ func _play_animation():
 		await get_tree().create_timer(0.05).timeout
 "
 
-[node name="fireshoot" type="Sprite2D" unique_id=1981167205]
+[node name="sparkshoot２" type="Sprite2D" unique_id=1095710832]
+modulate = Color(0.40784314, 0.9137255, 0.20392157, 1)
 rotation = -1.5707964
-scale = Vector2(11.937499, 13.363637)
-texture = SubResource("CompressedTexture2D_fwnnb")
-hframes = 5
-frame = 4
+scale = Vector2(5, 3.5)
+texture = SubResource("CompressedTexture2D_6ol44")
+hframes = 4
 script = SubResource("GDScript_dlgb4")
