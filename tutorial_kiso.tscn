@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dfi2j4x1dwxq5"]
+
+[ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_0v6ut"]
+[ext_resource type="Script" uid="uid://dtw7xpqo4d238" path="res://tutorial_kiso.gd" id="1_8tujo"]
+[ext_resource type="Texture2D" uid="uid://64gl6fj4dfn4" path="res://irasto/ChatGPT Image 2026年8月28日 12_13_42.png" id="2_6yflx"]
+[ext_resource type="Texture2D" uid="uid://dw3adml3t14eu" path="res://irasto/box_blue_name.png" id="3_8tujo"]
+
+[node name="tutorial_kiso" type="Node2D" unique_id=2078407810]
+script = ExtResource("1_8tujo")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=837407939]
+position = Vector2(1268, 676)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2024176615]
+offset_right = 2537.0
+offset_bottom = 1351.0
+texture = ExtResource("1_0v6ut")
+
+[node name="kuro" type="TextureRect" parent="." unique_id=1454475283]
+offset_left = 840.99994
+offset_top = 263.00003
+offset_right = 2088.0
+offset_bottom = 1524.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_6yflx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1027924308]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=598493742]
+offset_left = 459.0
+offset_top = 919.0
+offset_right = 1234.0
+offset_bottom = 1102.0
+scale = Vector2(2, 2)
+texture = ExtResource("3_8tujo")
+
+[node name="caraname" type="Label" parent="CanvasLayer" unique_id=701590537]
+offset_left = 482.0
+offset_top = 940.0
+offset_right = 822.0
+offset_bottom = 990.0
+
+[node name="texte" type="Label" parent="CanvasLayer" unique_id=565720480]
+offset_left = 505.0
+offset_top = 1020.0
+offset_right = 1908.0
+offset_bottom = 1248.0
+
+[node name="AutoButton" type="Button" parent="CanvasLayer" unique_id=1226003906]
+offset_left = 1790.0
+offset_top = 961.0
+offset_right = 1832.0
+offset_bottom = 1001.0
+
+[node name="SkipButton" type="Button" parent="CanvasLayer" unique_id=1392864292]
+offset_left = 1845.0
+offset_top = 962.0
+offset_right = 1882.0
+offset_bottom = 1001.0
+
+[node name="Timer" type="Timer" parent="." unique_id=801090443]
+wait_time = 3.0
+
+[connection signal="pressed" from="CanvasLayer/AutoButton" to="." method="_on_auto_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SkipButton" to="." method="_on_skip_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co2sw55y8mduy"
-path="res://.godot/imported/reaper-scythe.png-cef769c4b829458a2ddd3e2d99783bdd.ctex"
+uid="uid://dw3adml3t14eu"
+path="res://.godot/imported/box_blue_name.png-fdfc6f96c9f1b61053575164caed7c5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://irasto/reaper-scythe.png"
-dest_files=["res://.godot/imported/reaper-scythe.png-cef769c4b829458a2ddd3e2d99783bdd.ctex"]
+source_file="res://irasto/box_blue_name.png"
+dest_files=["res://.godot/imported/box_blue_name.png-fdfc6f96c9f1b61053575164caed7c5d.ctex"]
 
 [params]
 
