@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dhffpobnqjg8g"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r6wik"]
+load_path = "res://.godot/imported/Water Splash 01 - Spritesheet.png-46ac8886445d137c02fdfdbad8f7b633.ctex"
+
+[sub_resource type="GDScript" id="GDScript_vecl7"]
+script/source = "extends Sprite2D
+
+func launch(start_pos, end_pos):
+	
+	await get_tree().create_timer(1).timeout
+
+	# 対面スロットに表示
+	global_position = end_pos+ Vector2(150, 0)
+
+	frame = 0
+
+	await _play_animation()
+
+	queue_free()
+
+
+func _play_animation():
+
+	for i in range(hframes * vframes):
+
+		frame = i
+
+		await get_tree().create_timer(0.05).timeout
+"
+
+[node name="splashOffset_3" type="Sprite2D" unique_id=691106018]
+position = Vector2(267, 142)
+scale = Vector2(8.705, 8.705)
+texture = SubResource("CompressedTexture2D_r6wik")
+hframes = 5
+vframes = 4
+frame = 19
+script = SubResource("GDScript_vecl7")
