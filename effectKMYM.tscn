@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dc5np4blj0qid"]
+
+[ext_resource type="PackedScene" uid="uid://diy626cji6het" path="res://Assets/Effect Animation/firetornado.tscn" id="1_q1w27"]
+[ext_resource type="PackedScene" uid="uid://c2bv33gcja6wj" path="res://Assets/Effect Animation/fireboll.tscn" id="2_t008t"]
+[ext_resource type="PackedScene" uid="uid://cyxmijhur3s8j" path="res://Assets/Effect Animation/bakuha.tscn" id="3_j6e52"]
+
+[node name="Node2D" type="Node2D" unique_id=784054698]
+
+[node name="firetornado" parent="." unique_id=1912408409 instance=ExtResource("1_q1w27")]
+
+[node name="fireboll" parent="." unique_id=122478870 instance=ExtResource("2_t008t")]
+
+[node name="bakuha" parent="." unique_id=1605266717 instance=ExtResource("3_j6e52")]
+scale = Vector2(8, 8)

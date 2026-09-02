@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cyxmijhur3s8j"]
+
+[ext_resource type="Texture2D" uid="uid://cikoyout8ixdc" path="res://Assets/Free  Effect Bullet Impact Explosion 32x32 V1/Red Effect Bullet Impact Explosion 32x32.png" id="1_3nsqc"]
+[ext_resource type="Script" uid="uid://x224e5jb80ca" path="res://fire.gd" id="2_ihkal"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
+atlas = ExtResource("1_3nsqc")
+region = Rect2(198.10625, 478.7345, 119.73338, 33.265503)
+
+[node name="bakuha" type="Sprite2D" unique_id=1605266717]
+scale = Vector2(8, 8)
+texture = SubResource("AtlasTexture_g4v7s")
+hframes = 4
+frame = 3
+script = ExtResource("2_ihkal")
