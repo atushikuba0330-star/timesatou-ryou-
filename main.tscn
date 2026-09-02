@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cfy4vyrpcw14s" path="res://irasto/2117725.png" id="12_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://dx85sxgwqgpwt" path="res://irasto/ka-do6.png" id="13_w48qg"]
 [ext_resource type="AudioStream" uid="uid://box4fa1jqq254" path="res://audiostock_53254.mp3" id="15_vivmo"]
+[ext_resource type="AudioStream" uid="uid://51bunaakqhvi" path="res://audiostock_854960.wav" id="16_2cqfq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
 atlas = ExtResource("11_ycdy4")
@@ -539,3 +540,4 @@ theme_override_font_sizes/font_size = 30
 stream = ExtResource("15_vivmo")
 
 [node name="SePlayer1" type="AudioStreamPlayer" parent="." unique_id=816714142]
+stream = ExtResource("16_2cqfq")
