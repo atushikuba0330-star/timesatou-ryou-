@@ -11,7 +11,7 @@ static var se_list = {
 	"雷": preload("res://audiostock_60265.mp3"),
 	"光": preload("res://audiostock_57407.wav"),
 	"闇": preload("res://audiostock_1640462.wav")
-
+	
 
 }
 
@@ -58,7 +58,10 @@ static func fire_completed_projectiles(tree) -> void:
 
 		var element = slot.card.data.element
 		var se_player = tree.get_root().get_node("/root/Main/SePlayer1")
-		se_player.stream = BattleEffects.se_list[element]
+		if BattleEffects.se_list.has(element):
+			se_player.stream = BattleEffects.se_list[element]
+
+	
 		se_player.play()
 
 		if enemy.just_completed:
