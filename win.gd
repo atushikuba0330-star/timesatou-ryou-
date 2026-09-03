@@ -6,4 +6,4 @@ func _ready() -> void:
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://reward.tscn")
-	SePlayer.play_se("res://SE (1).wav")
+	SePlayer.play_se("res://audiostock_60330.mp3")
