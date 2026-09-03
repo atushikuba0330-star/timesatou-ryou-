@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dt05tw06aeeeb" path="res://Assets/Effect Animation/sparkshooter_02.tscn" id="11_yk4s8"]
 [ext_resource type="Texture2D" uid="uid://71ny1fbk2iu4" path="res://Assets/Pixel Art Skill Animations - Lightning/VFX4/Frames/lightning_skill4_frame2.png" id="12_6kyi8"]
 [ext_resource type="PackedScene" uid="uid://biko4nnub26ei" path="res://Assets/Effect Animation/thunderrain_effect_test.tscn" id="13_1r5lw"]
+[ext_resource type="PackedScene" uid="uid://dgqxwdamw333o" path="res://Assets/Effect Animation/holly_effect_01.tscn" id="14_78cms"]
 [ext_resource type="PackedScene" uid="uid://bda261rcj13wo" path="res://Assets/Effect Animation/sparkshoot.tscn" id="14_t3ahh"]
+[ext_resource type="PackedScene" uid="uid://btiu6t3g6wpxx" path="res://Assets/Effect Animation/splash_lastarts.tscn" id="15_ulh1w"]
 [ext_resource type="PackedScene" uid="uid://boirpehvscnjm" path="res://Assets/Effect Animation/sprite_2d.tscn" id="16_wywkg"]
 [ext_resource type="PackedScene" uid="uid://dhffpobnqjg8g" path="res://Assets/Effect Animation/splash_offset_3.tscn" id="18_t3ahh"]
 
@@ -175,3 +177,9 @@ anim_speed_max = 10.0
 
 [node name="thunderrainEffectTest" parent="." unique_id=1953092606 instance=ExtResource("13_1r5lw")]
 position = Vector2(2111, 1900)
+
+[node name="hollyEffect01" parent="." unique_id=232671538 instance=ExtResource("14_78cms")]
+position = Vector2(-2065, 1564)
+
+[node name="splashLastarts" parent="." unique_id=1434565801 instance=ExtResource("15_ulh1w")]
+position = Vector2(-3437, 1095)

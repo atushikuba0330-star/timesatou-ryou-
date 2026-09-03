@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_i0e3l"]
 [ext_resource type="Texture2D" uid="uid://bwlyuthq4dqmk" path="res://irasto/Normal/Ma1a-line-normal/ma1a-skyblue.png" id="2_dadxt"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_riv63"]
+[ext_resource type="PackedScene" uid="uid://btiu6t3g6wpxx" path="res://Assets/Effect Animation/splash_lastarts.tscn" id="3_dadxt"]
 
 [resource]
 script = ExtResource("2_riv63")
@@ -11,6 +12,6 @@ power = 400
 cast_time = 1
 ability = "ミラージュ"
 ability_value = 4
-is_ultimate = true
+projectile_icon = ExtResource("3_dadxt")
 magic_circles = Array[Texture2D]([ExtResource("2_dadxt")])
 icon = ExtResource("1_i0e3l")
