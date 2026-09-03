@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cyxmijhur3s8j"]
+[gd_scene format=3 uid="uid://ckl74a1b3cowh"]
 
 [ext_resource type="Texture2D" uid="uid://cikoyout8ixdc" path="res://Assets/Free  Effect Bullet Impact Explosion 32x32 V1/Red Effect Bullet Impact Explosion 32x32.png" id="1_3nsqc"]
 [ext_resource type="Script" uid="uid://x224e5jb80ca" path="res://fire.gd" id="2_ihkal"]

@@ -1,10 +1,10 @@
 extends Sprite2D
 
 @export var move_time := 0.4
-@export var frame_delay := 0.05
+@export var frame_delay := 0.15
 
 func launch(start_pos: Vector2, end_pos: Vector2):
-	global_position = end_pos+ Vector2(150, 0)
+	global_position = end_pos+ Vector2(100, 130)
 
 	frame = 0
 
@@ -14,7 +14,7 @@ func launch(start_pos: Vector2, end_pos: Vector2):
 	tween.tween_property(
 		self,
 		"global_position",
-		end_pos,
+		end_pos + Vector2(100, 130), # 着弾地点も右へ50px
 		move_time
 	)
 

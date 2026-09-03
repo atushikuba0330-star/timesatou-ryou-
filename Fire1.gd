@@ -4,7 +4,7 @@ extends Sprite2D
 @export var life_time := 0.5
 
 func launch(start_pos: Vector2, end_pos: Vector2):
-	global_position = start_pos
+	global_position = start_pos + Vector2(100, 130)
 	frame = 0
 
 	_play_animation()
@@ -14,7 +14,7 @@ func launch(start_pos: Vector2, end_pos: Vector2):
 	tween.parallel().tween_property(
 		self,
 		"global_position",
-		end_pos,
+		end_pos + Vector2(100, 130), # 着弾地点も右へ50px
 		move_time
 	)
 
