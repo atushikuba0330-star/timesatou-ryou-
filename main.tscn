@@ -538,6 +538,8 @@ theme_override_font_sizes/font_size = 30
 
 [node name="SePlayer" type="AudioStreamPlayer" parent="." unique_id=509987655]
 stream = ExtResource("15_vivmo")
+bus = &"SFX"
 
 [node name="SePlayer1" type="AudioStreamPlayer" parent="." unique_id=816714142]
 stream = ExtResource("16_2cqfq")
+bus = &"SFX"
