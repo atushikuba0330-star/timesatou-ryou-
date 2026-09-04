@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_hkuv3"]
 [ext_resource type="Texture2D" uid="uid://ctvwtii76ht4j" path="res://irasto/まほー/炎/フゥバル.png" id="1_l6niv"]
 [ext_resource type="Texture2D" uid="uid://bb1um6alfv07w" path="res://irasto/Normal/Ma1a-line-normal/ma1a-red.png" id="2_if5t3"]
+[ext_resource type="PackedScene" uid="uid://c2bv33gcja6wj" path="res://Assets/Effect Animation/fireboll.tscn" id="3_if5t3"]
 
 [resource]
 script = ExtResource("1_hkuv3")
@@ -12,6 +13,7 @@ power = 150
 cast_time = 2
 ability = "インパクト"
 ability_value = 2
+projectile_icon = ExtResource("3_if5t3")
 magic_circles = Array[Texture2D]([ExtResource("2_if5t3"), ExtResource("2_if5t3")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
 icon = ExtResource("1_l6niv")
