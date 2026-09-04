@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dmsbytc445uxt" path="res://irasto/Designer (3).png" id="6_ycdy4"]
 [ext_resource type="Script" uid="uid://cpxoxxbq3c3qf" path="res://script/slot.gd" id="7_272bh"]
 [ext_resource type="Script" uid="uid://dhqcdh76yrph3" path="res://script/mana_manager.gd" id="8_5vw27"]
-[ext_resource type="Script" uid="uid://dndisvwmflryo" path="res://enemy_ai.gd" id="8_kek77"]
 [ext_resource type="Script" uid="uid://bqmathkxwi3cd" path="res://relic_manager.gd" id="9_kek77"]
 [ext_resource type="Script" uid="uid://ce1lbg7tqixro" path="res://battle_manager.gd" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://iojwasw3qojs" path="res://card_preview.gd" id="10_dg77c"]
@@ -448,7 +447,6 @@ texture_under = SubResource("AtlasTexture_w48qg")
 texture_progress = SubResource("AtlasTexture_dg77c")
 
 [node name="EnemyAI" type="Node" parent="." unique_id=1846317281]
-script = ExtResource("8_kek77")
 
 [node name="RelicManager" type="Node" parent="." unique_id=337626491]
 script = ExtResource("9_kek77")

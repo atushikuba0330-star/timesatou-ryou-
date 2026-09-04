@@ -24,9 +24,16 @@ EscMenu="*res://esc_menu.tscn"
 
 [display]
 
-window/size/viewport_width=2540
+window/size/viewport_width=2550
 window/size/viewport_height=1350
-window/stretch/mode="viewport"
+window/size/mode=1
+window/stretch/mode="canvas_items"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red"
+}
 
 [physics]
 

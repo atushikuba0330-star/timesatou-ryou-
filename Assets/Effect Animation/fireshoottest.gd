@@ -2,7 +2,8 @@ extends Sprite2D
 
 func launch(start_pos, end_pos):
 
-	global_position = start_pos
+	# 発射位置を右へ50px
+	global_position = start_pos + Vector2(100, 0)
 
 	frame = 0
 
@@ -13,7 +14,7 @@ func launch(start_pos, end_pos):
 	tween.tween_property(
 		self,
 		"global_position",
-		end_pos,
+		end_pos + Vector2(100, 0), # 着弾地点も右へ50px
 		0.5
 	)
 

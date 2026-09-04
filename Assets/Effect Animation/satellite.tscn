@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://u8a7c4iu260r"]
+
+[ext_resource type="Texture2D" uid="uid://c5pqks4wyhjj" path="res://Assets/hollyfolder/Pipoya VFX LightPillar/Pipoya VFX LightPillar/400x400/pipo-mapeffect013a-front.png" id="1_egiqc"]
+[ext_resource type="Script" uid="uid://y23m47x0mwev" path="res://Assets/Effect Animation/satellite.gd" id="2_3my52"]
+[ext_resource type="Texture2D" uid="uid://bnowdvxdrk8tb" path="res://Assets/Holy VFX 01-02/Holy VFX 02/Holy VFX 02.png" id="2_lqb1v"]
+[ext_resource type="Script" uid="uid://c8a2uplssdjts" path="res://Assets/Effect Animation/hollysatellite.gd" id="4_po3tm"]
+[ext_resource type="Texture2D" uid="uid://wnb866vhbkw4" path="res://Assets/Super Pixel Effects Mini Pack 1/Super Pixel Effects Mini Pack 1/spritesheet/fx2_impact_shock_large_brown/spritesheet.png" id="5_3nb6h"]
+[ext_resource type="Script" uid="uid://72ep7et5c225" path="res://Assets/Effect Animation/holly_offset.gd" id="6_13dw1"]
+
+[node name="satellitesite" type="Sprite2D" unique_id=1628763127]
+position = Vector2(0, -4.9999995)
+scale = Vector2(1.565, 1.565)
+texture = ExtResource("1_egiqc")
+hframes = 5
+vframes = 2
+script = ExtResource("2_3my52")
+
+[node name="hollysatellite" type="Sprite2D" parent="." unique_id=1036838640]
+position = Vector2(2, -120.000015)
+scale = Vector2(4.8052564, 10.997671)
+texture = ExtResource("2_lqb1v")
+hframes = 16
+frame = 15
+script = ExtResource("4_po3tm")
+
+[node name="hollyOffset" type="Sprite2D" parent="." unique_id=1866182892]
+position = Vector2(-2.000001, 66)
+scale = Vector2(2.9062233, 2.758759)
+texture = ExtResource("5_3nb6h")
+hframes = 7
+frame = 6
+script = ExtResource("6_13dw1")

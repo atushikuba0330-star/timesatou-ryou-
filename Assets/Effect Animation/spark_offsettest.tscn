@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b7v006seutfis"]
+
+[ext_resource type="Script" uid="uid://go6q38b3h1h6" path="res://Assets/Effect Animation/spark_offsettest.gd" id="1_iaxoy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yk4s8"]
+load_path = "res://.godot/imported/spark.png-ca6b6219d42b1280deef545d74d3621c.ctex"
+
+[node name="sparkOffset" type="Sprite2D" unique_id=1420923098]
+position = Vector2(368, 21)
+scale = Vector2(7.475, 7.475)
+texture = SubResource("CompressedTexture2D_yk4s8")
+hframes = 4
+vframes = 2
+frame = 7
+script = ExtResource("1_iaxoy")
