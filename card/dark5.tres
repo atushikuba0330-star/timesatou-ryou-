@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dhdhc26ixffkf" path="res://irasto/まほー/闇/ルーフイスターダ.png" id="1_72mhp"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_wpmrl"]
 [ext_resource type="Texture2D" uid="uid://ctf57vm5kuye0" path="res://irasto/Normal/Ma1a-line-normal/ma1a-purple.png" id="2_q43ck"]
+[ext_resource type="PackedScene" uid="uid://juevhu50mo0o" path="res://Assets/Effect Animation/darkmagic/dark_effect_5.tscn" id="3_q43ck"]
 
 [resource]
 script = ExtResource("1_wpmrl")
@@ -12,6 +13,7 @@ power = 180
 cast_time = 2
 ability = "残骸"
 ability_value = 4
+projectile_icon = ExtResource("3_q43ck")
 magic_circles = Array[Texture2D]([ExtResource("2_q43ck"), ExtResource("2_q43ck")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
 icon = ExtResource("1_72mhp")

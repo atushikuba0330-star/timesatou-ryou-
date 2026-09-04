@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bda261rcj13wo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ol44"]
+load_path = "res://.godot/imported/spritesheet.png-be348f746263df2b6cea86e3a2844b51.ctex"
+
+[sub_resource type="GDScript" id="GDScript_dlgb4"]
+script/source = "extends Sprite2D
+
+func launch(start_pos, end_pos):
+
+	global_position = start_pos+Vector2(110, 0)
+
+	frame = 0
+
+	_play_animation()
+
+	var tween = create_tween()
+
+	tween.tween_property(
+		self,
+		\"global_position\",
+		end_pos+Vector2(110, 0),
+		0.5
+	)
+
+	await tween.finished
+
+	queue_free()
+
+
+func _play_animation():
+
+	for i in range(hframes):
+
+		frame = i
+
+		await get_tree().create_timer(0.05).timeout
+"
+
+[node name="sparkshoot２" type="Sprite2D" unique_id=1095710832]
+modulate = Color(0.40784314, 0.9137255, 0.20392157, 1)
+rotation = -1.5707964
+scale = Vector2(5, 3.5)
+texture = SubResource("CompressedTexture2D_6ol44")
+hframes = 4
+script = SubResource("GDScript_dlgb4")

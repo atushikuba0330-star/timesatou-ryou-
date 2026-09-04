@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://deh0nc2fsqvf6"]
+
+[ext_resource type="Texture2D" uid="uid://ch8bvm5t1ao08" path="res://Assets/masks for  particles transparent/26.png" id="1_f7fd1"]
+[ext_resource type="Script" uid="uid://4h0cuev6bvt" path="res://Assets/Effect Animation/watermagic/wave_effecttest.gd" id="2_f7fd1"]
+
+[node name="waveEffecttest" type="CPUParticles2D" unique_id=1434962498]
+modulate = Color(0.10518441, 0.21973437, 0.5013311, 1)
+emitting = false
+amount = 10000
+texture = ExtResource("1_f7fd1")
+lifetime = 5.779999999999999
+one_shot = true
+preprocess = 1.0
+speed_scale = 1.5
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 10)
+direction = Vector2(0, 0)
+spread = 66.5
+gravity = Vector2(0, -980)
+damping_max = 1.0
+color = Color(0.31321377, 0.56241316, 0.7234952, 1)
+anim_speed_min = 10.0
+anim_speed_max = 10.0
+script = ExtResource("2_f7fd1")
