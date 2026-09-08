@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://jh245q4doxyk"]
+
+[ext_resource type="Texture2D" uid="uid://ca6ljbtf7hhyi" path="res://Character files/光キャラNE.png" id="1_neml4"]
+
+[node name="Node2D" type="Node2D" unique_id=1630768733]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=650941680]
+offset_right = 1000.0
+offset_bottom = 1350.0
+texture = ExtResource("1_neml4")

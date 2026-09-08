@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://whx7ybav0sqb"]
+
+[ext_resource type="Texture2D" uid="uid://bx2nxy8ua5l84" path="res://Character files/雷キャラNE.png" id="1_f8lfr"]
+
+[node name="Node2D" type="Node2D" unique_id=1415008382]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=497690459]
+offset_right = 1000.0
+offset_bottom = 1350.0
+texture = ExtResource("1_f8lfr")
