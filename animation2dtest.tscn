@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ulko6ema5m6" path="res://Assets/hollyfolder/Pipoya VFX LightPillar/Pipoya VFX LightPillar/400x400/pipo-mapeffect013c.png" id="19_77o4u"]
 [ext_resource type="Texture2D" uid="uid://cd02hkc5aw5x2" path="res://Assets/hollyfolder/Pixel Art VFX - Priest - FREE Version/VFX 1/sprite-sheet.png" id="20_rmn7y"]
 [ext_resource type="PackedScene" uid="uid://c45wwvmwjsup8" path="res://Assets/Effect Animation/darkmagic/darkarts.tscn" id="21_mcrcb"]
+[ext_resource type="PackedScene" uid="uid://cxtwqva6he2nd" path="res://Assets/Effect Animation/hollymagic/hollyarts.tscn" id="22_rmn7y"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4xx4e"]
 load_path = "res://.godot/imported/spritesheet.png-25bea359d3e9369e0be02fac24ee7007.ctex"
@@ -220,3 +221,6 @@ frame = 3
 
 [node name="darkarts" parent="." unique_id=1657326898 instance=ExtResource("21_mcrcb")]
 position = Vector2(-5741.713, 2523.712)
+
+[node name="hollyarts" parent="." unique_id=1713934369 instance=ExtResource("22_rmn7y")]
+position = Vector2(-4001.253, 159.2342)
