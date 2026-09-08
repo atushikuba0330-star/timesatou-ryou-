@@ -22,5 +22,5 @@ func _show_random_character():
 	var char_instance = random_scene.instantiate()
 	char_holder.add_child(char_instance)
 
-	char_instance.position = Vector2(1000, 100)
+	char_instance.position = Vector2(1200, 100)
 	char_instance.scale = Vector2(1.0, 1.0)

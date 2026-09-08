@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://jh245q4doxyk"]
 
-[ext_resource type="Texture2D" uid="uid://ca6ljbtf7hhyi" path="res://Character files/光キャラNE.png" id="1_neml4"]
+[ext_resource type="Texture2D" uid="uid://b8erbmatexq7k" path="res://Character files/光キャラ-removebg-preview.png" id="1_neml4"]
 
 [node name="Node2D" type="Node2D" unique_id=1630768733]
 

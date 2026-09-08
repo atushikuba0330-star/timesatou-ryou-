@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://whx7ybav0sqb"]
 
-[ext_resource type="Texture2D" uid="uid://bx2nxy8ua5l84" path="res://Character files/雷キャラNE.png" id="1_f8lfr"]
+[ext_resource type="Texture2D" uid="uid://derwjvoxqmfiy" path="res://Character files/雷キャラ-removebg-preview.png" id="1_f8lfr"]
 
 [node name="Node2D" type="Node2D" unique_id=1415008382]
 

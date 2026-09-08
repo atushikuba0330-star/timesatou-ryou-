@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://buby6cejyu8j2"]
 
-[ext_resource type="Texture2D" uid="uid://c8e3mwjl0rsja" path="res://Character files/炎キャラNE.png" id="1_4w1y0"]
+[ext_resource type="Texture2D" uid="uid://don1x85e2r11t" path="res://Character files/火キャラ-removebg-preview.png" id="1_4w1y0"]
 
 [node name="Node2D" type="Node2D" unique_id=853871711]
 
