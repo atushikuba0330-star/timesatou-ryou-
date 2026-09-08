@@ -24,3 +24,13 @@ func _show_random_character():
 
 	char_instance.position = Vector2(1200, 100)
 	char_instance.scale = Vector2(1.0, 1.0)
+
+	var tween = create_tween()
+	tween.set_loops()
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_IN_OUT)
+	
+	var base_y = char_instance.position.y
+	tween.tween_property(char_instance, "position:y", base_y - 20, 1.5)
+	tween.tween_property(char_instance, "position:y", base_y + 20, 1.5)
+	
