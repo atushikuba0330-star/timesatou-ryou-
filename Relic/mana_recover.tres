@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://2r075oy8vmx0"]
 
+[ext_resource type="Texture2D" uid="uid://dbinttkhnvm1x" path="res://Relic/アイテムアイコン/アイテムアイコン/賢者の指輪.png" id="1_6urv0"]
 [ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_ys74o"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_ys74o")
 name = "賢者の指輪"
 description = "詠唱完了時にマナを1回復する"
 relic_type = "mana_recover"
+icon = ExtResource("1_6urv0")

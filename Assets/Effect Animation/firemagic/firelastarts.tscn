@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cskw1r2e45dg1"]
+
+[ext_resource type="Script" uid="uid://s66rb1ajcpro" path="res://Assets/Effect Animation/firemagic/firelastarts.gd" id="1_4w23x"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_otiji"]
+load_path = "res://.godot/imported/sprite-sheet.png-1014285634b6b937ae3588aba9a01361.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_slaqq"]
+load_path = "res://.godot/imported/Fire-bomb.png-81bd5ae98326c990966ba0546a64be47.ctex"
+
+[node name="firelastarts" type="Sprite2D" unique_id=1585360974]
+modulate = Color(1, 0.54901963, 0.5254902, 1)
+self_modulate = Color(1, 0.93333334, 0, 1)
+scale = Vector2(3.425, 3.425)
+texture = SubResource("CompressedTexture2D_otiji")
+hframes = 5
+vframes = 2
+frame = 3
+script = ExtResource("1_4w23x")
+
+[node name="meteorexplosion" type="Sprite2D" parent="." unique_id=1270051371]
+position = Vector2(-27.73719, 25.109497)
+scale = Vector2(5.925, 5.925)
+texture = SubResource("CompressedTexture2D_slaqq")
+hframes = 14
+frame = 10
+
+[node name="FlashLayer" type="CanvasLayer" parent="." unique_id=2009649737]
+
+[node name="FlashRect" type="ColorRect" parent="FlashLayer" unique_id=1535068933]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.75744736, 0.1295051, 0.012096605, 1)

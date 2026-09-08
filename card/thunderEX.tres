@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_j1o3a"]
 [ext_resource type="Texture2D" uid="uid://ddhljlfainhbv" path="res://irasto/Normal/Ma1a-line-normal/ma1a-green.png" id="2_1lw2h"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_xnnye"]
+[ext_resource type="PackedScene" uid="uid://duyqeah3m84p5" path="res://Assets/Effect Animation/sparklastarts.tscn" id="3_1lw2h"]
 
 [resource]
 script = ExtResource("2_xnnye")
@@ -11,6 +12,6 @@ power = 400
 cast_time = 1
 ability = "スパーク"
 ability_value = 4
-is_ultimate = true
+projectile_icon = ExtResource("3_1lw2h")
 magic_circles = Array[Texture2D]([ExtResource("2_1lw2h")])
 icon = ExtResource("1_j1o3a")

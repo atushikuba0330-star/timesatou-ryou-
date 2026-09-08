@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c45wwvmwjsup8"]
+
+[ext_resource type="Texture2D" uid="uid://tkc14dt16xy7" path="res://Assets/Warped shooting fx files/Assets/Pixelart/hits/hits-1/spritesheet.png" id="1_hdy3h"]
+[ext_resource type="Script" uid="uid://chap4smc1lm75" path="res://Assets/Effect Animation/darkmagic/darkarts.gd" id="2_aj45j"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aj45j"]
+load_path = "res://.godot/imported/Fire-bomb.png-81bd5ae98326c990966ba0546a64be47.ctex"
+
+[sub_resource type="GDScript" id="GDScript_jt6t7"]
+script/source = "extends Sprite2D
+
+func _ready():
+	visible = false
+
+
+func play_explosion():
+
+	visible = true
+
+	frame = 0
+
+	for i in range(hframes * vframes):
+
+		frame = i
+
+		await get_tree().create_timer(0.05).timeout
+"
+
+[node name="darkarts" type="Sprite2D" unique_id=1657326898]
+modulate = Color(0.54246974, 0.0002192837, 0.54492384, 1)
+position = Vector2(111, 20)
+scale = Vector2(9.86, 9.86)
+texture = ExtResource("1_hdy3h")
+hframes = 5
+script = ExtResource("2_aj45j")
+
+[node name="darkartsexplosion" type="Sprite2D" parent="." unique_id=1150007801]
+scale = Vector2(3.47, 3.47)
+texture = SubResource("CompressedTexture2D_aj45j")
+hframes = 14
+frame = 13
+script = SubResource("GDScript_jt6t7")

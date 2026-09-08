@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_vxs2q"]
 [ext_resource type="Texture2D" uid="uid://ctf57vm5kuye0" path="res://irasto/Normal/Ma1a-line-normal/ma1a-purple.png" id="2_1wonp"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_4iayl"]
+[ext_resource type="PackedScene" uid="uid://c45wwvmwjsup8" path="res://Assets/Effect Animation/darkmagic/darkarts.tscn" id="3_1wonp"]
 
 [resource]
 script = ExtResource("2_4iayl")
@@ -11,5 +12,6 @@ power = 300
 cast_time = 1
 ability_value = 10
 is_ultimate = true
+projectile_icon = ExtResource("3_1wonp")
 magic_circles = Array[Texture2D]([ExtResource("2_1wonp")])
 icon = ExtResource("1_vxs2q")

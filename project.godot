@@ -35,12 +35,6 @@ folder_colors={
 "res://Assets/": "red"
 }
 
-[file_customization]
-
-folder_colors={
-"res://Assets/": "red"
-}
-
 [physics]
 
 3d/physics_engine="Jolt Physics"

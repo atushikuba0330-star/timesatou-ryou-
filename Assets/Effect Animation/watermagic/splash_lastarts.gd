@@ -108,7 +108,7 @@ func _flash_screen():
 			sub.global_position = Vector2(-10000, -10000)
 
 	# 白画面維持
-	await get_tree().create_timer(10.0).timeout
+	await get_tree().create_timer(1.0).timeout
 
 	# フェードアウト
 	var flash_out = create_tween()
@@ -117,7 +117,7 @@ func _flash_screen():
 		flash,
 		"modulate:a",
 		0.0,
-		5.0
+		1.0
 	)
 
 	await flash_out.finished
