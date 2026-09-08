@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://diy626cji6het"]
+
+[ext_resource type="Texture2D" uid="uid://cikoyout8ixdc" path="res://Assets/Free  Effect Bullet Impact Explosion 32x32 V1/Red Effect Bullet Impact Explosion 32x32.png" id="1_37eb7"]
+[ext_resource type="Script" uid="uid://d2it1xhjqtpfl" path="res://Assets/Effect Animation/fireshoottest.gd" id="2_37eb7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6e52"]
+atlas = ExtResource("1_37eb7")
+region = Rect2(191.65346, 0, 128.72038, 31.655724)
+
+[node name="firetornado" type="Sprite2D" unique_id=1912408409]
+scale = Vector2(11.99, 11.99)
+texture = SubResource("AtlasTexture_j6e52")
+hframes = 4
+frame = 3
+script = ExtResource("2_37eb7")

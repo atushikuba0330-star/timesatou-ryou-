@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b32v1qoqmvbfs"]
+
+[ext_resource type="Texture2D" uid="uid://6m70te5whmui" path="res://Assets/Magic Pack 9 files/Magic Pack 9 files/sprites/FireBomb/Fire-bomb6.png" id="1_syqyw"]
+[ext_resource type="Script" uid="uid://cud1jgynxvplv" path="res://Assets/Effect Animation/watermagic/rain_effect_test.gd" id="2_f8l4d"]
+
+[node name="rainEffectTest" type="CPUParticles2D" unique_id=932443399]
+amount = 1000
+texture = ExtResource("1_syqyw")
+lifetime = 2.0
+speed_scale = 1.5
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 10)
+gravity = Vector2(300, 980)
+initial_velocity_min = 202.95
+initial_velocity_max = 500.0
+damping_max = 1.0
+color = Color(0.31321377, 0.56241316, 0.7234952, 1)
+anim_speed_min = 10.0
+anim_speed_max = 10.0
+script = ExtResource("2_f8l4d")

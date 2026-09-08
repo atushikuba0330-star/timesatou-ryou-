@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://duyqeah3m84p5"]
+
+[ext_resource type="Script" uid="uid://n7hb37phwim4" path="res://Assets/Effect Animation/sparkmagic/sparklastarts.gd" id="2_5hcq1"]
+[ext_resource type="Texture2D" uid="uid://cxtwwpm7w3m7j" path="res://Assets/Free Pixel Effects Pack/17_felspell_spritesheet.png" id="3_7luf4"]
+[ext_resource type="Texture2D" uid="uid://ca6nctqjdo5sl" path="res://Assets/Pixel Art Skill Animations - Lightning/VFX4/Sprite-sheet/Sprite-sheet.png" id="4_vygol"]
+[ext_resource type="Texture2D" uid="uid://deelxygns8tlk" path="res://Assets/Pixel Art Skill Animations - Lightning/VFX3/Sprite-sheet/Sprite-sheet.png" id="5_a13kg"]
+
+[node name="sparklastarts" type="Sprite2D" unique_id=309492905]
+modulate = Color(0.1855622, 0.15883318, 0.127384, 1)
+self_modulate = Color(0.46237934, 0.42850614, 0.36512658, 0.35686275)
+scale = Vector2(33.3816, 30.410099)
+texture = ExtResource("3_7luf4")
+hframes = 10
+vframes = 10
+frame = 10
+script = ExtResource("2_5hcq1")
+
+[node name="subthunder" type="Sprite2D" parent="." unique_id=449610502]
+modulate = Color(0.70115036, 0.69710785, 3.85046e-07, 1)
+position = Vector2(-24.414642, 3.3870316)
+scale = Vector2(0.051522393, 0.056556866)
+texture = ExtResource("4_vygol")
+hframes = 5
+frame = 4
+
+[node name="subthunder2" type="Sprite2D" parent="." unique_id=18039153]
+modulate = Color(0.6784314, 0.6745098, 0, 1)
+position = Vector2(-1.407959, -11.542219)
+scale = Vector2(0.051522393, 0.056556866)
+texture = ExtResource("4_vygol")
+hframes = 5
+frame = 4
+
+[node name="subthunder3" type="Sprite2D" parent="." unique_id=2031514919]
+modulate = Color(1, 1, 0.14901961, 1)
+position = Vector2(11.653122, 7.7276917)
+scale = Vector2(0.051522393, 0.056556866)
+texture = ExtResource("4_vygol")
+hframes = 5
+
+[node name="Mainethunder" type="Sprite2D" parent="." unique_id=573789412]
+modulate = Color(1, 1, 0.29803923, 1)
+position = Vector2(0.11982726, -14.172924)
+scale = Vector2(0.08643682, 0.14681305)
+texture = ExtResource("5_a13kg")
+hframes = 5
+frame = 4
+
+[node name="FlashLayer" type="CanvasLayer" parent="." unique_id=859523137]
+
+[node name="FlashRect" type="ColorRect" parent="FlashLayer" unique_id=234404573]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6813984, 0.8742833, 0.611605, 1)

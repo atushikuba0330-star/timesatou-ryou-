@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://juevhu50mo0o"]
+
+[ext_resource type="Texture2D" uid="uid://d2mrvlqymbso" path="res://Assets/smoke_shok_wave/smoke_shok_wave/852x852/big/_852x852_big.png" id="1_jkent"]
+[ext_resource type="Script" uid="uid://dbwlufw022wkm" path="res://Assets/Effect Animation/darkmagic/dark_effect_5.gd" id="2_jerre"]
+[ext_resource type="Texture2D" uid="uid://yynakgcr6mpo" path="res://Assets/Pixel Art VFX - Starcaller - FREE Version/VFX 3/sprite-sheet/sprite-sheet.png" id="3_xulek"]
+
+[node name="darkEffect5" type="Sprite2D" unique_id=1095108213]
+modulate = Color(0.52941775, 0.0018091387, 0.7426586, 1)
+texture = ExtResource("1_jkent")
+hframes = 9
+vframes = 9
+frame = 46
+script = ExtResource("2_jerre")
+
+[node name="darksubEffect" type="Sprite2D" parent="." unique_id=1435134553]
+modulate = Color(1, 0, 0.7921569, 1)
+position = Vector2(-1, 2)
+scale = Vector2(6.56, 5.495)
+texture = ExtResource("3_xulek")
+hframes = 5
+vframes = 3
+frame = 9
+
+[node name="FlashLayer" type="CanvasLayer" parent="." unique_id=491121211]
+
+[node name="FlashRect" type="ColorRect" parent="FlashLayer" unique_id=1225153275]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.081337385, 0.0044751824, 0.12326508, 1)

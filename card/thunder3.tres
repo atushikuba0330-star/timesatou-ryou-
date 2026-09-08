@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_1o6sf"]
 [ext_resource type="Texture2D" uid="uid://bdv2n0o5bfq87" path="res://irasto/まほー/雷/シュテーク.png" id="1_aipks"]
 [ext_resource type="Texture2D" uid="uid://ddhljlfainhbv" path="res://irasto/Normal/Ma1a-line-normal/ma1a-green.png" id="2_2ygwg"]
-[ext_resource type="PackedScene" uid="uid://bda261rcj13wo" path="res://Assets/Effect Animation/sparkshoot.tscn" id="3_bco5m"]
+[ext_resource type="PackedScene" uid="uid://bda261rcj13wo" path="res://Assets/Effect Animation/sparkmagic/sparkshoot.tscn" id="3_bco5m"]
 
 [resource]
 script = ExtResource("1_1o6sf")

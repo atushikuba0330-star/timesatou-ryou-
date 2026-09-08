@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dysunxr5eali5"]
+
+[ext_resource type="Shader" uid="uid://clek3s7stdilj" path="res://Assets/Effect Animation/hollymagic/hollyloyal.gdshader" id="1_h3ngf"]
+[ext_resource type="Texture2D" uid="uid://bx6hfb6px0bkp" path="res://Assets/hollyfolder/Pipoya VFX TimeMagic/Pipoya VFX TimeMagic/480x480/pipo-btleffect211_480.png" id="1_lf6bd"]
+[ext_resource type="Script" uid="uid://qi7hei4dl83f" path="res://Assets/Effect Animation/hollymagic/hollyloyal.gd" id="2_ts0d5"]
+[ext_resource type="Texture2D" uid="uid://cbfgntym4su6i" path="res://Assets/hollyfolder/Pipoya VFX TimeMagic/Pipoya VFX TimeMagic/480x480/pipo-btleffect210_480.png" id="3_h3ngf"]
+[ext_resource type="Texture2D" uid="uid://bb4l58oht86r7" path="res://Assets/hollyfolder/PIPOYA FREE VFX Bell/PIPOYA FREE VFX Bell/480x480/pipo-btleffect217_480.png" id="4_qalwg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tmoks"]
+shader = ExtResource("1_h3ngf")
+shader_parameter/up_left = Vector2(0, 0)
+shader_parameter/up_right = Vector2(1, 0)
+shader_parameter/down_right = Vector2(1, 1)
+shader_parameter/down_left = Vector2(0, 1)
+shader_parameter/plane_size = Vector2(0, 0)
+
+[node name="hollyloyal" type="Sprite2D" unique_id=1535308993]
+material = SubResource("ShaderMaterial_tmoks")
+texture = ExtResource("1_lf6bd")
+hframes = 5
+vframes = 3
+script = ExtResource("2_ts0d5")
+
+[node name="hollyloyal2" type="Sprite2D" parent="." unique_id=1680448289]
+position = Vector2(0, -4)
+rotation = 1.5707964
+scale = Vector2(0.71, 0.71)
+texture = ExtResource("3_h3ngf")
+hframes = 5
+vframes = 3
+
+[node name="hollybell" type="Sprite2D" parent="." unique_id=1640658002]
+position = Vector2(-2, 2)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("4_qalwg")
+hframes = 5
+vframes = 3
+frame = 14
+
+[node name="FlashLayer" type="CanvasLayer" parent="." unique_id=846552565]
+
+[node name="FlashRect" type="ColorRect" parent="FlashLayer" unique_id=554206157]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0.9137255, 1)

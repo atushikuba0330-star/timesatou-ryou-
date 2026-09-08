@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c2bv33gcja6wj"]
+
+[ext_resource type="Texture2D" uid="uid://cikoyout8ixdc" path="res://Assets/Free  Effect Bullet Impact Explosion 32x32 V1/Red Effect Bullet Impact Explosion 32x32.png" id="1_ka5y7"]
+[ext_resource type="Script" uid="uid://dmus4v15hvi16" path="res://Assets/Effect Animation/fireboll.tscn.gd" id="2_tltft"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83kyw"]
+atlas = ExtResource("1_ka5y7")
+region = Rect2(349.49277, 479.5061, 133.92798, 32.15747)
+
+[node name="fireboll" type="Sprite2D" unique_id=122478870]
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_83kyw")
+hframes = 4
+frame = 3
+script = ExtResource("2_tltft")
