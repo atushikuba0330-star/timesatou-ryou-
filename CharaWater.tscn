@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bq5r6wh44s0xq"]
+
+[ext_resource type="Texture2D" uid="uid://dqnvfui3o2mw4" path="res://Character files/水キャラ-removebg-preview.png" id="1_nnnxd"]
+
+[node name="Node2D" type="Node2D" unique_id=1336150315]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2065911223]
+offset_right = 1000.0
+offset_bottom = 1350.0
+texture = ExtResource("1_nnnxd")

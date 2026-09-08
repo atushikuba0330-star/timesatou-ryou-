@@ -6,6 +6,8 @@
 [node name="Bgmplayer" type="Node" unique_id=440700207]
 script = ExtResource("1_yfopc")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=413212157]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1715647569]
 stream = ExtResource("2_sxx0c")
 bus = &"Music"
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

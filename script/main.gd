@@ -46,6 +46,7 @@ var pre_pause_time_scale = 1.0
 
 # シーン開始時に実行
 func _ready():
+	BgmPlayer.play_bgm("battle")
 
 	# 戦闘データ初期化
 	GameData.reset_battle()
@@ -225,3 +226,5 @@ func display_deck():
 
 		# デッキ表示欄へ追加
 		deck_display.add_child(card)
+		
+		

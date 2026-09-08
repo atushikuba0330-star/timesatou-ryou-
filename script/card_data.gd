@@ -14,3 +14,4 @@ extends Resource
 @export var magic_circles: Array[Texture2D]
 @export var magic_positions: Array[Vector2]
 @export var icon: Texture2D
+@export var card_se: AudioStream

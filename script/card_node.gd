@@ -61,6 +61,8 @@ func _ready():
 	if chain_overlay:
 		chain_overlay.visible = locked
 
+
+
 func set_locked(value: bool):
 	locked = value
 	if chain_overlay:
@@ -112,6 +114,14 @@ func _on_mouse_entered():
 	var preview = get_tree().current_scene.get_node_or_null("CardPreview")
 	if preview:
 		preview.show_preview(self)
+
+	var se_player = get_tree().get_root().get_node("/root/Main/SePlayer1")
+	if data.card_se:
+		se_player.stream = data.card_se
+	else:
+		se_player.stream = preload("res://audiostock_854960.wav")
+	se_player.play()
+
 
 func _on_mouse_exited():
 	var preview = get_tree().current_scene.get_node_or_null("CardPreview")
