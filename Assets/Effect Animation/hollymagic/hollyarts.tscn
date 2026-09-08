@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cxtwqva6he2nd"]
+
+[ext_resource type="Texture2D" uid="uid://j1bp0hjyh3ip" path="res://Assets/hollyfolder/Pipoya VFX TimeMagic/Pipoya VFX TimeMagic/480x480/pipo-btleffect214_480.png" id="1_ggdoc"]
+[ext_resource type="Texture2D" uid="uid://cjh8oe6yfedev" path="res://Assets/hollyfolder/Pipoya VFX HEXShield/Pipoya VFX HEXShield/480x480/pipo-btleffect207_480.png" id="2_h83tu"]
+[ext_resource type="Script" uid="uid://1rgo4shdktjx" path="res://Assets/Effect Animation/hollymagic/hollyarts.gd" id="2_x00ta"]
+
+[node name="hollyarts" type="Sprite2D" unique_id=1713934369]
+position = Vector2(879, 315)
+scale = Vector2(2.09, 2.09)
+texture = ExtResource("1_ggdoc")
+hframes = 5
+vframes = 3
+frame = 14
+script = ExtResource("2_x00ta")
+
+[node name="hollyartsshield" type="Sprite2D" parent="." unique_id=1990551795]
+position = Vector2(0.9569354, -10.047848)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("2_h83tu")
+hframes = 5
+vframes = 4
+frame = 11
