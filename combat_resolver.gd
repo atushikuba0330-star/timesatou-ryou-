@@ -6,14 +6,22 @@ extends RefCounted
 # destroy_card_interrupted を呼び戻すため）を想定。
 
 static func resolve_pair(battle_manager, a, b) -> void:
+	
+	
 	if a.card == null or b.card == null:
 		return
 	var power_a = a.card.get_current_power()
 	var power_b = b.card.get_current_power()
 	var diff = power_a - power_b
 	var tree = battle_manager.get_tree()
+	
 
 	if diff > 0:
+		var element = a.card.data.element
+		var se_player = tree.get_root().get_node("/root/Main/SePlayer1")
+		se_player.stream = BattleEffects.hit_se_list[element]
+		se_player.play()
+		
 		if a.is_player:
 			tree.current_scene.damage_enemy(diff)
 		else:
@@ -21,6 +29,11 @@ static func resolve_pair(battle_manager, a, b) -> void:
 		b.destroy_card()
 		battle_manager.finish_card_with_ability(a)
 	elif diff < 0:
+		var element = b.card.data.element
+		var se_player = tree.get_root().get_node("/root/Main/SePlayer1")
+		se_player.stream = BattleEffects.hit_se_list[element]
+		se_player.play()
+		
 		if b.is_player:
 			tree.current_scene.damage_enemy(-diff)
 		else:
@@ -41,7 +54,12 @@ static func resolve_vs_chanting(battle_manager, slot) -> void:
 		var cut = int(diff * (enemy.shield_value * 0.1))
 		diff = max(diff - cut,0)
 		print("シールド発動 残りダメージ:", diff)
-
+		if diff > 0:
+			var element = slot.card.data.element
+			var se_player = tree.get_root().get_node("/root/Main/SePlayer1")
+			se_player.stream = BattleEffects.hit_se_list[element]
+			se_player.play()
+			
 		if not slot.is_player:  # プレイヤーのシールドが発動した場合
 			GameData.shield_cut_total += cut
 			print("シールドカット合計:", GameData.shield_cut_total)
@@ -59,6 +77,13 @@ static func resolve_vs_chanting(battle_manager, slot) -> void:
 		if enemy.card != null:
 			enemy_power = enemy.card.get_current_power()
 		var diff = max(power - enemy_power, 0)
+		
+		if diff > 0:
+			var element = slot.card.data.element
+			var se_player = tree.get_root().get_node("/root/Main/SePlayer1")
+			se_player.stream = BattleEffects.hit_se_list[element]
+			se_player.play()
+		
 		if slot.is_player:
 			tree.current_scene.damage_enemy(diff)
 		else:

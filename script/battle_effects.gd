@@ -10,9 +10,18 @@ static var se_list = {
 	"水": preload("res://audiostock_903941.wav"),
 	"雷": preload("res://audiostock_60265.mp3"),
 	"光": preload("res://audiostock_57407.wav"),
-	"闇": preload("res://audiostock_1640462.wav")
+	"闇": preload("res://audiostock_66640.wav")
 	
 
+}
+
+
+static var hit_se_list = {
+	"火": preload("res://audiostock_60330.mp3"),
+	"水": preload("res://audiostock_903941.wav"),
+	"雷": preload("res://audiostock_60265.mp3"),
+	"光": preload("res://audiostock_57407.wav"),
+	"闇": preload("res://audiostock_1640462.wav")
 }
 
 
