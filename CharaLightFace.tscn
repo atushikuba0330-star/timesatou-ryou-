@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ee5clh8xqmfw"]
+
+[ext_resource type="Script" uid="uid://5hpglmte2ya5" path="res://chara_light_face.gd" id="1_h5jer"]
+[ext_resource type="Texture2D" uid="uid://dkjigxpkm2ay0" path="res://Character files/20260726_045326469_iOS-removebg-preview.png" id="1_xn1fd"]
+
+[node name="Control" type="Control" unique_id=1699646413]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h5jer")
+
+[node name="face" type="TextureRect" parent="." unique_id=452927917]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_xn1fd")

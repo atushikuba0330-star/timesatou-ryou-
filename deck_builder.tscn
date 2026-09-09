@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ch3ke4yu7l8k1" path="res://deck_builder.gd" id="1_script"]
 [ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="2_font"]
 [ext_resource type="Texture2D" uid="uid://dynigqedrc1yh" path="res://ChatGPT Image 2026年8月26日 16_16_51.png" id="2_pcmq2"]
+[ext_resource type="Script" uid="uid://cdgksm5r0oytu" path="res://BACK2BGMkirikae.gd" id="4_q5hcc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riqys"]
 bg_color = Color(0.6, 0.6, 0.6, 0.23529412)
@@ -93,3 +94,15 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
 text = "編成完了 → 次の戦闘へ"
+
+[node name="Button" type="Button" parent="." unique_id=1410373976]
+layout_mode = 0
+offset_left = 1932.0
+offset_top = 786.0
+offset_right = 2498.0
+offset_bottom = 950.0
+theme_override_font_sizes/font_size = 70
+text = "メニューに戻る"
+script = ExtResource("4_q5hcc")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
