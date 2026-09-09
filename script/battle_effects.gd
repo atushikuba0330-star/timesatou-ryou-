@@ -190,7 +190,7 @@ static func _get_ultimate_points(element: String, slot, enemy) -> Array:
 			# 相手のスロットに大型のものを展開
 			return [
 				enemy.global_position + Vector2(-100, 0),
-				enemy.global_position + Vector2(100, 0),
+				
 			]
 		"闇":
 			# 自分の側から大きな斜め一列
