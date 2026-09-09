@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("2_bg07x")
+name = "ラフラム"
 element = "火"
 cost = 1
 power = 100

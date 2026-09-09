@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("1_8u3sh")
+name = "アムレートゥム"
 element = "光"
 cost = 6
 power = 70

@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("1_yr3jn")
+name = "メテオエクリプス"
 element = "火"
 cost = 7
 power = 200
