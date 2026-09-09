@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://jsbug4mh73m3"]
 
 [ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_23glv"]
+[ext_resource type="Script" uid="uid://bietgh3ey0mor" path="res://settei.gd" id="1_fjbq5"]
 [ext_resource type="Script" uid="uid://41emyst12bhc" path="res://BACK.gd" id="2_7u6aa"]
 [ext_resource type="Script" uid="uid://28cliu2dj1b2" path="res://CONTROL.gd" id="3_scyhx"]
 [ext_resource type="Script" uid="uid://dt0g2tr3a34fo" path="res://onnryoutamesi.gd" id="4_2q0nf"]
 
 [node name="settei" type="Node2D" unique_id=1816131404]
+script = ExtResource("1_fjbq5")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1401415807]
 position = Vector2(1270, 675)
@@ -67,6 +69,12 @@ offset_bottom = 961.0
 theme_override_font_sizes/font_size = 70
 text = "SE音量試し"
 script = ExtResource("4_2q0nf")
+
+[node name="char_holder" type="Control" parent="." unique_id=271979268]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="onnryoutamesi" to="onnryoutamesi" method="_on_pressed"]
