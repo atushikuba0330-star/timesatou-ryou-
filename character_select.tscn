@@ -190,6 +190,13 @@ layout_mode = 0
 offset_right = 451.0
 offset_bottom = 781.0
 
+[node name="TextureRect" type="TextureRect" parent="RightPanel" unique_id=1649702244]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 394.0
+offset_right = 396.0
+offset_bottom = 884.0
+
 [node name="StartButton" type="Button" parent="." unique_id=1229982573]
 layout_mode = 0
 offset_left = 2053.0

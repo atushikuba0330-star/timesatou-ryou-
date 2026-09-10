@@ -23,7 +23,7 @@ func select_character(element: String):
 func _on_start_button_pressed():
 	GameData.selected_element= temp_selected_element
 	GameData.player_deck.clear()  # 新しいランは初期デッキから開始する
-	SePlayer.play_se("res://SE (1).wav")
+	SePlayer.play_se("res://audiostock_60330.mp3")
 	get_tree().change_scene_to_file("res://Scenes/TutorialKeyWordFire .tscn")
 	
 func _on_fire_buttan_pressed():
