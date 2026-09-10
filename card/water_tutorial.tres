@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://72f2aelp6mp8"]
+
+[ext_resource type="Texture2D" uid="uid://5ggdfli13gls" path="res://irasto/まほー/水/ネロフスカ.png" id="1_y5lak"]
+[ext_resource type="Texture2D" uid="uid://bwlyuthq4dqmk" path="res://irasto/Normal/Ma1a-line-normal/ma1a-skyblue.png" id="2_e1ict"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="3_x5g75"]
+
+[resource]
+script = ExtResource("3_x5g75")
+element = "水試"
+cost = 4
+power = 70
+cast_time = 2
+ability = "ミラージュ"
+ability_value = 1
+magic_circles = Array[Texture2D]([ExtResource("2_e1ict"), ExtResource("2_e1ict")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
+icon = ExtResource("1_y5lak")

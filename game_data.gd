@@ -46,6 +46,18 @@ func set_starter_deck(element: String):
 				player_deck.append(load("res://card/dark" + str(i) + ".tres"))
 			_append_empty_neutral_slots()
 			player_deck.append(load("res://card/darkEX.tres"))  # ← 追加
+		"火試":
+			player_deck.append(load("res://card/fire_tutorial.tres"))
+		"水試":
+			player_deck.append(load("res://card/water_tutorial.tres"))
+		"雷試":
+			player_deck.append(load("res://card/thunder_tutorial.tres"))
+		"光試":
+			player_deck.append(load("res://card/holly_tutorial.tres"))
+		"闇試":
+			player_deck.append(load("res://card/dark_tutorial.tres"))
+		"敵試":
+			player_deck.append(load("res://card/enemy_card.tres"))
 
 # ニュートラルカード専用枠(3枠)を空きとして追加
 func _append_empty_neutral_slots():
@@ -72,6 +84,8 @@ func set_enemy_deck(element: String):
 		"闇":
 			for i in range(1, 6):
 				enemy_deck.append(load("res://card/dark" + str(i) + ".tres"))
+		"敵試":
+			enemy_deck.append(load("res://card/enemy_card.tres"))
 
 func reset_battle():
 	fire_win_count = 0
