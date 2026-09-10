@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drsoh1e6johj0"]
 
 [ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_0cycf"]
+[ext_resource type="Script" uid="uid://bas8fgsoend1j" path="res://tutorial_select.gd" id="1_0tebu"]
 [ext_resource type="Script" uid="uid://41emyst12bhc" path="res://BACK.gd" id="2_q0umt"]
 
 [node name="TR" type="Node2D" unique_id=450945355]
@@ -12,6 +13,7 @@ position = Vector2(1270, 675)
 offset_right = 2540.0
 offset_bottom = 1350.0
 texture = ExtResource("1_0cycf")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="." unique_id=351436821]
 offset_left = 110.0
@@ -32,4 +34,27 @@ text = "チュートリアル"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Control" type="Control" parent="." unique_id=1978953606]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2540.0
+offset_bottom = 1345.0
+script = ExtResource("1_0tebu")
+
+[node name="fire_Buttan" type="Button" parent="Control" unique_id=85786805]
+layout_mode = 0
+offset_left = 1799.0
+offset_top = 459.0
+offset_right = 2540.0
+offset_bottom = 786.0
+
+[node name="Start_Button" type="Button" parent="Control" unique_id=410752617]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 464.0
+offset_right = 1584.0
+offset_bottom = 1065.0
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Control/fire_Buttan" to="Control" method="_on_fire_buttan_pressed"]
+[connection signal="pressed" from="Control/Start_Button" to="Control" method="_on_start_button_pressed"]

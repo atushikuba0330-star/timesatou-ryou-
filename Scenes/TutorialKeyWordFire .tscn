@@ -1,0 +1,424 @@
+[gd_scene format=3 uid="uid://c38vtiyqnc7so"]
+
+[ext_resource type="Script" uid="uid://d1caip7jc4h1s" path="res://script/tutorial_main.gd" id="1_31ue4"]
+[ext_resource type="Texture2D" uid="uid://cg74cf5h8ag0u" path="res://irasto/ChatGPT Image 2026年8月1日 12_16_21.png" id="2_snm7e"]
+[ext_resource type="Script" uid="uid://fp17w7wl61al" path="res://script/mana_Tutorial.gd" id="3_31ue4"]
+[ext_resource type="Script" uid="uid://ce1lbg7tqixro" path="res://battle_manager.gd" id="4_spytb"]
+[ext_resource type="Script" uid="uid://bgu0s2qingaas" path="res://ability_manager.gd" id="5_wbx6j"]
+[ext_resource type="Texture2D" uid="uid://dmsbytc445uxt" path="res://irasto/Designer (3).png" id="7_j7xxf"]
+[ext_resource type="Script" uid="uid://6putwmkhy4cr" path="res://script/slot_tutorial.gd" id="8_spytb"]
+[ext_resource type="Texture2D" uid="uid://dnl5kyvex5fm4" path="res://irasto/22302021.png" id="8_yyl3j"]
+[ext_resource type="Texture2D" uid="uid://cfy4vyrpcw14s" path="res://irasto/2117725.png" id="9_nu6v2"]
+[ext_resource type="Script" uid="uid://byd5sh1ldpw2" path="res://preview_tutorial.gd" id="11_31ue4"]
+[ext_resource type="Script" uid="uid://bqmathkxwi3cd" path="res://relic_manager.gd" id="11_uthlr"]
+[ext_resource type="Texture2D" uid="uid://dx85sxgwqgpwt" path="res://irasto/ka-do6.png" id="13_f8thf"]
+[ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="14_u572q"]
+[ext_resource type="Texture2D" uid="uid://bs7l0smxwgpen" path="res://irasto/カーソルアイコン右.png" id="15_31ue4"]
+[ext_resource type="Script" uid="uid://cwdcc5xomac5t" path="res://Scenes/Tutorial.gd" id="15_snm7e"]
+[ext_resource type="Texture2D" uid="uid://df0drkod2vx35" path="res://irasto/カーソルアイコン左.png" id="16_spytb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
+atlas = ExtResource("8_yyl3j")
+region = Rect2(0, 3245, 608, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0u6y"]
+atlas = ExtResource("9_nu6v2")
+region = Rect2(118, 800, 1032, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57qmd"]
+atlas = ExtResource("8_yyl3j")
+region = Rect2(25, 3245, 557, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf5fn"]
+atlas = ExtResource("8_yyl3j")
+region = Rect2(25, 2504, 557, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
+atlas = ExtResource("9_nu6v2")
+region = Rect2(356, 800, 785, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcnqv"]
+atlas = ExtResource("9_nu6v2")
+region = Rect2(356, 95, 785, 280)
+margin = Rect2(0, -8, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg77c"]
+atlas = ExtResource("9_nu6v2")
+region = Rect2(350, 95, 805, 280)
+margin = Rect2(0, -8, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vivmo"]
+atlas = ExtResource("13_f8thf")
+region = Rect2(0, 0, 1134, 850)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1u7k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgra1"]
+
+[node name="Main" type="Node2D" unique_id=166516908]
+script = ExtResource("1_31ue4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1193686480]
+position = Vector2(1270, 675)
+
+[node name="ChatGptImage2026年8月1日121621" type="Sprite2D" parent="." unique_id=259103776]
+position = Vector2(1267, 674.25)
+scale = Vector2(1.507177, 1.4171095)
+texture = ExtResource("2_snm7e")
+
+[node name="DeckDisplay" type="GridContainer" parent="." unique_id=550873136]
+offset_left = 1978.0
+offset_top = 415.0
+offset_right = 2488.0
+offset_bottom = 985.0
+columns = 3
+
+[node name="ManaManager" type="Control" parent="." unique_id=923551341]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_31ue4")
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelPlayer_HP" type="Label" parent="." unique_id=1759646058]
+offset_left = 803.0
+offset_top = 927.0
+offset_right = 843.0
+offset_bottom = 950.0
+
+[node name="LabelPlayer_Mana" type="Label" parent="." unique_id=2055023808]
+offset_left = 789.0
+offset_top = 978.0
+offset_right = 829.0
+offset_bottom = 1001.0
+
+[node name="LabelEnemy_HP" type="Label" parent="." unique_id=1918225598]
+offset_left = 825.0
+offset_top = 283.0
+offset_right = 865.0
+offset_bottom = 306.0
+
+[node name="LabelEnemy_Mana" type="Label" parent="." unique_id=1142364570]
+offset_left = 838.0
+offset_top = 332.0
+offset_right = 878.0
+offset_bottom = 355.0
+
+[node name="BattleManager" type="Node" parent="." unique_id=1314963196]
+script = ExtResource("4_spytb")
+
+[node name="AbilityManager" type="Node" parent="." unique_id=926559697]
+script = ExtResource("5_wbx6j")
+
+[node name="PlayerSlot" type="Node" parent="." unique_id=697633319]
+
+[node name="Slot4" type="Control" parent="PlayerSlot" unique_id=1161250156]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1050.0
+offset_top = 900.0
+offset_right = 1275.0
+offset_bottom = 1200.0
+script = ExtResource("8_spytb")
+
+[node name="ShieldOverlay" type="TextureRect" parent="PlayerSlot/Slot4" unique_id=1278909158]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("7_j7xxf")
+
+[node name="Panel" type="Panel" parent="PlayerSlot/Slot4" unique_id=1626119485]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="EnemySlot" type="Node" parent="." unique_id=212027387]
+
+[node name="Slot4" type="Control" parent="EnemySlot" unique_id=553321545]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1050.0
+offset_top = 240.0
+offset_right = 1275.0
+offset_bottom = 540.0
+script = ExtResource("8_spytb")
+is_player = false
+
+[node name="ShieldOverlay" type="TextureRect" parent="EnemySlot/Slot4" unique_id=301829510]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -60.0
+offset_right = 999.0
+offset_bottom = 1468.0
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("7_j7xxf")
+
+[node name="Panel" type="Panel" parent="EnemySlot/Slot4" unique_id=365986045]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 210.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1788043568]
+offset_left = 1950.0
+offset_top = 1207.0
+offset_right = 2619.0
+offset_bottom = 1257.0
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_g4v7s")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1093853626]
+offset_left = 1950.0
+offset_top = 189.0
+offset_right = 2619.0
+offset_bottom = 239.0
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_g4v7s")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1814993638]
+offset_left = 1945.9999
+offset_top = 1094.0001
+offset_right = 2978.0
+offset_bottom = 1374.0001
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_d0u6y")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1896018797]
+offset_left = 1953.9999
+offset_top = 77.0
+offset_right = 2986.0
+offset_bottom = 357.0
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_d0u6y")
+
+[node name="PlayerMPBar" type="TextureProgressBar" parent="." unique_id=2040058652]
+offset_left = 1972.0
+offset_top = 1207.0
+offset_right = 2584.0
+offset_bottom = 1257.0
+scale = Vector2(0.8, 0.8)
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_57qmd")
+texture_progress = SubResource("AtlasTexture_yf5fn")
+
+[node name="EnemyMPBar" type="TextureProgressBar" parent="." unique_id=46821814]
+offset_left = 1972.0
+offset_top = 189.0
+offset_right = 2584.0
+offset_bottom = 239.0
+scale = Vector2(0.8, 0.8)
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_57qmd")
+texture_progress = SubResource("AtlasTexture_yf5fn")
+
+[node name="PlayerHPBar" type="TextureProgressBar" parent="." unique_id=1041815007]
+custom_minimum_size = Vector2(300, 30)
+offset_left = 2041.0
+offset_top = 1094.0
+offset_right = 2833.5
+offset_bottom = 1374.0
+scale = Vector2(0.4, 0.4)
+texture_under = SubResource("AtlasTexture_w48qg")
+texture_progress = SubResource("AtlasTexture_fcnqv")
+
+[node name="EnemyHPBar" type="TextureProgressBar" parent="." unique_id=1696531416]
+custom_minimum_size = Vector2(300, 30)
+offset_left = 2049.0
+offset_top = 77.0
+offset_right = 3089.0
+offset_bottom = 357.0
+scale = Vector2(0.4, 0.4)
+texture_under = SubResource("AtlasTexture_w48qg")
+texture_progress = SubResource("AtlasTexture_dg77c")
+
+[node name="RelicManager" type="Node" parent="." unique_id=337626491]
+script = ExtResource("11_uthlr")
+
+[node name="CardPreview" type="Panel" parent="." unique_id=613139404]
+offset_left = 170.0
+offset_top = 200.0
+offset_right = 530.0
+offset_bottom = 750.0
+script = ExtResource("11_31ue4")
+
+[node name="PreviewIcon" type="TextureRect" parent="CardPreview" unique_id=521706138]
+layout_mode = 0
+offset_left = -307.0
+offset_top = -62.0
+offset_right = 1293.0
+offset_bottom = 1138.0
+scale = Vector2(0.6, 0.6)
+texture = SubResource("AtlasTexture_vivmo")
+expand_mode = 1
+
+[node name="Labelcost" type="Label" parent="CardPreview" unique_id=237307857]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 1.0
+offset_right = 102.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_u572q")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+
+[node name="Labelname" type="Label" parent="CardPreview" unique_id=1996249456]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 46.0
+offset_right = 280.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_u572q")
+theme_override_font_sizes/font_size = 18
+
+[node name="Labelcast" type="Label" parent="CardPreview" unique_id=900632355]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 26.0
+offset_right = 345.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_u572q")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[node name="Labelpower" type="Label" parent="CardPreview" unique_id=1017337369]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 420.0
+offset_right = 185.0
+offset_bottom = 455.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Labelability" type="Label" parent="CardPreview" unique_id=1740986636]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 323.0
+offset_right = 330.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="Labelcurrentpower" type="Label" parent="CardPreview" unique_id=1395320191]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 420.0
+offset_right = 335.0
+offset_bottom = 455.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="LabelOverMana" type="Label" parent="." unique_id=1486513152]
+offset_left = 2464.0
+offset_top = 1172.0
+offset_right = 2504.0
+offset_bottom = 1214.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("14_u572q")
+theme_override_font_sizes/font_size = 30
+
+[node name="Tutorial" type="Node" parent="." unique_id=378820396]
+script = ExtResource("15_snm7e")
+
+[node name="TutorialPanel" type="Panel" parent="Tutorial" unique_id=165566739]
+visible = false
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 2533.0
+offset_bottom = 1354.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1u7k")
+
+[node name="TutorialText" type="Label" parent="Tutorial/TutorialPanel" unique_id=416657311]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 3.0
+offset_right = 2277.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 185
+text = "インパクトについて"
+horizontal_alignment = 3
+
+[node name="KaisetuText" type="Label" parent="Tutorial/TutorialPanel" unique_id=479856302]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 318.0
+offset_right = 2519.0
+offset_bottom = 1234.0
+theme_override_font_sizes/font_size = 99
+text = "インパクトを持つカードが相手のカードとの戦闘勝利時にインパクトの数値×50のダメージボーナスが得られる能力です。
+また、インパクトの数値はカードによって異なり、カードの使用コストが高いほどインパクトの数値も高くなります"
+autowrap_mode = 2
+
+[node name="CardSample" type="TextureRect" parent="Tutorial/TutorialPanel" unique_id=1977392633]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 563.0
+offset_bottom = 1353.0
+
+[node name="NextButtan" type="Button" parent="Tutorial/TutorialPanel" unique_id=721583397]
+process_mode = 3
+layout_mode = 0
+offset_left = 1731.0
+offset_top = 1190.0
+offset_right = 2502.0
+offset_bottom = 1340.0
+theme_override_font_sizes/font_size = 108
+text = "次へ"
+
+[node name="TutorialPanel2" type="Panel" parent="Tutorial" unique_id=2122085131]
+visible = false
+offset_left = 853.0
+offset_top = 453.0
+offset_right = 1793.0
+offset_bottom = 994.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xgra1")
+
+[node name="TutorialText2" type="Label" parent="Tutorial/TutorialPanel2" unique_id=251241660]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.003
+anchor_top = 0.007
+anchor_right = 0.003
+anchor_bottom = 0.007
+offset_left = 4.1800003
+offset_top = 1.2129998
+offset_right = 933.18
+offset_bottom = 534.213
+theme_override_font_sizes/font_size = 90
+text = "与えたダメージを見てみましょう"
+autowrap_mode = 3
+
+[node name="NextButtan2" type="Button" parent="Tutorial/TutorialPanel2" unique_id=1953985873]
+process_mode = 3
+layout_mode = 0
+offset_left = 642.0
+offset_top = 576.0
+offset_right = 1062.0
+offset_bottom = 737.0
+theme_override_font_sizes/font_size = 100
+text = "次へ"
+
+[node name="YubiMigi" type="Sprite2D" parent="Tutorial/TutorialPanel2" unique_id=1969279706]
+position = Vector2(902, -300.00003)
+scale = Vector2(0.8828125, 0.92578125)
+texture = ExtResource("15_31ue4")
+
+[node name="YubiHidari" type="Sprite2D" parent="Tutorial/TutorialPanel2" unique_id=610583088]
+position = Vector2(-179, 107.5)
+scale = Vector2(0.96875, 0.94921875)
+texture = ExtResource("16_spytb")
+
+[connection signal="pressed" from="Tutorial/TutorialPanel/NextButtan" to="ManaManager" method="_on_next_buttan_pressed"]
+[connection signal="pressed" from="Tutorial/TutorialPanel/NextButtan" to="Tutorial" method="_on_next_buttan_pressed"]
+[connection signal="pressed" from="Tutorial/TutorialPanel2/NextButtan2" to="ManaManager" method="_on_next_buttan_2_pressed"]
+[connection signal="pressed" from="Tutorial/TutorialPanel2/NextButtan2" to="Tutorial" method="_on_next_buttan_2_pressed"]
