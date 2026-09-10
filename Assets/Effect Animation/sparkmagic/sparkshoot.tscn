@@ -11,6 +11,14 @@ func launch(start_pos, end_pos):
 	global_position = start_pos+Vector2(110, 0)
 
 	frame = 0
+	
+	# 向きを自動判定
+	if start_pos.y < end_pos.y:
+		rotation_degrees = 90
+	else:
+		rotation_degrees = 270
+
+	frame = 0
 
 	_play_animation()
 

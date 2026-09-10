@@ -11,6 +11,14 @@ func launch(start_pos, end_pos):
 	global_position = start_pos+Vector2(110,0)
 
 	frame = 0
+	
+	# 向きを自動判定
+	if start_pos.y < end_pos.y:
+		rotation_degrees = 90
+	else:
+		rotation_degrees = 270
+
+	frame = 0
 
 	_play_animation()
 
@@ -38,8 +46,8 @@ func _play_animation():
 "
 
 [node name="hollyshoot" type="Sprite2D" unique_id=804451614]
-modulate = Color(0.82676965, 0.87329227, 0.8586157, 1)
-self_modulate = Color(0.9999996, 0.9614802, 0.8978144, 1)
+modulate = Color(0.92941177, 0.9607843, 0.9411765, 1)
+self_modulate = Color(1, 0.9607843, 1, 1)
 rotation = -1.5707964
 scale = Vector2(13.485, 9.24)
 texture = SubResource("CompressedTexture2D_eoq22")
