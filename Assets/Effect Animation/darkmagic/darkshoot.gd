@@ -6,9 +6,9 @@ func launch(start_pos, end_pos):
 
 	# 向きを自動判定
 	if start_pos.y < end_pos.y:
-		rotation_degrees = 270
+		rotation_degrees = 180
 	else:
-		rotation_degrees = 90
+		rotation_degrees = 0
 
 	frame = 0
 
