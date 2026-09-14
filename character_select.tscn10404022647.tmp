@@ -2,17 +2,12 @@
 
 [ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="1_5duen"]
 [ext_resource type="Script" uid="uid://c5vfufvv4wyhq" path="res://character_select.gd" id="1_6yhuy"]
-[ext_resource type="Texture2D" uid="uid://45tbv2qponnj" path="res://irasto/まほー/炎/エクスプロズ.png" id="2_8d0rx"]
 [ext_resource type="Texture2D" uid="uid://d11svx60s5nhu" path="res://キャラ選択背景.png" id="2_lqqhx"]
 [ext_resource type="Texture2D" uid="uid://c8e3mwjl0rsja" path="res://Character files/炎キャラNE.png" id="3_aoibv"]
-[ext_resource type="Texture2D" uid="uid://ltphnm6mxunk" path="res://irasto/まほー/水/ネロスフィーラ.png" id="4_aq61o"]
-[ext_resource type="Texture2D" uid="uid://bxbauec2lkghb" path="res://irasto/まほー/雷/クーゲルブリッツ.png" id="4_fes3t"]
 [ext_resource type="Texture2D" uid="uid://b73ohgu7invua" path="res://Character files/水キャラNE.png" id="4_mn8d4"]
 [ext_resource type="Texture2D" uid="uid://bx2nxy8ua5l84" path="res://Character files/雷キャラNE.png" id="5_7yigr"]
 [ext_resource type="Texture2D" uid="uid://ca6ljbtf7hhyi" path="res://Character files/光キャラNE.png" id="6_4hbjg"]
-[ext_resource type="Texture2D" uid="uid://b3nchgbia0k6t" path="res://irasto/まほー/闇/ザラーム.png" id="6_tlgw2"]
 [ext_resource type="Texture2D" uid="uid://balrdw7a1ead6" path="res://Character files/闇キャラNE.png" id="7_4hbjg"]
-[ext_resource type="Texture2D" uid="uid://d1h5glkpvkwp0" path="res://irasto/まほー/光/アムレートゥム.png" id="9_8vty7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pq6wd"]
 atlas = ExtResource("3_aoibv")
@@ -44,11 +39,6 @@ offset_bottom = -114.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6yhuy")
-fire_cards = Array[Texture2D]([ExtResource("2_8d0rx")])
-water_cards = Array[Texture2D]([ExtResource("4_aq61o")])
-thunder_cards = Array[Texture2D]([ExtResource("4_fes3t")])
-light_cards = Array[Texture2D]([ExtResource("9_8vty7")])
-dark_cards = Array[Texture2D]([ExtResource("6_tlgw2")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1979057654]
 layout_mode = 0
@@ -200,41 +190,12 @@ layout_mode = 0
 offset_right = 451.0
 offset_bottom = 781.0
 
-[node name="deck_list" type="HBoxContainer" parent="RightPanel" unique_id=2056419210]
-layout_mode = 1
-offset_left = 2.0
-offset_right = 418.0
-offset_bottom = 639.0
-
-[node name="card1" type="TextureRect" parent="RightPanel/deck_list" unique_id=1379903776]
-custom_minimum_size = Vector2(80, 120)
-layout_mode = 2
-expand_mode = 2
-stretch_mode = 4
-
-[node name="card2" type="TextureRect" parent="RightPanel/deck_list" unique_id=2067977055]
-custom_minimum_size = Vector2(80, 120)
-layout_mode = 2
-expand_mode = 2
-stretch_mode = 4
-
-[node name="card3" type="TextureRect" parent="RightPanel/deck_list" unique_id=2006760582]
-custom_minimum_size = Vector2(80, 120)
-layout_mode = 2
-expand_mode = 2
-stretch_mode = 4
-
-[node name="card4" type="TextureRect" parent="RightPanel/deck_list" unique_id=1806789993]
-custom_minimum_size = Vector2(80, 120)
-layout_mode = 2
-expand_mode = 2
-stretch_mode = 4
-
-[node name="card5" type="TextureRect" parent="RightPanel/deck_list" unique_id=989252853]
-custom_minimum_size = Vector2(80, 120)
-layout_mode = 2
-expand_mode = 2
-stretch_mode = 4
+[node name="deck list" type="TextureRect" parent="RightPanel" unique_id=1649702244]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 394.0
+offset_right = 396.0
+offset_bottom = 884.0
 
 [node name="StartButton" type="Button" parent="." unique_id=1229982573]
 layout_mode = 0
