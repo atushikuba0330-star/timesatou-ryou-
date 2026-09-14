@@ -12,6 +12,8 @@ element = "光"
 cost = 5
 power = 300
 cast_time = 5
+flavor_text = "中級魔法
+天から降り注ぐ柱で敵を焼き尽くす"
 projectile_icon = ExtResource("3_m1pd6")
 magic_circles = Array[Texture2D]([ExtResource("2_m1pd6"), ExtResource("2_m1pd6"), ExtResource("2_m1pd6"), ExtResource("2_m1pd6"), ExtResource("2_m1pd6")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80), Vector2(100, 140), Vector2(60, 80)])
