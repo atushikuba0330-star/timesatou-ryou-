@@ -194,11 +194,14 @@ offset_bottom = 1443.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 30
 
 [node name="DescLabel" type="Label" parent="RightPanel" unique_id=1394198302]
 layout_mode = 0
+offset_top = 539.0
 offset_right = 451.0
 offset_bottom = 781.0
+theme_override_font_sizes/font_size = 30
 
 [node name="deck_list" type="HBoxContainer" parent="RightPanel" unique_id=2056419210]
 layout_mode = 1
