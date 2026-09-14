@@ -26,8 +26,8 @@ func _ready():
 @onready var player = $AudioStreamPlayer
 
 var bgm_list = {
-	"title": preload("res://BGM (1).mp3"),
-	"Home":preload("res://BGM (1).mp3"),
+	"title": preload("res://audiostock_993960.mp3"),
+	"Home":preload("res://audiostock_993960.mp3"),
 	"battle": preload("res://audiostock_20548.mp3")
 }
 
