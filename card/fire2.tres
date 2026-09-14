@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("1_y5cls")
+name = "フゥバル"
 element = "火"
 cost = 2
 power = 80

@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("1_sp8v3")
+name = "フルトゥーナ"
 element = "水"
 cost = 6
 power = 90

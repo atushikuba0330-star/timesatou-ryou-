@@ -7,10 +7,13 @@
 
 [resource]
 script = ExtResource("2_bg07x")
+name = "ラフラム"
 element = "火"
 cost = 1
 power = 100
 cast_time = 1
+flavor_text = "火の初級魔法
+コスパが良い"
 projectile_icon = ExtResource("3_spac3")
 magic_circles = Array[Texture2D]([ExtResource("1_01lb8"), ExtResource("1_01lb8"), ExtResource("1_01lb8")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])

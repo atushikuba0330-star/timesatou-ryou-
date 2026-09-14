@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_hauko")
+name = "ジルズバーナ"
 element = "闇"
 cost = 4
 power = 80

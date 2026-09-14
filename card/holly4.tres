@@ -7,12 +7,15 @@
 
 [resource]
 script = ExtResource("1_8u3sh")
+name = "アムレートゥム"
 element = "光"
 cost = 6
 power = 70
 cast_time = 3
 ability = "シールド"
 ability_value = 5
+flavor_text = "高硬度なシールド展開技
+"
 projectile_icon = ExtResource("3_biko3")
 magic_circles = Array[Texture2D]([ExtResource("1_moup1"), ExtResource("1_moup1"), ExtResource("1_moup1")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])

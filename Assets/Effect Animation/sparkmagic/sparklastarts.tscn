@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://deelxygns8tlk" path="res://Assets/Pixel Art Skill Animations - Lightning/VFX3/Sprite-sheet/Sprite-sheet.png" id="5_a13kg"]
 
 [node name="sparklastarts" type="Sprite2D" unique_id=309492905]
-modulate = Color(0.1855622, 0.15883318, 0.127384, 1)
+modulate = Color(0.19724387, 0.9388719, 0.1323438, 1)
 self_modulate = Color(0.46237934, 0.42850614, 0.36512658, 0.35686275)
 scale = Vector2(33.3816, 30.410099)
 texture = ExtResource("3_7luf4")

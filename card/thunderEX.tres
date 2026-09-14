@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bgtfiwhmn46n0"]
 
-[ext_resource type="Texture2D" uid="uid://cw74h7vcifj8y" path="res://irasto/ka-do4.png" id="1_j1o3a"]
+[ext_resource type="Texture2D" uid="uid://jmh6kelmvehv" path="res://irasto/まほー/雷/kaminariEX.png" id="1_1lw2h"]
 [ext_resource type="Texture2D" uid="uid://ddhljlfainhbv" path="res://irasto/Normal/Ma1a-line-normal/ma1a-green.png" id="2_1lw2h"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="2_xnnye"]
-[ext_resource type="PackedScene" uid="uid://duyqeah3m84p5" path="res://Assets/Effect Animation/sparklastarts.tscn" id="3_1lw2h"]
+[ext_resource type="PackedScene" uid="uid://duyqeah3m84p5" path="res://Assets/Effect Animation/sparkmagic/sparklastarts.tscn" id="3_1lw2h"]
 
 [resource]
 script = ExtResource("2_xnnye")
@@ -14,4 +14,4 @@ ability = "スパーク"
 ability_value = 4
 projectile_icon = ExtResource("3_1lw2h")
 magic_circles = Array[Texture2D]([ExtResource("2_1lw2h")])
-icon = ExtResource("1_j1o3a")
+icon = ExtResource("1_1lw2h")
