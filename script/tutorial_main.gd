@@ -2,7 +2,7 @@ extends Node2D
 var player_hp := 1000
 var enemy_hp := 1000
 var max_hp := 1000
-var player_break_count := 0
+var player_break_count := 1
 var enemy_break_count := 0
 var time_scale_steps = [1.0, 1.5, 2.0]
 var time_scale_index = 0
@@ -52,12 +52,13 @@ func damage_enemy(value):
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_SPACE:
-			_toggle_pause()
-		elif event.keycode == KEY_E:
-			_change_speed(1)
-		elif event.keycode == KEY_Q:
-			_change_speed(-1)
+		#if event.keycode == KEY_SPACE:
+			#_toggle_pause()
+		#elif event.keycode == KEY_E:
+			#_change_speed(1)
+		#elif event.keycode == KEY_Q:
+			#_change_speed(-1)
+		pass
 
 func _toggle_pause():
 	is_paused = not is_paused

@@ -22,4 +22,5 @@ func show_preview(card):
 		$Labelcurrentpower.visible = false
 
 func hide_preview():
-	visible = false
+	#visible = false
+	pass

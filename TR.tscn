@@ -16,6 +16,7 @@ texture = ExtResource("1_0cycf")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="." unique_id=351436821]
+process_mode = 3
 offset_left = 110.0
 offset_top = 47.0
 offset_right = 519.0
@@ -43,18 +44,42 @@ script = ExtResource("1_0tebu")
 
 [node name="fire_Buttan" type="Button" parent="Control" unique_id=85786805]
 layout_mode = 0
-offset_left = 1799.0
-offset_top = 459.0
-offset_right = 2540.0
-offset_bottom = 786.0
+offset_left = 1742.0
+offset_top = 272.0
+offset_right = 2483.0
+offset_bottom = 599.0
 
-[node name="Start_Button" type="Button" parent="Control" unique_id=410752617]
+[node name="dark_Buttan" type="Button" parent="Control" unique_id=1433296559]
 layout_mode = 0
-offset_left = 616.0
-offset_top = 464.0
-offset_right = 1584.0
-offset_bottom = 1065.0
+offset_left = 1767.0
+offset_top = 727.0
+offset_right = 2508.0
+offset_bottom = 1054.0
+
+[node name="horry_Button" type="Button" parent="Control" unique_id=509541015]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 255.0
+offset_right = 1646.0
+offset_bottom = 610.0
+
+[node name="water_Button" type="Button" parent="Control" unique_id=1385463690]
+layout_mode = 0
+offset_left = 951.0
+offset_top = 719.0
+offset_right = 1620.0
+offset_bottom = 1049.0
+
+[node name="thunder_Button" type="Button" parent="Control" unique_id=309975714]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 514.0
+offset_right = 902.0
+offset_bottom = 844.0
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Control/fire_Buttan" to="Control" method="_on_fire_buttan_pressed"]
-[connection signal="pressed" from="Control/Start_Button" to="Control" method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/dark_Buttan" to="Control" method="_on_dark_buttan_pressed"]
+[connection signal="pressed" from="Control/horry_Button" to="Control" method="_on_horry_button_pressed"]
+[connection signal="pressed" from="Control/water_Button" to="Control" method="_on_water_button_pressed"]
+[connection signal="pressed" from="Control/thunder_Button" to="Control" method="_on_thunder_button_pressed"]
