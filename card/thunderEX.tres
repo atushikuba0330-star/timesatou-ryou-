@@ -14,6 +14,9 @@ cast_time = 1
 ability = "スパーク"
 ability_value = 4
 preview_font_size = 12
+flavor_text = "雷の奥義魔法
+多数の嵐と雷鳴で周囲を削り取る
+"
 projectile_icon = ExtResource("3_1lw2h")
 magic_circles = Array[Texture2D]([ExtResource("2_1lw2h")])
 icon = ExtResource("1_1lw2h")

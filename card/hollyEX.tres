@@ -11,6 +11,8 @@ name = "光る鐘の閃光"
 element = "光"
 power = 500
 cast_time = 1
+flavor_text = "光属性の奥義
+それは鐘の値が鳴る音"
 is_ultimate = true
 projectile_icon = ExtResource("3_64ua5")
 magic_circles = Array[Texture2D]([ExtResource("2_64ua5")])
