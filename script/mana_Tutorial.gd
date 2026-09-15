@@ -13,25 +13,17 @@ var enemy_mana := 0
 var max_mana := 10
 
 var count = 0
+var stop = false
 @onready var tut = $"../Tutorial"
-var enemy_slots = "../EnemySlot"
-var card_scene = load("res://card_node.tscn")
-var new_card = card_scene.instantiate()
-var reserved_card: CardData = null
 
 # シーン開始時
 func _ready():
-	new_card.data = reserved_card
 	# ターン進行ループ開始
 	run()
-	player_mana += 3
-	enemy_mana += 3
+	player_mana += 5
+	enemy_mana += 5
 	while count == 1:
-		if player_mana != 3:
-			if not GameData.enemy_used_cards.has(reserved_card):
-				#GameData.enemy_used_cards.append(reserved_card)
-				pass
-			enemy_slots.place(new_card, true)
+		if player_mana == 5:
 			tut.step1()
 
 

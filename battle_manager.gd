@@ -1,5 +1,4 @@
 extends Node
-
 # ターン終了時の戦闘処理
 func resolve_turn():
 
