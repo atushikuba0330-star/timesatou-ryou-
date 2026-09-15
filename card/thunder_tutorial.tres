@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c7j3cjhkf3gs3"]
+
+[ext_resource type="Texture2D" uid="uid://bkckrlrbm1fk3" path="res://irasto/まほー/雷/ゲヴィター￥￥.png" id="1_inxwa"]
+[ext_resource type="Texture2D" uid="uid://ddhljlfainhbv" path="res://irasto/Normal/Ma1a-line-normal/ma1a-green.png" id="2_o3mhw"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="3_pfrll"]
+
+[resource]
+script = ExtResource("3_pfrll")
+name = "ブリッツ"
+element = "雷試"
+cost = 5
+power = 200
+cast_time = 3
+ability = "スパーク"
+ability_value = 2
+magic_circles = Array[Texture2D]([ExtResource("2_o3mhw"), ExtResource("2_o3mhw"), ExtResource("2_o3mhw"), ExtResource("2_o3mhw")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80), Vector2(100, 140)])
+icon = ExtResource("1_inxwa")

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://r46n3orrfhic"]
 
+[ext_resource type="Script" uid="uid://c4gxe4xmm7i17" path="res://menu.gd" id="1_ecwwl"]
 [ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_l48gv"]
 [ext_resource type="Script" uid="uid://cowsykecspkx6" path="res://story.gd" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://c06y38yxllpxj" path="res://endless.gd" id="2_ouk20"]
@@ -8,6 +9,7 @@
 [ext_resource type="Script" uid="uid://ywavk7755t0s" path="res://tr.gd" id="5_ytr4m"]
 
 [node name="Menu" type="Node2D" unique_id=543504500]
+script = ExtResource("1_ecwwl")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1266239471]
 position = Vector2(1270, 675)
@@ -61,6 +63,12 @@ offset_bottom = 1217.0
 theme_override_font_sizes/font_size = 40
 text = "タイトルに戻る"
 script = ExtResource("4_4hy44")
+
+[node name="CharacterHolder" type="Control" parent="." unique_id=541883811]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="TR" to="TR" method="_on_pressed"]
 [connection signal="pressed" from="story" to="story" method="_on_pressed"]

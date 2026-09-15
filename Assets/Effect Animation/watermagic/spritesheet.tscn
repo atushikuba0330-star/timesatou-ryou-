@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://do8fmg0a1wpoc"]
+
+[ext_resource type="Texture2D" uid="uid://c2rcyhfrn77o6" path="res://Assets/Warped shooting fx files/Assets/Pixelart/Bolt/spritesheet.png" id="1_2gepv"]
+[ext_resource type="Script" uid="uid://d2it1xhjqtpfl" path="res://Assets/Effect Animation/firemagic/fireshoottest.gd" id="2_6bk6q"]
+
+[node name="Spritesheet" type="Sprite2D" unique_id=1370368705]
+rotation = 1.5707964
+scale = Vector2(6, 4.596)
+texture = ExtResource("1_2gepv")
+hframes = 4
+script = ExtResource("2_6bk6q")

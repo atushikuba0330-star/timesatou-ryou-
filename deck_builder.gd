@@ -192,7 +192,9 @@ func _on_pool_card_pressed(card: CardData):
 		GameData.owned_cards.append(old_card)
 	selected_slot_index = -1
 	refresh_all()
+	SePlayer.play_se("res://audiostock_53254.mp3")
+
 
 func _on_confirm_pressed():
 	get_tree().change_scene_to_file("res://main.tscn")
-	SePlayer.play_se("res://SE (1).wav")
+	SePlayer.play_se("res://audiostock_60330.mp3")

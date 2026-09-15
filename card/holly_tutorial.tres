@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dmyf08ho6ifsa"]
+
+[ext_resource type="Texture2D" uid="uid://ed65kavdmlc5" path="res://irasto/まほー/光/オラティオ.png" id="1_4qgya"]
+[ext_resource type="Texture2D" uid="uid://dfb6eg3ohv2yo" path="res://irasto/Normal/Ma1a-line-normal/ma1a-yellow.png" id="2_e8u27"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="3_mv6f3"]
+
+[resource]
+script = ExtResource("3_mv6f3")
+element = "光試"
+cost = 2
+power = 120
+cast_time = 1
+ability = "シールド"
+ability_value = 1
+magic_circles = Array[Texture2D]([ExtResource("2_e8u27")])
+magic_positions = Array[Vector2]([Vector2(60, 80)])
+icon = ExtResource("1_4qgya")

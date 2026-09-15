@@ -31,7 +31,6 @@ func _process(delta):
 func can_place():
 	return card == null and not sealed
 
-
 # ==================
 # カード配置
 # ==================
@@ -63,6 +62,11 @@ func place(c, free: bool = false):
 	c.get_parent().remove_child(c)
 	add_child(c)
 	c.position = $Panel.position
+	
+
+	
+	var se = get_node("/root/Main/SePlayer")
+	se.play()
 	
 	# 詠唱数計算（詠唱の書・移動のダイス・封印の鎖）
 	var cast_reduction = 0

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c81p4eksccnh7"]
+
+[ext_resource type="Texture2D" uid="uid://b68xtcc5dsejh" path="res://Character files/20260726_045337540_iOS-removebg-preview.png" id="1_mxkl8"]
+[ext_resource type="Script" uid="uid://dbfuhicjamxq8" path="res://chara_darkness_face.gd" id="1_wel2t"]
+
+[node name="Control" type="Control" unique_id=2024676409]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wel2t")
+
+[node name="face" type="TextureRect" parent="." unique_id=475738162]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_mxkl8")

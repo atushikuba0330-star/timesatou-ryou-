@@ -24,6 +24,7 @@ bus = &"SFX"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="." unique_id=1862438718]
 stream = ExtResource("5_mncjs")
+bus = &"SFX"
 
 [node name="Node" type="Node" parent="." unique_id=1047785381]
 script = ExtResource("3_2wnuf")

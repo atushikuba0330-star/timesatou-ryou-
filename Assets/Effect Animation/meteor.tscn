@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b0n5bxsb6gfe0"]
+[gd_scene format=3 uid="uid://6oox4wcm7pe0"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_otiji"]
 load_path = "res://.godot/imported/sprite-sheet.png-1014285634b6b937ae3588aba9a01361.ctex"

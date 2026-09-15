@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://bdh3atocwydwd"]
 
+[ext_resource type="Texture2D" uid="uid://dujeikyuwmve0" path="res://Relic/アイテムアイコン/アイテムアイコン/軽業師の手袋.png" id="1_kw6jw"]
 [ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_s332i"]
 
 [resource]
@@ -8,3 +9,4 @@ name = "軽業師の手袋"
 description = "全カードのコスト-1（最低0）"
 relic_type = "cost_down"
 value = 1
+icon = ExtResource("1_kw6jw")

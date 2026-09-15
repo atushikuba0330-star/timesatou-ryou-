@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://biko4nnub26ei"]
+
+[ext_resource type="Texture2D" uid="uid://de14yrw60ugo0" path="res://Assets/Pixel Art Skill Animations - Lightning/VFX3/Frames/lightning_skill3_frame2.png" id="1_btgcy"]
+[ext_resource type="Script" uid="uid://ca6ymf5sfop13" path="res://Assets/Effect Animation/sparkmagic/thunderrain_effect_test.gd" id="2_ca1r8"]
+
+[node name="thunderrainEffectTest" type="CPUParticles2D" unique_id=1953092606]
+emitting = false
+amount = 300
+texture = ExtResource("1_btgcy")
+lifetime = 4.0
+speed_scale = 11.27
+emission_shape = 3
+emission_rect_extents = Vector2(100, 10)
+direction = Vector2(0, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+damping_max = 1.0
+scale_amount_min = 0.0
+color = Color(1, 0.5647059, 0, 1)
+anim_speed_min = 10.0
+anim_speed_max = 10.0
+script = ExtResource("2_ca1r8")

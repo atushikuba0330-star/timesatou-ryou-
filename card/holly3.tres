@@ -3,13 +3,18 @@
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_ddlaa"]
 [ext_resource type="Texture2D" uid="uid://ba03120oxdknv" path="res://irasto/まほー/光/カラムナ.png" id="1_s5wr8"]
 [ext_resource type="Texture2D" uid="uid://dfb6eg3ohv2yo" path="res://irasto/Normal/Ma1a-line-normal/ma1a-yellow.png" id="2_m1pd6"]
+[ext_resource type="PackedScene" uid="uid://u8a7c4iu260r" path="res://Assets/Effect Animation/hollymagic/satellite.tscn" id="3_m1pd6"]
 
 [resource]
 script = ExtResource("1_ddlaa")
+name = "クリペウス"
 element = "光"
 cost = 5
 power = 300
 cast_time = 5
+flavor_text = "中級魔法
+天から降り注ぐ柱で敵を焼き尽くす"
+projectile_icon = ExtResource("3_m1pd6")
 magic_circles = Array[Texture2D]([ExtResource("2_m1pd6"), ExtResource("2_m1pd6"), ExtResource("2_m1pd6"), ExtResource("2_m1pd6"), ExtResource("2_m1pd6")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80), Vector2(100, 140), Vector2(60, 80)])
 icon = ExtResource("1_s5wr8")

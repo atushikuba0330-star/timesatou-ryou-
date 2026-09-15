@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://tmcjqb1d7bwg"]
 
+[ext_resource type="Texture2D" uid="uid://ckis73dy3mqkd" path="res://Relic/アイテムアイコン/アイテムアイコン/詠唱の書.png" id="1_5epa8"]
 [ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_nr3h2"]
 
 [resource]
@@ -8,3 +9,4 @@ name = "詠唱の書"
 description = "全カードの詠唱数-1（最低1）"
 relic_type = "cast_time_down"
 value = 1
+icon = ExtResource("1_5epa8")

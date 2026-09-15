@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cisrvtnsme2vf"]
+
+[ext_resource type="Texture2D" uid="uid://b2tl7p8xok0np" path="res://Character files/闇きゃら-removebg-preview.png" id="1_c0efr"]
+
+[node name="Node2D" type="Node2D" unique_id=1011383110]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1567637689]
+offset_right = 1000.0
+offset_bottom = 1350.0
+texture = ExtResource("1_c0efr")

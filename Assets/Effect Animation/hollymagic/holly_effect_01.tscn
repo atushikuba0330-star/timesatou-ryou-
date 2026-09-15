@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dgqxwdamw333o"]
+
+[ext_resource type="Texture2D" uid="uid://cipaw265ss26g" path="res://Assets/hollyfolder/Pixel Art VFX - Priest - FREE Version/VFX 3/sprite-sheet.png" id="1_sxq67"]
+[ext_resource type="Script" uid="uid://dc7nmnyplti1h" path="res://Assets/Effect Animation/hollymagic/holly_effect_01.gd" id="2_3f10i"]
+[ext_resource type="Texture2D" uid="uid://cuqx8ouur1t47" path="res://Assets/hollyfolder/Pipoya VFX LightPillar/Pipoya VFX LightPillar/400x400/pipo-mapeffect013a-back.png" id="2_32tud"]
+[ext_resource type="Script" uid="uid://i8ssr22aj6db" path="res://Assets/Effect Animation/hollymagic/hollyparticle_01.gd" id="4_3f10i"]
+[ext_resource type="Texture2D" uid="uid://de70hw734mnx8" path="res://Assets/hollyfolder/Pipoya VFX HEXShield/Pipoya VFX HEXShield/480x480/pipo-btleffect206_480.png" id="5_8dym2"]
+
+[node name="hollyEffect01" type="Sprite2D" unique_id=232671538]
+position = Vector2(37, 78)
+scale = Vector2(4.055, 4.055)
+texture = ExtResource("1_sxq67")
+hframes = 5
+vframes = 3
+frame = 5
+script = ExtResource("2_3f10i")
+
+[node name="hollyparticle01" type="Sprite2D" parent="." unique_id=778093990]
+position = Vector2(7.678884, 8.376963)
+scale = Vector2(0.34904015, 0.34904015)
+texture = ExtResource("2_32tud")
+hframes = 5
+vframes = 2
+script = ExtResource("4_3f10i")
+
+[node name="shieldEffect" type="Sprite2D" parent="." unique_id=1618695972]
+position = Vector2(6.1093245, 27.652737)
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("5_8dym2")
+hframes = 5
+vframes = 4
+frame = 19

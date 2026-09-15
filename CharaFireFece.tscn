@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://53chn81e7p0t"]
+
+[ext_resource type="Script" uid="uid://cnp3mq1koqnqf" path="res://chara_fire_fece.gd" id="1_qc6c4"]
+[ext_resource type="Texture2D" uid="uid://coft87q655yib" path="res://Character files/20260726_045341526_iOS-removebg-preview.png" id="1_xk0t7"]
+
+[node name="Control" type="Control" unique_id=1087961534]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qc6c4")
+
+[node name="face" type="TextureRect" parent="." unique_id=1326851945]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_xk0t7")

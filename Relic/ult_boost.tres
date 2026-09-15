@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://k86ot7ov2ptn"]
 
+[ext_resource type="Texture2D" uid="uid://cdb5n7dauuju4" path="res://Relic/アイテムアイコン/アイテムアイコン/業火の心臓.png" id="1_0dntv"]
 [ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_6q4mx"]
 
 [resource]
@@ -8,3 +9,4 @@ name = "業火の心臓"
 description = "必殺技のパワーが1.5倍"
 relic_type = "ult_boost"
 value = 150
+icon = ExtResource("1_0dntv")

@@ -6,6 +6,14 @@ var temp_selected_element: String = ""
 @onready var right_panel_desc = $RightPanel/DescLabel
 @onready var start_button = $StartButton
 
+@onready var deck_list = $RightPanel/deck_list
+
+@export var fire_cards: Array[Texture2D]
+@export var water_cards: Array[Texture2D]
+@export var thunder_cards: Array[Texture2D]
+@export var light_cards: Array[Texture2D]
+@export var dark_cards: Array[Texture2D]
+
 var descriptions = {
 	"火": "速攻火力\n素早く敵を焼き尽くす攻撃的なデッキ",
 	"水": "大量展開\n多数のカードでスロットを埋め尽くす",
@@ -23,10 +31,28 @@ func select_character(element: String):
 	right_panel_desc.text = descriptions[element]
 	start_button.disabled = false
 
+	var cards: Array
+
+	match element:
+		"火": cards = fire_cards
+		"水": cards = water_cards
+		"雷": cards = thunder_cards
+		"光": cards = light_cards
+		"闇": cards = dark_cards
+
+
+
+	for i in range(deck_list.get_child_count()):
+		var card_node = deck_list.get_child(i)
+		if i < cards.size():
+			card_node.texture = cards[i]
+		else:
+			card_node.texture = null
+
 func _on_start_button_pressed():
 	GameData.selected_element = temp_selected_element
 	GameData.player_deck.clear()  # 新しいランは初期デッキから開始する
-	SePlayer.play_se("res://SE (1).wav")
+	SePlayer.play_se("res://audiostock_60330.mp3")
 	get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_fire_button_pressed():

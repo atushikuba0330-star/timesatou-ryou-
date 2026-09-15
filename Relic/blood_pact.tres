@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="RelicData" format=3 uid="uid://b2qjk0ycviy1w"]
 
 [ext_resource type="Script" uid="uid://c7if2owfhbdix" path="res://script/relic_data.gd" id="1_c3wdx"]
+[ext_resource type="Texture2D" uid="uid://cqvj5tetwv8d4" path="res://Relic/アイテムアイコン/アイテムアイコン/血の契約.png" id="1_m5lhx"]
 
 [resource]
 script = ExtResource("1_c3wdx")
@@ -8,3 +9,4 @@ name = "血の契約"
 description = "HP-100ごとにパワー+5%"
 relic_type = "blood_pact"
 value = 5
+icon = ExtResource("1_m5lhx")

@@ -20,6 +20,7 @@ func _ready():
 	run()
 
 
+
 # 戦闘中ずっと繰り返されるメインループ
 func run():
 
@@ -60,3 +61,4 @@ func run():
 		# ターン解決処理
 		# ダメージ計算や効果発動など
 		get_node("/root/Main/BattleManager").resolve_turn()
+		

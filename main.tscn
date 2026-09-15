@@ -6,14 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://dmsbytc445uxt" path="res://irasto/Designer (3).png" id="6_ycdy4"]
 [ext_resource type="Script" uid="uid://cpxoxxbq3c3qf" path="res://script/slot.gd" id="7_272bh"]
 [ext_resource type="Script" uid="uid://dhqcdh76yrph3" path="res://script/mana_manager.gd" id="8_5vw27"]
-[ext_resource type="Script" uid="uid://dndisvwmflryo" path="res://enemy_ai.gd" id="8_kek77"]
 [ext_resource type="Script" uid="uid://bqmathkxwi3cd" path="res://relic_manager.gd" id="9_kek77"]
 [ext_resource type="Script" uid="uid://ce1lbg7tqixro" path="res://battle_manager.gd" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://iojwasw3qojs" path="res://card_preview.gd" id="10_dg77c"]
 [ext_resource type="Texture2D" uid="uid://dnl5kyvex5fm4" path="res://irasto/22302021.png" id="11_ycdy4"]
 [ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="12_dg77c"]
+[ext_resource type="Texture2D" uid="uid://cc7l0px75ygsi" path="res://irasto/まほー/カード枠（最終改訂版）.png" id="12_vivmo"]
 [ext_resource type="Texture2D" uid="uid://cfy4vyrpcw14s" path="res://irasto/2117725.png" id="12_ycdy4"]
-[ext_resource type="Texture2D" uid="uid://dx85sxgwqgpwt" path="res://irasto/ka-do6.png" id="13_w48qg"]
+[ext_resource type="AudioStream" uid="uid://box4fa1jqq254" path="res://audiostock_53254.mp3" id="15_vivmo"]
+[ext_resource type="AudioStream" uid="uid://51bunaakqhvi" path="res://audiostock_854960.wav" id="16_2cqfq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
 atlas = ExtResource("11_ycdy4")
@@ -44,10 +45,6 @@ margin = Rect2(0, -8, 0, 0)
 atlas = ExtResource("12_ycdy4")
 region = Rect2(350, 95, 805, 280)
 margin = Rect2(0, -8, 0, 0)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vivmo"]
-atlas = ExtResource("13_w48qg")
-region = Rect2(0, 0, 1134, 850)
 
 [node name="Main" type="Node2D" unique_id=166516908]
 script = ExtResource("1_kek77")
@@ -446,7 +443,6 @@ texture_under = SubResource("AtlasTexture_w48qg")
 texture_progress = SubResource("AtlasTexture_dg77c")
 
 [node name="EnemyAI" type="Node" parent="." unique_id=1846317281]
-script = ExtResource("8_kek77")
 
 [node name="RelicManager" type="Node" parent="." unique_id=337626491]
 script = ExtResource("9_kek77")
@@ -465,7 +461,7 @@ offset_top = -62.0
 offset_right = 1293.0
 offset_bottom = 1138.0
 scale = Vector2(0.6, 0.6)
-texture = SubResource("AtlasTexture_vivmo")
+texture = ExtResource("12_vivmo")
 expand_mode = 1
 
 [node name="Labelcost" type="Label" parent="CardPreview" unique_id=237307857]
@@ -481,10 +477,10 @@ horizontal_alignment = 1
 
 [node name="Labelname" type="Label" parent="CardPreview" unique_id=1996249456]
 layout_mode = 0
-offset_left = 130.0
+offset_left = 132.0
 offset_top = 46.0
 offset_right = 280.0
-offset_bottom = 91.0
+offset_bottom = 91.000015
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_dg77c")
 theme_override_font_sizes/font_size = 18
@@ -506,6 +502,14 @@ offset_left = 35.0
 offset_top = 420.0
 offset_right = 185.0
 offset_bottom = 455.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="LabelFlavor" type="Label" parent="CardPreview" unique_id=1578707790]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 347.0
+offset_right = 185.0
+offset_bottom = 403.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Labelability" type="Label" parent="CardPreview" unique_id=1740986636]
@@ -533,3 +537,11 @@ offset_bottom = 1214.0
 theme_override_colors/font_color = Color(0, 1, 1, 1)
 theme_override_fonts/font = ExtResource("12_dg77c")
 theme_override_font_sizes/font_size = 30
+
+[node name="SePlayer" type="AudioStreamPlayer" parent="." unique_id=509987655]
+stream = ExtResource("15_vivmo")
+bus = &"SFX"
+
+[node name="SePlayer1" type="AudioStreamPlayer" parent="." unique_id=816714142]
+stream = ExtResource("16_2cqfq")
+bus = &"SFX"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://mjydqbi4t05c"]
+
+[ext_resource type="Texture2D" uid="uid://45tbv2qponnj" path="res://irasto/まほー/炎/エクスプロズ.png" id="1_tpi73"]
+[ext_resource type="Texture2D" uid="uid://bb1um6alfv07w" path="res://irasto/Normal/Ma1a-line-normal/ma1a-red.png" id="2_p8gx5"]
+[ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="3_jqyep"]
+
+[resource]
+script = ExtResource("3_jqyep")
+cast_time = 5
+magic_circles = Array[Texture2D]([ExtResource("2_p8gx5"), ExtResource("2_p8gx5"), ExtResource("2_p8gx5")])
+magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])
+icon = ExtResource("1_tpi73")
