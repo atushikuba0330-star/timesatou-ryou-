@@ -86,6 +86,7 @@ func _on_next_buttan_2_pressed() -> void:
 	else:
 		get_tree().paused = false
 		get_tree().change_scene_to_file("res://TR.tscn")
+		BgmPlayer.play_bgm("Home")
 
 
 func _on_next_button_3_pressed() -> void:
