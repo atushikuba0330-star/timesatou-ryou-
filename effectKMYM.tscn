@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://diy626cji6het" path="res://Assets/Effect Animation/firetornado.tscn" id="1_q1w27"]
 [ext_resource type="PackedScene" uid="uid://c2bv33gcja6wj" path="res://Assets/Effect Animation/fireboll.tscn" id="2_t008t"]
-[ext_resource type="PackedScene" uid="uid://cyxmijhur3s8j" path="res://Assets/Effect Animation/bakuha.tscn" id="3_j6e52"]
+[ext_resource type="PackedScene" uid="uid://ckl74a1b3cowh" path="res://Assets/Effect Animation/bakuha.tscn" id="3_j6e52"]
+[ext_resource type="PackedScene" uid="uid://c05gsvmo4oetd" path="res://Assets/Effect Animation/dark_4.tscn" id="4_y6xga"]
+[ext_resource type="PackedScene" uid="uid://nyd0ob2sk77t" path="res://Assets/Effect Animation/dark2.5.tscn" id="5_1cdjn"]
 
 [node name="Node2D" type="Node2D" unique_id=784054698]
 
@@ -11,4 +13,8 @@
 [node name="fireboll" parent="." unique_id=122478870 instance=ExtResource("2_t008t")]
 
 [node name="bakuha" parent="." unique_id=1605266717 instance=ExtResource("3_j6e52")]
-scale = Vector2(8, 8)
+
+[node name="dark2" parent="." unique_id=1686045452 instance=ExtResource("4_y6xga")]
+
+[node name="Sprite2D" parent="dark2" unique_id=2100644864 instance=ExtResource("5_1cdjn")]
+position = Vector2(362.375, 269.375)

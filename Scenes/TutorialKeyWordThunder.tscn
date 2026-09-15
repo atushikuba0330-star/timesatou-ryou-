@@ -559,6 +559,10 @@ text = "Next"
 [node name="enemy" type="Node" parent="." unique_id=1036426572]
 script = ExtResource("17_6cnx7")
 
+[node name="SePlayer" type="AudioStreamPlayer" parent="." unique_id=1451303575]
+
+[node name="SePlayer1" type="AudioStreamPlayer" parent="." unique_id=408186471]
+
 [connection signal="pressed" from="Tutorial/TutorialPanel/NextButtan" to="ManaManager" method="_on_next_buttan_pressed"]
 [connection signal="pressed" from="Tutorial/TutorialPanel/NextButtan" to="Tutorial" method="_on_next_buttan_pressed"]
 [connection signal="pressed" from="Tutorial/TutorialPanel2/NextButtan2" to="ManaManager" method="_on_next_buttan_2_pressed"]

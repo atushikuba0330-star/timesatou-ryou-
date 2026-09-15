@@ -14,6 +14,9 @@ power = 180
 cast_time = 2
 ability = "残骸"
 ability_value = 4
+flavor_text = "残骸をためて攻撃力を上げよう
+
+ーネクロア"
 projectile_icon = ExtResource("3_q43ck")
 magic_circles = Array[Texture2D]([ExtResource("2_q43ck"), ExtResource("2_q43ck")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])

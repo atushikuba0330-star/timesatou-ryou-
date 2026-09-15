@@ -456,6 +456,10 @@ theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5bg3t")
 text = "Next"
 
+[node name="SePlayer" type="AudioStreamPlayer" parent="." unique_id=647877510]
+
+[node name="SePlayer1" type="AudioStreamPlayer" parent="." unique_id=510370821]
+
 [connection signal="pressed" from="Tutorial/TutorialPanel/NextButtan" to="ManaManager" method="_on_next_buttan_pressed"]
 [connection signal="pressed" from="Tutorial/TutorialPanel/NextButtan" to="Tutorial" method="_on_next_buttan_pressed"]
 [connection signal="pressed" from="Tutorial/TutorialPanel2/NextButtan2" to="ManaManager" method="_on_next_buttan_2_pressed"]

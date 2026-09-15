@@ -13,6 +13,9 @@ power = 130
 cast_time = 3
 ability = "残骸"
 ability_value = 2
+flavor_text = "残骸でほんとに攻撃力上がってる？
+
+ーネクロア"
 magic_circles = Array[Texture2D]([ExtResource("2_dspuk"), ExtResource("2_dspuk"), ExtResource("2_dspuk")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(20, 140)])
 icon = ExtResource("1_0asld")
