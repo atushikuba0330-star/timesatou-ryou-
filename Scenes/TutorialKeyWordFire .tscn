@@ -461,7 +461,7 @@ text = "Next"
 [node name="SePlayer" type="AudioStreamPlayer" parent="." unique_id=1173965280]
 stream = ExtResource("17_wbx6j")
 
-[node name="SePlayet1" type="AudioStreamPlayer" parent="." unique_id=176800642]
+[node name="SePlayer1" type="AudioStreamPlayer" parent="." unique_id=176800642]
 stream = ExtResource("18_lx6xv")
 
 [connection signal="pressed" from="Tutorial/TutorialPanel/NextButtan" to="ManaManager" method="_on_next_buttan_pressed"]
