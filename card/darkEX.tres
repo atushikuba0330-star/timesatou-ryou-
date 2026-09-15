@@ -12,6 +12,9 @@ element = "闇"
 power = 300
 cast_time = 1
 ability_value = 10
+flavor_text = "永久に闇へ沈みなさい
+
+ーネクロア"
 is_ultimate = true
 projectile_icon = ExtResource("3_1wonp")
 magic_circles = Array[Texture2D]([ExtResource("2_1wonp")])
