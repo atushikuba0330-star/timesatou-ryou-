@@ -28,26 +28,26 @@ func _on_dark_buttan_pressed():
 	select_character("闇試")
 	GameData.selected_element= temp_selected_element
 	GameData.player_deck.clear()  # 新しいランは初期デッキから開始する
-	SePlayer.play_se("res://SE (1).wav")
+	SePlayer.play_se("res://audiostock_60330.mp3")
 	get_tree().change_scene_to_file("res://Scenes/TutorialKeyWordDark.tscn")
 
 func _on_horry_button_pressed() -> void:
 	select_character("光試")
 	GameData.selected_element= temp_selected_element
 	GameData.player_deck.clear()  # 新しいランは初期デッキから開始する
-	SePlayer.play_se("res://SE (1).wav")
+	SePlayer.play_se("res://audiostock_60330.mp3")
 	get_tree().change_scene_to_file("res://Scenes/TutorialKeyWordHorry.tscn")
 
 func _on_water_button_pressed() -> void:
 	select_character("水試")
 	GameData.selected_element= temp_selected_element
 	GameData.player_deck.clear()  # 新しいランは初期デッキから開始する
-	SePlayer.play_se("res://SE (1).wav")
+	SePlayer.play_se("res://audiostock_60330.mp3")
 	get_tree().change_scene_to_file("res://Scenes/TutorialKeyWordWater .tscn")
 
 func _on_thunder_button_pressed() -> void:
 	select_character("雷試")
 	GameData.selected_element= temp_selected_element
 	GameData.player_deck.clear()  # 新しいランは初期デッキから開始する
-	SePlayer.play_se("res://SE (1).wav")
+	SePlayer.play_se("res://audiostock_60330.mp3")
 	get_tree().change_scene_to_file("res://Scenes/TutorialKeyWordThunder.tscn")
