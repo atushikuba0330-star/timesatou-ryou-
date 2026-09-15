@@ -16,6 +16,8 @@
 [ext_resource type="Script" uid="uid://c2u1xu1rwk644" path="res://Scenes/Tutorial_dark.gd" id="14_4gsbs"]
 [ext_resource type="Texture2D" uid="uid://df0drkod2vx35" path="res://irasto/カーソルアイコン左.png" id="15_gfd1k"]
 [ext_resource type="Texture2D" uid="uid://bs7l0smxwgpen" path="res://irasto/カーソルアイコン右.png" id="16_gfuhx"]
+[ext_resource type="AudioStream" uid="uid://box4fa1jqq254" path="res://audiostock_53254.mp3" id="17_pxen0"]
+[ext_resource type="AudioStream" uid="uid://51bunaakqhvi" path="res://audiostock_854960.wav" id="18_3qrpg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
 atlas = ExtResource("8_uouf8")
@@ -457,8 +459,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5bg3t")
 text = "Next"
 
 [node name="SePlayer" type="AudioStreamPlayer" parent="." unique_id=647877510]
+stream = ExtResource("17_pxen0")
 
 [node name="SePlayer1" type="AudioStreamPlayer" parent="." unique_id=510370821]
+stream = ExtResource("18_3qrpg")
 
 [connection signal="pressed" from="Tutorial/TutorialPanel/NextButtan" to="ManaManager" method="_on_next_buttan_pressed"]
 [connection signal="pressed" from="Tutorial/TutorialPanel/NextButtan" to="Tutorial" method="_on_next_buttan_pressed"]

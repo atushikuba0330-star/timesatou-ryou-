@@ -38,6 +38,7 @@ vertical_alignment = 1
 [node name="Control" type="Control" parent="." unique_id=1978953606]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 181.0
 offset_right = 2540.0
 offset_bottom = 1345.0
 script = ExtResource("1_0tebu")
