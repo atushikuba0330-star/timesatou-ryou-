@@ -7,11 +7,13 @@
 
 [resource]
 script = ExtResource("2_xnnye")
+name = "ヘフティガードナーシュラーク"
 element = "雷"
 power = 400
 cast_time = 1
 ability = "スパーク"
 ability_value = 4
+preview_font_size = 12
 projectile_icon = ExtResource("3_1lw2h")
 magic_circles = Array[Texture2D]([ExtResource("2_1lw2h")])
 icon = ExtResource("1_1lw2h")

@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("2_4iayl")
-name = "6連装ミサイル"
+name = "マターエクスプロ"
 element = "闇"
 power = 300
 cast_time = 1

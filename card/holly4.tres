@@ -15,6 +15,7 @@ cast_time = 3
 ability = "シールド"
 ability_value = 5
 flavor_text = "高硬度なシールド展開技
+ついでに敵も攻撃する。
 "
 projectile_icon = ExtResource("3_biko3")
 magic_circles = Array[Texture2D]([ExtResource("1_moup1"), ExtResource("1_moup1"), ExtResource("1_moup1")])

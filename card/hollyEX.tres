@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("2_i7yv3")
+name = "光る鐘の閃光"
 element = "光"
 power = 500
 cast_time = 1
