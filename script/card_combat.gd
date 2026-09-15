@@ -8,7 +8,8 @@ static func compute_power(card) -> int:
 	if card.data == null:
 		return 0
 
-	var base_power = int(card.data.power * (float(card.chant_progress) / float(card.actual_cast_time)))
+	var ratio = min(float(card.chant_progress) / float(card.actual_cast_time), 1.0)
+	var base_power = int(card.data.power * ratio)
 
 	for relic in GameData.player_relics:
 		if relic.relic_type == "black_pact" and card.is_player_card():

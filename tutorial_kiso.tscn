@@ -6,25 +6,26 @@
 [ext_resource type="Texture2D" uid="uid://dw3adml3t14eu" path="res://irasto/box_blue_name.png" id="3_8tujo"]
 
 [node name="tutorial_kiso" type="Node2D" unique_id=2078407810]
+visible = false
 script = ExtResource("1_8tujo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=837407939]
 position = Vector2(1268, 676)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2024176615]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1027924308]
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=2024176615]
 offset_right = 2537.0
 offset_bottom = 1351.0
 texture = ExtResource("1_0v6ut")
 
-[node name="kuro" type="TextureRect" parent="." unique_id=1454475283]
+[node name="kuro" type="TextureRect" parent="CanvasLayer" unique_id=1454475283]
 offset_left = 840.99994
 offset_top = 263.00003
 offset_right = 2088.0
 offset_bottom = 1524.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_6yflx")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1027924308]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=598493742]
 offset_left = 459.0
@@ -39,12 +40,14 @@ offset_left = 482.0
 offset_top = 940.0
 offset_right = 822.0
 offset_bottom = 990.0
+theme_override_font_sizes/font_size = 25
 
 [node name="texte" type="Label" parent="CanvasLayer" unique_id=565720480]
 offset_left = 505.0
 offset_top = 1020.0
 offset_right = 1908.0
 offset_bottom = 1248.0
+theme_override_font_sizes/font_size = 30
 
 [node name="AutoButton" type="Button" parent="CanvasLayer" unique_id=1226003906]
 offset_left = 1790.0
