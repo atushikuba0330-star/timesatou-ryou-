@@ -14,6 +14,10 @@ power = 70
 cast_time = 2
 ability = "ミラージュ"
 ability_value = 1
+flavor_text = "水の初級応用魔法
+相手に水の泡の攻撃を仕掛けながら
+裏でネロフスカの攻撃動作を
+準備する"
 projectile_icon = ExtResource("3_6ts72")
 magic_circles = Array[Texture2D]([ExtResource("2_6ts72"), ExtResource("2_6ts72")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])

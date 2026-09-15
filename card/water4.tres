@@ -14,6 +14,8 @@ power = 120
 cast_time = 3
 ability = "ミラージュ"
 ability_value = 3
+flavor_text = "波が押し寄せてくる技
+まさに波状攻撃"
 projectile_icon = ExtResource("3_m8eb3")
 magic_circles = Array[Texture2D]([ExtResource("2_m8eb3"), ExtResource("2_m8eb3"), ExtResource("2_m8eb3")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])

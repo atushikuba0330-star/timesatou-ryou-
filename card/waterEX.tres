@@ -13,6 +13,8 @@ power = 400
 cast_time = 1
 ability = "ミラージュ"
 ability_value = 4
+flavor_text = "多数のネロフスカを一に唱える
+飽和攻撃になる"
 projectile_icon = ExtResource("3_dadxt")
 magic_circles = Array[Texture2D]([ExtResource("2_dadxt")])
 icon = ExtResource("1_dadxt")

@@ -14,6 +14,8 @@ power = 90
 cast_time = 3
 ability = "ミラージュ"
 ability_value = 2
+flavor_text = "荒波のように攻撃する
+かなり強い"
 projectile_icon = ExtResource("3_wau16")
 magic_circles = Array[Texture2D]([ExtResource("2_wau16"), ExtResource("2_wau16"), ExtResource("2_wau16")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])
