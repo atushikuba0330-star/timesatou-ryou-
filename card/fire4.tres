@@ -14,6 +14,9 @@ power = 200
 cast_time = 3
 ability = "インパクト"
 ability_value = 3
+preview_font_size = 18
+flavor_text = "高位の炎属性魔法
+空から落ちる火の玉はまさにメテオ"
 projectile_icon = ExtResource("3_h7x2s")
 magic_circles = Array[Texture2D]([ExtResource("2_h7x2s"), ExtResource("2_h7x2s"), ExtResource("2_h7x2s")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])

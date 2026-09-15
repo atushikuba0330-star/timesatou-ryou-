@@ -14,6 +14,8 @@ power = 80
 cast_time = 1
 ability = "インパクト"
 ability_value = 1
+flavor_text = "炎属性の初級魔法の一つ
+炎の渦を敵に送り付ける"
 projectile_icon = ExtResource("3_foyme")
 magic_circles = Array[Texture2D]([ExtResource("2_foyme")])
 magic_positions = Array[Vector2]([Vector2(60, 80)])
