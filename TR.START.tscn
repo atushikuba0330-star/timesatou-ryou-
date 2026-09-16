@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://byw62pww28fmu"]
+
+[ext_resource type="Texture2D" uid="uid://5hmpw57cxy6c" path="res://Copilot_20260916_103813.png" id="1_0fagv"]
+[ext_resource type="Script" uid="uid://dd5gsxishccg6" path="res://kiso_tutorial.gd" id="1_r4pgv"]
+[ext_resource type="Script" uid="uid://vlcvrrhh2x52" path="res://zokusei_tutorial.gd" id="2_0fagv"]
+[ext_resource type="Script" uid="uid://41emyst12bhc" path="res://BACK.gd" id="4_mqlp1"]
+
+[node name="Node2D" type="Node2D" unique_id=769505879]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1784034591]
+offset_right = 2550.0
+offset_bottom = 1350.0
+texture = ExtResource("1_0fagv")
+
+[node name="kisoTutorial" type="Button" parent="." unique_id=1217213562]
+offset_left = 159.0
+offset_top = 442.0
+offset_right = 939.0
+offset_bottom = 633.0
+theme_override_font_sizes/font_size = 50
+text = "基礎チュートリアル"
+script = ExtResource("1_r4pgv")
+
+[node name="zokuseiTutorial" type="Button" parent="." unique_id=981137893]
+offset_left = 1533.0
+offset_top = 456.0
+offset_right = 2284.0
+offset_bottom = 641.0
+theme_override_font_sizes/font_size = 50
+text = "属性ごとのスキルチュートリアル"
+script = ExtResource("2_0fagv")
+
+[node name="black" type="Button" parent="." unique_id=1442931755]
+offset_left = 807.0
+offset_top = 20.0
+offset_right = 1730.0
+offset_bottom = 172.0
+theme_override_font_sizes/font_size = 100
+text = "メニューに戻る"
+script = ExtResource("4_mqlp1")
+
+[connection signal="pressed" from="kisoTutorial" to="kisoTutorial" method="_on_pressed"]
+[connection signal="pressed" from="zokuseiTutorial" to="zokuseiTutorial" method="_on_pressed"]
+[connection signal="pressed" from="black" to="black" method="_on_pressed"]
