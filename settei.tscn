@@ -45,6 +45,7 @@ layout_mode = 2
 
 [node name="CheckBox" type="CheckBox" parent="Control/VBoxContainer" unique_id=626893757]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "BGMオン/オフ"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=387484335]
@@ -59,6 +60,7 @@ layout_mode = 2
 
 [node name="CheckBox" type="CheckBox" parent="Control/VBoxContainer2" unique_id=111648865]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "SEオン/オフ"
 
 [node name="onnryoutamesi" type="Button" parent="." unique_id=1856370108]
