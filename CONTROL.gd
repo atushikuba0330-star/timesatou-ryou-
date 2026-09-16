@@ -6,17 +6,20 @@ extends Control
 @onready var se_toggle = $VBoxContainer2/CheckBox
 
 
+
 func _ready():
 	# 設定ファイル読み込み
 	var config = ConfigFile.new()
 	var err = config.load("user://settings.cfg")
-	
-	
+
+	for cb in get_tree().get_nodes_in_group("check_boxes"):
+		cb.add_theme_constant_override("check_icon_size", 48)
+
 
 	if err == OK:
 		# 保存された値を読み込む（なければデフォルト100）
-		var bgm_value = config.get_value("audio", "bgm_volume", 100)
-		var se_value = config.get_value("audio", "se_volume", 100)
+		var bgm_value = config.get_value("audio", "bgm_volume", 50)
+		var se_value = config.get_value("audio", "se_volume", 50)
 		
 		bgm_slider.value = bgm_value
 		se_slider.value = se_value

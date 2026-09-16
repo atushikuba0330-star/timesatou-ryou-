@@ -6,6 +6,16 @@
 [ext_resource type="Script" uid="uid://28cliu2dj1b2" path="res://CONTROL.gd" id="3_scyhx"]
 [ext_resource type="Script" uid="uid://dt0g2tr3a34fo" path="res://onnryoutamesi.gd" id="4_2q0nf"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22y4t"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.3529412, 0.3529412, 0.3529412, 0.50980395)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nin1p"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.3529412, 0.3529412, 0.3529412, 0.50980395)
+
 [node name="settei" type="Node2D" unique_id=1816131404]
 script = ExtResource("1_fjbq5")
 
@@ -37,14 +47,16 @@ script = ExtResource("3_scyhx")
 layout_mode = 0
 offset_left = 1809.0
 offset_top = 484.0
-offset_right = 2284.0
+offset_right = 2288.0
 offset_bottom = 612.0
 
 [node name="HSlider" type="HSlider" parent="Control/VBoxContainer" unique_id=1182136998]
 layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_22y4t")
 
 [node name="CheckBox" type="CheckBox" parent="Control/VBoxContainer" unique_id=626893757]
 layout_mode = 2
+theme_override_constants/icon_max_width = 48
 theme_override_font_sizes/font_size = 40
 text = "BGMオン/オフ"
 
@@ -57,9 +69,12 @@ offset_bottom = 823.0
 
 [node name="HSlider" type="HSlider" parent="Control/VBoxContainer2" unique_id=496267909]
 layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_nin1p")
 
 [node name="CheckBox" type="CheckBox" parent="Control/VBoxContainer2" unique_id=111648865]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+theme_override_constants/icon_max_width = 48
 theme_override_font_sizes/font_size = 40
 text = "SEオン/オフ"
 
