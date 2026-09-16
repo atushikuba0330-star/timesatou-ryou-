@@ -12,6 +12,7 @@ element = "雷"
 cost = 2
 power = 100
 cast_time = 2
+flavor_text = "雷の初級魔法"
 projectile_icon = ExtResource("3_q0qta")
 magic_circles = Array[Texture2D]([ExtResource("2_yk6ki"), ExtResource("2_yk6ki"), ExtResource("2_yk6ki")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80)])

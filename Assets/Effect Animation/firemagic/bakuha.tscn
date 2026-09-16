@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://ckl74a1b3cowh"]
 
 [ext_resource type="Texture2D" uid="uid://cikoyout8ixdc" path="res://Assets/Free  Effect Bullet Impact Explosion 32x32 V1/Red Effect Bullet Impact Explosion 32x32.png" id="1_3nsqc"]
-[ext_resource type="Script" uid="uid://x224e5jb80ca" path="res://fire.gd" id="2_ihkal"]
+[ext_resource type="Script" uid="uid://4hjxidlavj0t" path="res://Assets/Effect Animation/firemagic/bakuha.gd" id="2_ptdh0"]
+[ext_resource type="Texture2D" uid="uid://c8agrnjqw5cat" path="res://Assets/Magic Pack 9 files/Magic Pack 9 files/spritesheets/spark.png" id="3_fl1kj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
 atlas = ExtResource("1_3nsqc")
@@ -12,4 +13,13 @@ scale = Vector2(8, 8)
 texture = SubResource("AtlasTexture_g4v7s")
 hframes = 4
 frame = 3
-script = ExtResource("2_ihkal")
+script = ExtResource("2_ptdh0")
+
+[node name="fireSpark" type="Sprite2D" parent="." unique_id=59792584]
+modulate = Color(0.18359044, 0.18359044, 0.18359044, 1)
+self_modulate = Color(0.7178783, 0.00039188057, 0.7178732, 1)
+position = Vector2(2.875, 0.5)
+scale = Vector2(2.73, 2.73)
+texture = ExtResource("3_fl1kj")
+hframes = 7
+frame = 6

@@ -14,6 +14,8 @@ power = 200
 cast_time = 3
 ability = "スパーク"
 ability_value = 2
+flavor_text = "雷の初級魔法の一つ
+敵に雷を落とす"
 projectile_icon = ExtResource("3_lcugk")
 magic_circles = Array[Texture2D]([ExtResource("2_8i0kt"), ExtResource("2_8i0kt"), ExtResource("2_8i0kt"), ExtResource("2_8i0kt")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20), Vector2(0, 80), Vector2(100, 140)])

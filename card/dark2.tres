@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="1_hauko"]
 [ext_resource type="Texture2D" uid="uid://c4fmotq28ay6v" path="res://irasto/まほー/闇/ジルズバーナ.png" id="1_mqti0"]
 [ext_resource type="Texture2D" uid="uid://ctf57vm5kuye0" path="res://irasto/Normal/Ma1a-line-normal/ma1a-purple.png" id="2_cvrnt"]
-
-[sub_resource type="Resource" id="Resource_mqti0"]
-metadata/__load_path__ = "res://Assets/Effect Animation/dark_2.tscn"
+[ext_resource type="PackedScene" uid="uid://wyw13lnrj7cv" path="res://Assets/Effect Animation/darkmagic/dark_offset_2.tscn" id="3_cvrnt"]
 
 [resource]
 script = ExtResource("1_hauko")
@@ -19,7 +17,7 @@ ability_value = 2
 flavor_text = "残骸ためないと何もできないよ？
 
 ーネクロア"
-projectile_icon = SubResource("Resource_mqti0")
+projectile_icon = ExtResource("3_cvrnt")
 magic_circles = Array[Texture2D]([ExtResource("2_cvrnt"), ExtResource("2_cvrnt")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
 icon = ExtResource("1_mqti0")

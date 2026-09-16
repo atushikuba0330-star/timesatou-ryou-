@@ -25,8 +25,8 @@ func _input(event):
 		next_line()
 
 func end_conversation():
-	print("会話終了")
 	$Timer.stop()
+	get_tree().change_scene_to_file("res://tutorial_kiso_2.tscn")
 
 func next_line():
 	current_line += 1

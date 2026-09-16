@@ -12,6 +12,8 @@ element = "水"
 cost = 1
 power = 80
 cast_time = 2
+flavor_text = "水属性の初級魔法
+水魔法使いの基礎中の基礎"
 projectile_icon = ExtResource("3_b5wwj")
 magic_circles = Array[Texture2D]([ExtResource("2_b5wwj"), ExtResource("2_b5wwj")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])

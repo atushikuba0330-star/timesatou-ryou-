@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cd02hkc5aw5x2" path="res://Assets/hollyfolder/Pixel Art VFX - Priest - FREE Version/VFX 1/sprite-sheet.png" id="20_rmn7y"]
 [ext_resource type="PackedScene" uid="uid://c45wwvmwjsup8" path="res://Assets/Effect Animation/darkmagic/darkarts.tscn" id="21_mcrcb"]
 [ext_resource type="PackedScene" uid="uid://b3b2a0k41gxpe" path="res://Assets/Effect Animation/hollymagic/hollylastarts.tscn" id="22_rmn7y"]
+[ext_resource type="PackedScene" uid="uid://wyw13lnrj7cv" path="res://Assets/Effect Animation/darkmagic/dark_offset_2.tscn" id="23_mcrcb"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4xx4e"]
 load_path = "res://.godot/imported/spritesheet.png-25bea359d3e9369e0be02fac24ee7007.ctex"
@@ -224,3 +225,6 @@ position = Vector2(-5741.713, 2523.712)
 
 [node name="hollylastarts" parent="." unique_id=1040730987 instance=ExtResource("22_rmn7y")]
 position = Vector2(-3509.9941, -278.40952)
+
+[node name="darkOffset2" parent="." unique_id=53812104 instance=ExtResource("23_mcrcb")]
+position = Vector2(-2339.996, 2959.3528)

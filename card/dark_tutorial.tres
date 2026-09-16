@@ -2,16 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://c4fmotq28ay6v" path="res://irasto/まほー/闇/ジルズバーナ.png" id="1_buyh0"]
 [ext_resource type="Texture2D" uid="uid://ctf57vm5kuye0" path="res://irasto/Normal/Ma1a-line-normal/ma1a-purple.png" id="2_smirp"]
+[ext_resource type="PackedScene" uid="uid://wyw13lnrj7cv" path="res://Assets/Effect Animation/darkmagic/dark_offset_2.tscn" id="3_smirp"]
 [ext_resource type="Script" uid="uid://due4uh7gypc27" path="res://script/card_data.gd" id="3_tuk78"]
 
 [resource]
 script = ExtResource("3_tuk78")
+name = "ジルズバーナ"
 element = "闇試"
 cost = 4
 power = 80
 cast_time = 2
 ability = "残骸"
 ability_value = 2
+preview_font_size = 22
+flavor_text = "残骸をためて攻撃力アップ！！"
+projectile_icon = ExtResource("3_smirp")
 magic_circles = Array[Texture2D]([ExtResource("2_smirp"), ExtResource("2_smirp")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])
 icon = ExtResource("1_buyh0")

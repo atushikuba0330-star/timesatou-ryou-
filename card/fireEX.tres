@@ -13,6 +13,9 @@ power = 500
 cast_time = 1
 ability = "インパクト"
 ability_value = 5
+preview_font_size = 17
+flavor_text = "炎属性の奥義技
+多数の火の玉を戦場全体に落とす"
 is_ultimate = true
 projectile_icon = ExtResource("3_uwrfj")
 magic_circles = Array[Texture2D]([ExtResource("2_uwrfj")])

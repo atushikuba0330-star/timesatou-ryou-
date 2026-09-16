@@ -14,6 +14,8 @@ power = 150
 cast_time = 2
 ability = "インパクト"
 ability_value = 2
+flavor_text = "炎属性の中級魔法
+炎の拳を敵に叩きつける"
 projectile_icon = ExtResource("3_if5t3")
 magic_circles = Array[Texture2D]([ExtResource("2_if5t3"), ExtResource("2_if5t3")])
 magic_positions = Array[Vector2]([Vector2(60, 80), Vector2(100, 20)])

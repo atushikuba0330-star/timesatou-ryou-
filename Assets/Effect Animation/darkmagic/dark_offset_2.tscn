@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://wyw13lnrj7cv"]
+
+[ext_resource type="Texture2D" uid="uid://ck46qmwn0jv1o" path="res://Assets/Water Effect 01/Water Effect 01/Water Effect SpriteSheet/Water Splash 01 - Spritesheet.png" id="1_dekrr"]
+[ext_resource type="Script" uid="uid://dv410khqeqnrn" path="res://Assets/Effect Animation/darkmagic/dark_offset_2.gd" id="2_m1dwp"]
+
+[node name="darkOffset2" type="Sprite2D" unique_id=53812104]
+modulate = Color(1, 0.16470589, 1, 1)
+scale = Vector2(4.42, 4.42)
+texture = ExtResource("1_dekrr")
+hframes = 5
+vframes = 4
+script = ExtResource("2_m1dwp")
