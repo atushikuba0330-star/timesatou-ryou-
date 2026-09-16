@@ -37,7 +37,7 @@ func _on_next_buttan_pressed() -> void:
 
 #ステップ１の処理
 func step1():
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(5.5).timeout
 	#get_tree().paused = true
 	Panel2.visible = true
 	YRight.visible = true

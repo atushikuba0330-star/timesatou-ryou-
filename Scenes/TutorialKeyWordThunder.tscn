@@ -487,6 +487,7 @@ theme_override_font_sizes/font_size = 108
 text = "次へ"
 
 [node name="TutorialPanel2" type="Panel" parent="Tutorial" unique_id=2122085131]
+visible = false
 offset_left = 725.0
 offset_top = 681.0
 offset_right = 1665.0
