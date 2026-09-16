@@ -49,6 +49,9 @@ offset_left = 1742.0
 offset_top = 272.0
 offset_right = 2483.0
 offset_bottom = 599.0
+theme_override_font_sizes/font_size = 60
+text = "火属性
+インパクト"
 
 [node name="dark_Buttan" type="Button" parent="Control" unique_id=1433296559]
 layout_mode = 0
@@ -56,6 +59,9 @@ offset_left = 1767.0
 offset_top = 727.0
 offset_right = 2508.0
 offset_bottom = 1054.0
+theme_override_font_sizes/font_size = 60
+text = "闇属性
+残骸"
 
 [node name="horry_Button" type="Button" parent="Control" unique_id=509541015]
 layout_mode = 0
@@ -63,6 +69,9 @@ offset_left = 956.0
 offset_top = 255.0
 offset_right = 1646.0
 offset_bottom = 610.0
+theme_override_font_sizes/font_size = 60
+text = "光属性
+バリア"
 
 [node name="water_Button" type="Button" parent="Control" unique_id=1385463690]
 layout_mode = 0
@@ -70,6 +79,9 @@ offset_left = 951.0
 offset_top = 719.0
 offset_right = 1620.0
 offset_bottom = 1049.0
+theme_override_font_sizes/font_size = 60
+text = "水属性
+ミラージュ"
 
 [node name="thunder_Button" type="Button" parent="Control" unique_id=309975714]
 layout_mode = 0
@@ -77,6 +89,9 @@ offset_left = 379.0
 offset_top = 514.0
 offset_right = 902.0
 offset_bottom = 844.0
+theme_override_font_sizes/font_size = 60
+text = "雷属性
+スパーク"
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Control/fire_Buttan" to="Control" method="_on_fire_buttan_pressed"]
