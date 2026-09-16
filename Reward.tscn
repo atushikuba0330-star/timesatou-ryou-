@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://8uemoypg4m0v"]
+[gd_scene format=3 uid="uid://fwilca27ha4"]
 
 [ext_resource type="Script" uid="uid://diciv8xj8fpg0" path="res://reward.gd" id="1_y65c6"]
 [ext_resource type="Texture2D" uid="uid://d24h1hgxcxj6h" path="res://ChatGPT Image 2026年8月26日 15_04_19.png" id="2_801r7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d53v7"]
+bg_color = Color(0.35686275, 0.6, 0.6, 0.68235296)
 
 [node name="Reward" type="Control" unique_id=553658734]
 layout_mode = 3
@@ -34,10 +37,12 @@ theme_override_constants/separation = 200
 [node name="CardButton" type="Button" parent="HBoxContainer" unique_id=583655249]
 custom_minimum_size = Vector2(400, 300)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d53v7")
 
 [node name="RelicButton" type="Button" parent="HBoxContainer" unique_id=1655940888]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d53v7")
 
 [connection signal="pressed" from="HBoxContainer/CardButton" to="." method="_on_card_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/RelicButton" to="." method="_on_relic_button_pressed"]
