@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://diy626cji6het"]
 
 [ext_resource type="Texture2D" uid="uid://cikoyout8ixdc" path="res://Assets/Free  Effect Bullet Impact Explosion 32x32 V1/Red Effect Bullet Impact Explosion 32x32.png" id="1_37eb7"]
-[ext_resource type="Script" uid="uid://d2it1xhjqtpfl" path="res://Assets/Effect Animation/fireshoottest.gd" id="2_37eb7"]
+[ext_resource type="Script" uid="uid://d2it1xhjqtpfl" path="res://Assets/Effect Animation/firemagic/fireshoottest.gd" id="2_37eb7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6e52"]
 atlas = ExtResource("1_37eb7")

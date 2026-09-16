@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b2l01urlhqrmh"]
 
 [ext_resource type="Script" uid="uid://bqy33u0suqnal" path="res://card_select.gd" id="1_8b6yr"]
-[ext_resource type="Texture2D" uid="uid://dx85sxgwqgpwt" path="res://irasto/ka-do6.png" id="2_7yep5"]
 [ext_resource type="Texture2D" uid="uid://bsbyev5xkpvxb" path="res://ChatGPT Image 2026年8月26日 15_37_17.png" id="2_d53v7"]
 [ext_resource type="FontFile" uid="uid://dno8o8enqrsps" path="res://irasto/Cinzel-VariableFont_wght.ttf" id="3_7yep5"]
+[ext_resource type="Texture2D" uid="uid://cc7l0px75ygsi" path="res://irasto/まほー/カード枠（最終改訂版）.png" id="3_d53v7"]
 
 [node name="CardSelect" type="Control" unique_id=443806316]
 layout_mode = 3
@@ -46,12 +46,12 @@ mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button/Panel" unique_id=813937856]
 layout_mode = 0
-offset_left = -516.00006
+offset_left = -327.0
 offset_top = -66.0
-offset_right = 1084.0
+offset_right = 1273.0
 offset_bottom = 1134.0
 scale = Vector2(0.65, 0.65)
-texture = ExtResource("2_7yep5")
+texture = ExtResource("3_d53v7")
 
 [node name="Labelcost" type="Label" parent="HBoxContainer/Button/Panel" unique_id=738422167]
 layout_mode = 0
@@ -118,12 +118,12 @@ mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button2/Panel" unique_id=5610543]
 layout_mode = 0
-offset_left = -516.00006
+offset_left = -333.0
 offset_top = -66.0
-offset_right = 1084.0
+offset_right = 1267.0
 offset_bottom = 1134.0
 scale = Vector2(0.65, 0.65)
-texture = ExtResource("2_7yep5")
+texture = ExtResource("3_d53v7")
 
 [node name="Labelcost" type="Label" parent="HBoxContainer/Button2/Panel" unique_id=582284050]
 layout_mode = 0
@@ -190,12 +190,12 @@ mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button3/Panel" unique_id=1318071872]
 layout_mode = 0
-offset_left = -516.00006
+offset_left = -327.00006
 offset_top = -66.0
-offset_right = 1084.0
+offset_right = 1273.0
 offset_bottom = 1134.0
 scale = Vector2(0.65, 0.65)
-texture = ExtResource("2_7yep5")
+texture = ExtResource("3_d53v7")
 
 [node name="Labelcost" type="Label" parent="HBoxContainer/Button3/Panel" unique_id=2138319285]
 layout_mode = 0

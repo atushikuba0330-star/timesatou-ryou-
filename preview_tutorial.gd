@@ -9,6 +9,13 @@ func show_preview(card):
 	$Labelcost.text = str(card.data.cost)
 	$Labelpower.text = str(card.data.power)
 	$Labelcast.text = str(card.data.cast_time)
+	
+	# カードごとのフォントサイズ
+	$Labelname.add_theme_font_size_override("font_size",card.data.preview_font_size)
+	# フレーバーテキスト
+	$LabelFlavor.text = card.data.flavor_text
+	#フレーバーテキストは小さめ
+	$LabelFlavor.add_theme_font_size_override("font_size",12)
 	$Labelability.text = str(card.data.ability) + str(card.data.ability_value)
 	if card.data.icon:
 		$PreviewIcon.texture = card.data.icon
