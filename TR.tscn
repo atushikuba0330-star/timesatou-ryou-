@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drsoh1e6johj0"]
 
-[ext_resource type="Texture2D" uid="uid://c8n5y0qywfe6s" path="res://Magical-Theatre1-1024x576.jpg" id="1_0cycf"]
 [ext_resource type="Script" uid="uid://bas8fgsoend1j" path="res://tutorial_select.gd" id="1_0tebu"]
+[ext_resource type="Texture2D" uid="uid://dad0ii3xpyjoj" path="res://Copilot_20260916_101349.png" id="1_k2v2q"]
 [ext_resource type="Script" uid="uid://41emyst12bhc" path="res://BACK.gd" id="2_q0umt"]
 
 [node name="TR" type="Node2D" unique_id=450945355]
@@ -12,7 +12,7 @@ position = Vector2(1270, 675)
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2036378932]
 offset_right = 2540.0
 offset_bottom = 1350.0
-texture = ExtResource("1_0cycf")
+texture = ExtResource("1_k2v2q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="." unique_id=351436821]
@@ -45,50 +45,50 @@ script = ExtResource("1_0tebu")
 
 [node name="fire_Buttan" type="Button" parent="Control" unique_id=85786805]
 layout_mode = 0
-offset_left = 1742.0
-offset_top = 272.0
-offset_right = 2483.0
-offset_bottom = 599.0
+offset_left = 128.0
+offset_top = 209.0
+offset_right = 869.0
+offset_bottom = 536.0
 theme_override_font_sizes/font_size = 60
 text = "火属性
 インパクト"
 
 [node name="dark_Buttan" type="Button" parent="Control" unique_id=1433296559]
 layout_mode = 0
-offset_left = 1767.0
-offset_top = 727.0
-offset_right = 2508.0
-offset_bottom = 1054.0
+offset_left = 164.0
+offset_top = 611.0
+offset_right = 905.0
+offset_bottom = 938.0
 theme_override_font_sizes/font_size = 60
 text = "闇属性
 残骸"
 
 [node name="horry_Button" type="Button" parent="Control" unique_id=509541015]
 layout_mode = 0
-offset_left = 956.0
-offset_top = 255.0
-offset_right = 1646.0
-offset_bottom = 610.0
+offset_left = 1689.0
+offset_top = 566.0
+offset_right = 2379.0
+offset_bottom = 921.0
 theme_override_font_sizes/font_size = 60
 text = "光属性
 シールド"
 
 [node name="water_Button" type="Button" parent="Control" unique_id=1385463690]
 layout_mode = 0
-offset_left = 951.0
-offset_top = 719.0
-offset_right = 1620.0
-offset_bottom = 1049.0
+offset_left = 942.0
+offset_top = 387.0
+offset_right = 1611.0
+offset_bottom = 717.0
 theme_override_font_sizes/font_size = 60
 text = "水属性
 ミラージュ"
 
 [node name="thunder_Button" type="Button" parent="Control" unique_id=309975714]
 layout_mode = 0
-offset_left = 379.0
-offset_top = 514.0
-offset_right = 902.0
-offset_bottom = 844.0
+offset_left = 1666.0
+offset_top = 202.0
+offset_right = 2189.0
+offset_bottom = 532.0
 theme_override_font_sizes/font_size = 60
 text = "雷属性
 スパーク"

@@ -2,5 +2,5 @@ extends Button
 
 func _on_pressed() -> void:
 	pass # Replace with function body.
-	get_tree().change_scene_to_file("res://TR.START.tscn")
+	get_tree().change_scene_to_file("res://tutorial_kiso.tscn")
 	SePlayer.play_se("res://audiostock_60330.mp3")
