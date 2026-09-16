@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://7lofkob0miqr"]
+
+[ext_resource type="Texture2D" uid="uid://clc22iekddhjk" path="res://Assets/Free  Effect Bullet Impact Explosion 32x32 V1/mahoujin.png" id="1_mh8it"]
+[ext_resource type="Script" uid="uid://cxvxtp81wirvf" path="res://Drak3.gd" id="2_umsex"]
+[ext_resource type="Texture2D" uid="uid://dmbt7jodqmvda" path="res://Assets/Magic Pack 9 files/Magic Pack 9 files/spritesheets/Dark-Bolt.png" id="3_itw2a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf5fn"]
+atlas = ExtResource("1_mh8it")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtvlx"]
+atlas = ExtResource("3_itw2a")
+region = Rect2(268.46478, 0, 177.27747, 88)
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1782926404]
+position = Vector2(445.99997, 197.8125)
+scale = Vector2(0.2355855, 0.079954945)
+texture = SubResource("AtlasTexture_yf5fn")
+script = ExtResource("2_umsex")
+
+[node name="dark2" type="Sprite2D" parent="." unique_id=1686045452]
+position = Vector2(12.734328, -873.14795)
+scale = Vector2(14.345, 22.873348)
+texture = SubResource("AtlasTexture_wtvlx")
+hframes = 3
+frame = 2

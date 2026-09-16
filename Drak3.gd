@@ -7,8 +7,9 @@ extends Sprite2D
 @onready var dark2 = $dark2
 
 func launch(from_position: Vector2, to_position: Vector2):
-	# 対面スロットから少し右下に表示
-	global_position = to_position + Vector2(1000, 130)
+
+	# 発生位置調整
+	global_position = to_position + Vector2(110, 200)
 
 	frame = 0
 	visible = true
@@ -16,11 +17,11 @@ func launch(from_position: Vector2, to_position: Vector2):
 
 	dark2.visible = false
 	dark2.frame = 0
-	
 
 	await _play_animation()
 
 func _play_animation() -> void:
+
 	# 魔法陣アニメーション
 	for i in range(hframes):
 		frame = i
@@ -35,10 +36,10 @@ func _play_animation() -> void:
 			dark2.frame = i
 			await get_tree().create_timer(dark2_frame_delay).timeout
 
-	# dark2消滅
+	# dark2非表示
 	dark2.visible = false
 
-	# 魔法陣を少し残す
+	# 少し待つ
 	await get_tree().create_timer(0.3).timeout
 
 	# 魔法陣フェードアウト

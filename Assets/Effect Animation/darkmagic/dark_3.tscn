@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://x1uckt5vth61"]
+
+[ext_resource type="Texture2D" uid="uid://f8qqjqc6ysdo" path="res://Assets/Free  Effect Bullet Impact Explosion 32x32 V1/Purple Effect Bullet Impact Explosion 32x32.png" id="1_65xlj"]
+[ext_resource type="Script" uid="uid://cjqrm2d2u1u5d" path="res://dark_3.gd" id="2_wtqwd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf5fn"]
+atlas = ExtResource("1_65xlj")
+region = Rect2(59.051327, 0, 104.13832, 33.631058)
+
+[node name="dark3" type="Sprite2D" unique_id=840248831]
+position = Vector2(464.5, 230.5)
+scale = Vector2(6, 4.662)
+texture = SubResource("AtlasTexture_yf5fn")
+hframes = 3
+frame = 2
+script = ExtResource("2_wtqwd")
